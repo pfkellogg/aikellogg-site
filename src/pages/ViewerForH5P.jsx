@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Video from "../components/Video.jsx";
 // ViewerForH5P.jsx: the detail page of the WordPress plugin Viewer for H5P (github.com/pfkellogg/h5p-viewer).
 // The picture is a drawing of the plugin's button and panel (HTML), until there are screenshots.
 const GITHUB = "https://github.com/pfkellogg/h5p-viewer";
@@ -51,6 +52,13 @@ export default function ViewerForH5P() {
       <p className="note">Coming soon to the WordPress.org plugin directory, so you can install it from Plugins → Add New.</p>
 
       <Mock />
+
+      <h2>Watch</h2>
+      <Video id="JvFwH5DdlaI" title="Your H5P Quiz Answers Are in Every Learner's Browser (Viewer for H5P, Free Plugin)" caption="Viewer for H5P, and the answers in the page's markup and JSON (2:02)." />
+      <p className="note">
+        The fix, before and after: <Link to="/secure-answers-for-h5p">Secure Answers for H5P</Link> (
+        <a href="https://youtu.be/_XCNjDt46H4">video</a>).
+      </p>
 
       <h2>What it shows</h2>
       <p>

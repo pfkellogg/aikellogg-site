@@ -1,6 +1,7 @@
 // SecureAnswers.jsx: the page of the paid WordPress plugin Secure Answers for H5P. Every purchase goes to the
 // Patrick Kellogg Foundation for the Performing Arts (through its Ko-fi page).
 import { Link } from "react-router-dom";
+import Video from "../components/Video.jsx";
 
 const BUY = "https://ko-fi.com/aikellogg";
 const VIEWER_VIDEO = "https://youtu.be/JvFwH5DdlaI";
@@ -38,6 +39,9 @@ export default function SecureAnswers() {
       <img className="sa-hero" src="img/sa-thumb.jpg" alt="Before: the Viewer shows Very dark purple marked right. After: no answers in the page." />
 
       <BuyCard />
+
+      <h2>Watch: before and after</h2>
+      <Video id="_XCNjDt46H4" title="H5P Answers, Before and After: Secure Answers for H5P Keeps Them on the Server" caption="The same lesson, before and after Secure Answers for H5P (2:19)." />
 
       <h2>The problem, in every H5P page</h2>
       <p>

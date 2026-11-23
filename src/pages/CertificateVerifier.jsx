@@ -1,3 +1,4 @@
+import Video from "../components/Video.jsx";
 // CertificateVerifier.jsx: the detail page of the WordPress plugin Certificate ID & QR Verifier for LearnDash
 // (github.com/pfkellogg/certificate-id-qr-verifier-for-learndash).
 const GITHUB = "https://github.com/pfkellogg/certificate-id-qr-verifier-for-learndash";
@@ -29,6 +30,9 @@ export default function CertificateVerifier() {
       </div>
 
       <img className="cqv-cert" src="img/cqv-certificate.jpg" alt="A landscape certificate with its ID, approval number, status Valid, and a QR code" />
+
+      <h2>Watch</h2>
+      <Video id="kgwFZtcj4Ig" title="Scan Any LearnDash Certificate: Verified, Expired or Fake (Free QR Verifier Plugin)" caption="QR codes, expiring certifications and approval numbers (2:13)." />
 
       <h2>Why it's different</h2>
       <div className="cqv-grid">

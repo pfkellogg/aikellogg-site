@@ -1,3 +1,4 @@
+import Video from "../components/Video.jsx";
 // MarkCompleteGate.jsx: the detail page of the WordPress plugin Mark Complete Gate for H5P in LearnDash
 // (github.com/pfkellogg/mark-complete-gate-for-h5p).
 const GITHUB = "https://github.com/pfkellogg/mark-complete-gate-for-h5p";
@@ -36,6 +37,9 @@ export default function MarkCompleteGate() {
       <p className="note">Coming soon to the WordPress.org plugin directory.</p>
 
       <Mock />
+
+      <h2>Watch</h2>
+      <Video id="il5P1rG8zf8" title="Stop LearnDash Learners Skipping Your H5P: Mark Complete Gate (Free Plugin)" caption="Locked, a wrong answer, then unlocked, in a real LearnDash lesson (2:07)." />
 
       <h2>What it does</h2>
       <ul>
