@@ -80,12 +80,12 @@ export default function ViewerForH5P() {
       </p>
       <div className="fix">
         <p className="kicker">The fix</p>
-        <h3>Secure H5P</h3>
+        <h3>Secure Answers for H5P</h3>
         <p>
           A separate, paid plugin that keeps the answers on the server: they're taken out of the page, and checked by the
           server when a learner answers. Its exam mode puts no question data in the page at all until the learner is ready.
         </p>
-        <p className="note">Coming soon. Questions: on the AIKellogg YouTube channel.</p>
+        <p className="note">$129 a year. Coming soon. Questions: on the AIKellogg YouTube channel.</p>
       </div>
 
       <h2>Handy for</h2>
