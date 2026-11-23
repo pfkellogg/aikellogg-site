@@ -31,7 +31,9 @@ function initial(params) {
 export default function FluteLab() {
   const [params, setParams] = useSearchParams();
   const [s, setS] = useState(() => initial(params));
-  const { code, noteOn, noteOff, busy, sounding, midiStatus, connectMidi, renderAll } = useFlute(s);
+  const [sweet, setSweet] = useState(() => localStorage.getItem("sweeten") === "1");
+  const { code, noteOn, noteOff, busy, sounding, midiStatus, connectMidi, renderAll } = useFlute(s, sweet);
+  useEffect(() => { localStorage.setItem("sweeten", sweet ? "1" : "0"); }, [sweet]);
   const [paste, setPaste] = useState("");
   const [msg, setMsg] = useState("");
   const [progress, setProgress] = useState(null);
@@ -121,6 +123,9 @@ export default function FluteLab() {
         </div>
         <div className="playbar">
           <button onClick={connectMidi}>Play from a MIDI keyboard / FM-1</button>
+          <button className={"sweet" + (sweet ? " on" : "")} onClick={() => setSweet((v) => !v)} aria-pressed={sweet}
+            title="What a good stereo does: a little warmth and air, soft tape saturation, stereo width and a small room">
+            Sweeten: {sweet ? "on" : "off"}</button>
           <span className="status fixed1" aria-live="polite">{midiStatus || "Computer keys: A W S E D F T G Y H U J K… = C4 up; Z X C V B N M = C3 up."}</span>
           <span className={"making" + (busy ? " show" : "")} aria-hidden={!busy}>Making the tape strip…</span>
         </div>

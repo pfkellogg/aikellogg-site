@@ -3,8 +3,9 @@
 // Mellotron), and runs out at 8 s like a tape. MIDI keyboards (an FM-1, a Keystation...) play it in Chrome.
 import { useCallback, useEffect, useRef, useState } from "react";
 import { encode, RATE } from "./flute.js";
+import { makeSweeten } from "./sweeten.js";
 
-export function useFlute(settings) {
+export function useFlute(settings, sweet = false) {
   const code = encode(settings);
   const codeRef = useRef(code);
   const settingsRef = useRef(settings);
@@ -33,8 +34,15 @@ export function useFlute(settings) {
     return () => w.terminate();
   }, []);
 
+  const sweetRef = useRef(null);
+  const sweetOn = useRef(sweet);
+  sweetOn.current = sweet;
   const ctx = () => {
-    if (!ctxRef.current) ctxRef.current = new (window.AudioContext || window.webkitAudioContext)({ latencyHint: "interactive" });
+    if (!ctxRef.current) {
+      ctxRef.current = new (window.AudioContext || window.webkitAudioContext)({ latencyHint: "interactive" });
+      sweetRef.current = makeSweeten(ctxRef.current);
+      sweetRef.current.setOn(sweetOn.current);
+    }
     if (ctxRef.current.state === "suspended") ctxRef.current.resume();
     return ctxRef.current;
   };
@@ -79,7 +87,7 @@ export function useFlute(settings) {
     const src = ac.createBufferSource(), gain = ac.createGain();
     src.buffer = buf;
     gain.gain.value = 0.9;
-    src.connect(gain).connect(ac.destination);
+    src.connect(gain).connect(sweetRef.current.input);
     src.start();
     src.onended = () => { if (voices.current.get(midi)?.src === src) { voices.current.delete(midi); setSounding((s) => { const n = new Set(s); n.delete(midi); return n; }); } };
     voices.current.set(midi, { src, gain });
@@ -91,6 +99,9 @@ export function useFlute(settings) {
     held.current.delete(midi);
     stopVoice(midi);
   }, [stopVoice]);
+
+  // Sweeten on or off
+  useEffect(() => { sweetRef.current?.setOn(sweet); }, [sweet]);
 
   // A slider moved: forget other settings' strips, and make the recent keys again in the background.
   useEffect(() => {
