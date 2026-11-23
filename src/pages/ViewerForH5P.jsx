@@ -60,6 +60,11 @@ export default function ViewerForH5P() {
         <a href="https://youtu.be/_XCNjDt46H4">video</a>).
       </p>
 
+      <p className="note">
+        Using Moodle? <a href="https://github.com/pfkellogg/moodle-viewer-for-h5p">Viewer for H5P for Moodle</a> (free, download
+        the zip from its releases).
+      </p>
+
       <h2>What it shows</h2>
       <p>
         Open any page or lesson with H5P on it and a small <b>H5P</b> button appears in the bottom-right corner, with a

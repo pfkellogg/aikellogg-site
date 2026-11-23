@@ -90,9 +90,14 @@ export default function SecureAnswers() {
       </ul>
 
       <div className="fix">
-        <p className="kicker">Coming soon</p>
-        <h3>For Moodle</h3>
-        <p>Moodle builds its H5P the same way: the answers are in the page there too. A Moodle version of the Viewer and of Secure Answers is on its way.</p>
+        <p className="kicker">New · for Moodle too</p>
+        <h3>Secure Answers for H5P, Moodle edition</h3>
+        <p>
+          Moodle builds its H5P the same way: every answer is in the H5P frame. The Moodle edition secures the frame, checks
+          answers on the server, and makes H5P activity <b>grades come from the server</b>: a learner can no longer send
+          "100%" without answering. Same price, same Foundation. Tell us which one you want when you buy.
+        </p>
+        <p className="note">The free <a href="https://github.com/pfkellogg/moodle-viewer-for-h5p">Viewer for H5P for Moodle</a> shows the problem.</p>
       </div>
 
       <BuyCard compact />
