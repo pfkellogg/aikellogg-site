@@ -71,6 +71,22 @@ export default function ViewerForH5P() {
         correct answers. The answers come from a REST route that checks the same roles.
       </p>
 
+      <h2>Why it matters: H5P sends the answers to every browser</h2>
+      <p>
+        The viewer only shows its panel to the roles you allow. But <b>H5P itself sends every correct answer to each
+        learner's browser</b>, in the page, where anyone can read it with the browser's developer tools. This viewer shows
+        you exactly what they can find.
+      </p>
+      <div className="fix">
+        <p className="kicker">The fix</p>
+        <h3>Secure H5P</h3>
+        <p>
+          A separate, paid plugin that keeps the answers on the server: they're taken out of the page, and checked by the
+          server when a learner answers. Its exam mode puts no question data in the page at all until the learner is ready.
+        </p>
+        <p className="note">Coming soon. Questions: on the AIKellogg YouTube channel.</p>
+      </div>
+
       <h2>Handy for</h2>
       <ul>
         <li>checking a course's quizzes before learners do</li>

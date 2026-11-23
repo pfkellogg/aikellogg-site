@@ -89,3 +89,5 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .h5pv-used { color: #50575e; }
 .h5pv-button { position: absolute; right: 24px; bottom: 20px; background: #2271b1; color: #fff; font-weight: 800; border-radius: 26px; padding: 10px 16px; }
 .h5pv-button span { background: #dba617; color: #000; border-radius: 10px; padding: 1px 7px; margin-left: 6px; font-size: 12px; }
+.detail .fix { margin: 18px 0; padding: 18px 22px; border: 2px solid #ffd60a; border-radius: 14px; background: #1b1a12; }
+.detail .fix h3 { margin: 0 0 8px; font-size: 26px; }
