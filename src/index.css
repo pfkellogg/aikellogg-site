@@ -10,7 +10,7 @@ h2 { font-size: 1.3rem; margin: 0 0 0.5em; }
 .lead { font-size: 1.15rem; color: var(--dim); max-width: 60ch; }
 .top { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; background: #000; border-bottom: 2px solid var(--line); position: sticky; top: 0; z-index: 5; }
 .top .brand { font-weight: 800; font-size: 1.3rem; text-decoration: none; color: var(--gold); }
-.top nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 18px; }
+.top nav { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 6px 14px; font-size: 15px; }
 .top nav a { text-decoration: none; color: var(--text); font-weight: 600; white-space: nowrap; }
 .top .brand { white-space: nowrap; margin-right: 18px; }
 .top nav a.active { color: var(--gold); border-bottom: 3px solid var(--gold); }
@@ -152,3 +152,12 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #000; box-shadow: 0 20px 50px rgba(0,0,0,.55); }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .video figcaption { margin-top: 8px; color: #aaa; font-size: 15px; text-align: center; }
+
+/* Contact me */
+.top nav a.nav-contact { color: #052e1c; background: #4ade80; padding: 4px 12px; border-radius: 999px; font-weight: 800; }
+.top nav a.nav-contact:hover { background: #86efac; }
+.site-footer { max-width: 920px; margin: 40px auto 0; padding: 26px 20px 40px; border-top: 1px solid var(--line); color: var(--dim);
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; font-size: 15px; }
+.site-footer a { color: var(--gold); }
+.site-footer a.footer-contact { color: #052e1c; background: #ffd60a; padding: 6px 14px; border-radius: 999px; font-weight: 800; text-decoration: none; }
+.footer-sep { opacity: .5; }

@@ -7,6 +7,7 @@ import ViewerForH5P from "./pages/ViewerForH5P.jsx";
 import MarkCompleteGate from "./pages/MarkCompleteGate.jsx";
 import CertificateVerifier from "./pages/CertificateVerifier.jsx";
 import SecureAnswers from "./pages/SecureAnswers.jsx";
+import Contact from "./components/Contact.jsx";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <NavLink to="/mark-complete-gate">Mark Complete Gate</NavLink>
           <NavLink to="/certificate-verifier">Certificate Verifier</NavLink>
           <NavLink to="/secure-answers-for-h5p">Secure Answers</NavLink>
+          <Contact className="nav-contact" />
         </nav>
       </header>
       <main>
@@ -33,6 +35,14 @@ export default function App() {
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
+      <footer className="site-footer">
+        <span>Questions, ideas, a plugin you'd like? </span>
+        <Contact className="footer-contact" label="✉ Contact me" />
+        <span className="footer-sep">·</span>
+        <a href="https://www.youtube.com/@AIKellogg">YouTube</a>
+        <span className="footer-sep">·</span>
+        <a href="https://ko-fi.com/aikellogg">Support the Patrick Kellogg Foundation for the Performing Arts</a>
+      </footer>
     </HashRouter>
   );
 }

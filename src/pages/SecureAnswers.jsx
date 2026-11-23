@@ -2,6 +2,7 @@
 // Patrick Kellogg Foundation for the Performing Arts (through its Ko-fi page).
 import { Link } from "react-router-dom";
 import Video from "../components/Video.jsx";
+import Contact from "../components/Contact.jsx";
 
 const BUY = "https://ko-fi.com/aikellogg";
 const VIEWER_VIDEO = "https://youtu.be/JvFwH5DdlaI";
@@ -15,7 +16,7 @@ function BuyCard({ compact }) {
       </div>
       <div className="sa-buy-text">
         <p className="sa-buy-heart">♥ Every purchase goes to the <b>Patrick Kellogg Foundation for the Performing Arts</b>.</p>
-        <p className="sa-buy-small">Pay on the Foundation's Ko-fi page ($129, or more if you like). The plugin, its updates and support come to your email.</p>
+        <p className="sa-buy-small">Pay on the Foundation's Ko-fi page ($129, or more if you like). The plugin, its updates and support come to your email. Questions first? <Contact label="Contact me" subject="Secure Answers for H5P" />.</p>
       </div>
       <a className="sa-buy-btn" href={BUY} target="_blank" rel="noopener noreferrer">
         Buy it · support the Foundation
