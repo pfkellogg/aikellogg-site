@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // ViewerForH5P.jsx: the detail page of the WordPress plugin Viewer for H5P (github.com/pfkellogg/h5p-viewer).
 // The picture is a drawing of the plugin's button and panel (HTML), until there are screenshots.
 const GITHUB = "https://github.com/pfkellogg/h5p-viewer";
@@ -85,7 +86,8 @@ export default function ViewerForH5P() {
           A separate, paid plugin that keeps the answers on the server: they're taken out of the page, and checked by the
           server when a learner answers. Its exam mode puts no question data in the page at all until the learner is ready.
         </p>
-        <p className="note">$129 a year. Coming soon. Questions: on the AIKellogg YouTube channel.</p>
+        <p className="note">$129 a year, and every purchase goes to the Patrick Kellogg Foundation for the Performing Arts.</p>
+        <p><Link className="btn" to="/secure-answers-for-h5p">See Secure Answers for H5P</Link></p>
       </div>
 
       <h2>Handy for</h2>

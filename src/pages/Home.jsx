@@ -27,6 +27,10 @@ export default function Home() {
           <h2>Mark Complete Gate</h2>
           <p>A WordPress plugin: LearnDash's Mark Complete stays locked until the learner has done the H5P.</p>
         </Link>
+        <Link to="/secure-answers-for-h5p" className="card">
+          <h2>Secure Answers for H5P</h2>
+          <p>Keeps H5P's correct answers on the server, so H5P can be used for real tests. Every purchase supports the Foundation.</p>
+        </Link>
         <Link to="/certificate-verifier" className="card">
           <h2>Certificate Verifier</h2>
           <p>A WordPress plugin: a QR code on every LearnDash certificate. Scan it: verified, expired or forged.</p>

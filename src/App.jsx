@@ -6,6 +6,7 @@ import FluteLab from "./pages/FluteLab.jsx";
 import ViewerForH5P from "./pages/ViewerForH5P.jsx";
 import MarkCompleteGate from "./pages/MarkCompleteGate.jsx";
 import CertificateVerifier from "./pages/CertificateVerifier.jsx";
+import SecureAnswers from "./pages/SecureAnswers.jsx";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <NavLink to="/viewer-for-h5p">Viewer for H5P</NavLink>
           <NavLink to="/mark-complete-gate">Mark Complete Gate</NavLink>
           <NavLink to="/certificate-verifier">Certificate Verifier</NavLink>
+          <NavLink to="/secure-answers-for-h5p">Secure Answers</NavLink>
         </nav>
       </header>
       <main>
@@ -27,6 +29,7 @@ export default function App() {
           <Route path="/viewer-for-h5p" element={<ViewerForH5P />} />
           <Route path="/mark-complete-gate" element={<MarkCompleteGate />} />
           <Route path="/certificate-verifier" element={<CertificateVerifier />} />
+          <Route path="/secure-answers-for-h5p" element={<SecureAnswers />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
