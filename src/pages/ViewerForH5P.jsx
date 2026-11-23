@@ -36,6 +36,7 @@ function Mock() {
 export default function ViewerForH5P() {
   return (
     <div className="detail">
+      <img className="banner" src="img/viewer-for-h5p-banner.png" alt="Viewer for H5P: see every question and answer on the page, the right ones marked" />
       <p className="kicker">WordPress plugin · free · GPL</p>
       <h1>Viewer for H5P</h1>
       <p className="lead">
