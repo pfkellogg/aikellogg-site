@@ -3,6 +3,7 @@
 import { HashRouter, NavLink, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import FluteLab from "./pages/FluteLab.jsx";
+import ViewerForH5P from "./pages/ViewerForH5P.jsx";
 
 export default function App() {
   return (
@@ -12,12 +13,14 @@ export default function App() {
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/flute-lab">Flute Lab</NavLink>
+          <NavLink to="/viewer-for-h5p">Viewer for H5P</NavLink>
         </nav>
       </header>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/flute-lab" element={<FluteLab />} />
+          <Route path="/viewer-for-h5p" element={<ViewerForH5P />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

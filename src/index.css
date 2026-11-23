@@ -66,3 +66,26 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 /* Sweeten: one width on or off (nothing moves); lit when on */
 .playbar .sweet { width: 9.5em; }
 .playbar .sweet.on { background: #ffd60a; color: #000; font-weight: 700; }
+
+/* ---- detail pages (Viewer for H5P) ---- */
+.detail { max-width: 920px; margin: 0 auto; padding: 32px 20px 60px; }
+.detail .kicker { color: #ffd60a; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; font-size: 14px; margin: 0 0 6px; }
+.detail h1 { margin: 0 0 10px; }
+.detail h2 { margin: 34px 0 10px; color: #ffd60a; }
+.detail li { margin: 4px 0; }
+.detail .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0 8px; }
+.detail .btn { display: inline-block; background: #ffd60a; color: #000; font-weight: 800; padding: 12px 20px; border-radius: 10px; text-decoration: none; }
+.detail .btn.ghost { background: transparent; color: #ffd60a; border: 2px solid #ffd60a; }
+.detail .note { color: #aaa; font-size: 15px; }
+.detail .fine { color: #888; font-size: 14px; margin-top: 40px; }
+/* the drawing of the plugin's panel and button */
+.h5pv-mock { position: relative; margin: 26px 0 10px; padding: 24px 24px 80px; border-radius: 16px; background: #eef0f3; color: #1d2327; }
+.h5pv-panel { max-width: 560px; margin-left: auto; background: #fff; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,.18); font-size: 14px; overflow: hidden; }
+.h5pv-head { background: #1d2327; color: #fff; font-weight: 700; padding: 10px 14px; display: flex; justify-content: space-between; }
+.h5pv-item { padding: 12px 14px; display: grid; gap: 6px; }
+.h5pv-q { border-left: 3px solid #2271b1; padding: 6px 10px; background: #f6f7f7; border-radius: 4px; }
+.h5pv-q ul { list-style: none; margin: 4px 0 0; padding: 0; }
+.h5pv-q li.ok { color: #00a32a; font-weight: 600; } .h5pv-q li.no { color: #8c8f94; }
+.h5pv-used { color: #50575e; }
+.h5pv-button { position: absolute; right: 24px; bottom: 20px; background: #2271b1; color: #fff; font-weight: 800; border-radius: 26px; padding: 10px 16px; }
+.h5pv-button span { background: #dba617; color: #000; border-radius: 10px; padding: 1px 7px; margin-left: 6px; font-size: 12px; }
