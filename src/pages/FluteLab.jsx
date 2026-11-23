@@ -119,9 +119,10 @@ export default function FluteLab() {
             );
           })}
         </div>
-        <div className="row">
+        <div className="playbar">
           <button onClick={connectMidi}>Play from a MIDI keyboard / FM-1</button>
-          <span className="status">{busy ? "Making the tape strip…" : midiStatus || "Computer keys: A W S E D F T G Y H U J K… = C4 up; Z X C V B N M = C3 up."}</span>
+          <span className="status fixed1" aria-live="polite">{midiStatus || "Computer keys: A W S E D F T G Y H U J K… = C4 up; Z X C V B N M = C3 up."}</span>
+          <span className={"making" + (busy ? " show" : "")} aria-hidden={!busy}>Making the tape strip…</span>
         </div>
       </section>
 
@@ -145,9 +146,9 @@ export default function FluteLab() {
           </label>
           <button onClick={() => setS(defaults())}>Reset all (our flute, v7)</button>
           <button onClick={surprise}>Surprise me</button>
-          <button onClick={download} disabled={progress !== null}>{progress === null ? "Download my flute (35 WAVs)" : `Making ${progress} of 35…`}</button>
+          <button className="fixedw" onClick={download} disabled={progress !== null}>{progress === null ? "Download my flute (35 WAVs)" : `Making ${progress} of 35…`}</button>
         </div>
-        {msg && <p className="status" role="status">{msg}</p>}
+        <p className="status fixed1" role="status">{msg || "\u00a0"}</p>
       </section>
 
       <section className="sliders">
@@ -156,7 +157,7 @@ export default function FluteLab() {
             <legend>{g} <button className="small" onClick={() => resetGroup(g)}>reset</button></legend>
             {Object.entries(PARAMS).filter(([, p]) => p[4] === g).map(([k, [d, lo, hi, step, , label, help]]) => (
               <div className="slider" key={k}>
-                <label htmlFor={k}>{label} <span className="val">{+(+s[k]).toFixed(4)}</span>{Math.abs(s[k] - d) > 1e-9 && <button className="small" onClick={() => set(k, d)} title="Back to our flute's value">↺ {d}</button>}</label>
+                <label htmlFor={k}>{label} <span className="val">{+(+s[k]).toFixed(4)}</span><button className={"small undo" + (Math.abs(s[k] - d) > 1e-9 ? "" : " off")} onClick={() => set(k, d)} title="Back to our flute's value" tabIndex={Math.abs(s[k] - d) > 1e-9 ? 0 : -1}>↺ {d}</button></label>
                 <input id={k} type="range" min={lo} max={hi} step={step} value={s[k]} onChange={(e) => set(k, +e.target.value)} />
                 {help && <p className="help">{help}</p>}
               </div>

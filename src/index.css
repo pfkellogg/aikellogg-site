@@ -46,3 +46,19 @@ legend { font-weight: 800; color: var(--gold); font-size: 1.15rem; padding: 0 6p
 .card:hover { border-color: var(--gold); }
 .card h2 { color: var(--gold); }
 .support { color: var(--dim); }
+
+/* nothing moves while playing: lines that change keep one size */
+.fixed1 { display: block; min-height: 1.45em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; margin: 0; }
+.row .fixed1 { flex: 1 1 300px; min-width: 0; }
+.making { color: var(--gold); font-weight: 700; visibility: hidden; white-space: nowrap; }
+.making.show { visibility: visible; }
+.mycode { white-space: nowrap; overflow-x: auto; overflow-y: hidden; word-break: normal; height: 2.6em; line-height: 1.5em; }
+.slider label { min-height: 2.1em; }
+.slider label .val { margin-left: auto; }
+.small.undo.off { visibility: hidden; }
+.slider .val { min-width: 4.5ch; text-align: right; }
+.fixedw { min-width: 15.5em; }
+html { overflow-y: scroll; }          /* the scrollbar never appears or disappears */
+.keyboard .white, .keyboard .black { outline: none; }
+.playbar { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: center; margin: 12px 0 0; height: 52px; }
+.playbar .fixed1 { min-width: 0; }
