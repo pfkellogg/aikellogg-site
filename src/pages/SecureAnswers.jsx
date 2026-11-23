@@ -98,6 +98,7 @@ export default function SecureAnswers() {
           "100%" without answering. Same price, same Foundation. Tell us which one you want when you buy.
         </p>
         <p className="note">The free <a href="https://github.com/pfkellogg/moodle-viewer-for-h5p">Viewer for H5P for Moodle</a> shows the problem.</p>
+        <Video id="BQLdrVu7VeM" title="Moodle H5P: Students Can Fake 100%. Secure Answers for H5P Fixes It (Before & After)" caption="Moodle 4.5, before and after: a fake 100% accepted, then refused (2:10)." />
       </div>
 
       <BuyCard compact />
