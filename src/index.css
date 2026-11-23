@@ -154,10 +154,25 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .video figcaption { margin-top: 8px; color: #aaa; font-size: 15px; text-align: center; }
 
 /* Contact me */
-.top nav a.nav-contact { color: #052e1c; background: #4ade80; padding: 4px 12px; border-radius: 999px; font-weight: 800; }
-.top nav a.nav-contact:hover { background: #86efac; }
+.top nav .nav-contact { color: #052e1c; background: #4ade80; padding: 4px 12px; border-radius: 999px; font-weight: 800; }
+.top nav .nav-contact:hover { background: #86efac; }
 .site-footer { max-width: 920px; margin: 40px auto 0; padding: 26px 20px 40px; border-top: 1px solid var(--line); color: var(--dim);
   display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; font-size: 15px; }
 .site-footer a { color: var(--gold); }
-.site-footer a.footer-contact { color: #052e1c; background: #ffd60a; padding: 6px 14px; border-radius: 999px; font-weight: 800; text-decoration: none; }
+.site-footer .footer-contact { color: #052e1c; background: #ffd60a; padding: 6px 14px; border-radius: 999px; font-weight: 800; text-decoration: none; }
 .footer-sep { opacity: .5; }
+
+/* Contact me: the button looks like a link unless styled; the panel */
+.contact-btn { font: inherit; color: var(--gold); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+.top nav .contact-btn.nav-contact, .site-footer .contact-btn.footer-contact { text-decoration: none; }
+.contact-backdrop { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.55); display: flex; align-items: center; justify-content: center; padding: 20px; }
+.contact-panel { position: relative; width: min(440px, 100%); background: #121418; border: 2px solid #ffd60a; border-radius: 20px; padding: 28px 28px 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6); text-align: center; }
+.contact-kicker { margin: 0 0 6px; color: #ffd60a; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 13px; }
+.contact-address { margin: 0 0 20px; font-size: 22px; font-weight: 800; color: #fff; word-break: break-all; user-select: all; }
+.contact-actions { display: flex; flex-direction: column; gap: 10px; }
+.contact-go { display: block; background: #ffd60a; color: #000; font-weight: 900; padding: 13px; border-radius: 12px; text-decoration: none; }
+.contact-alt { display: block; font: inherit; background: transparent; color: #ffd60a; border: 2px solid #ffd60a; padding: 11px; border-radius: 12px; font-weight: 800;
+  text-decoration: none; cursor: pointer; }
+.contact-go:hover, .contact-alt:hover { filter: brightness(1.12); }
+.contact-close { position: absolute; top: 8px; right: 12px; background: none; border: 0; color: #aaa; font-size: 28px; cursor: pointer; line-height: 1; }
