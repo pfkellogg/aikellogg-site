@@ -1,0 +1,48 @@
+/* aikellogg.com: big and high-contrast first (the FM-1 Big Screen look: yellow on black) */
+:root { --bg: #0b0b10; --panel: #17171f; --line: #2c2c38; --text: #f5f5f5; --dim: #b8b8c6; --gold: #ffd21f; --on: #ffd21f;
+  font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-size: 20px; line-height: 1.45; color: var(--text); background: var(--bg); }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--gold); }
+main { max-width: 1200px; margin: 0 auto; padding: 0 24px 64px; }
+h1 { font-size: 2.2rem; margin: 0.6em 0 0.3em; }
+h2 { font-size: 1.3rem; margin: 0 0 0.5em; }
+.lead { font-size: 1.15rem; color: var(--dim); max-width: 60ch; }
+.top { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; background: #000; border-bottom: 2px solid var(--line); position: sticky; top: 0; z-index: 5; }
+.top .brand { font-weight: 800; font-size: 1.3rem; text-decoration: none; color: var(--gold); }
+.top nav a { margin-left: 22px; text-decoration: none; color: var(--text); font-weight: 600; }
+.top nav a.active { color: var(--gold); border-bottom: 3px solid var(--gold); }
+button, select, input { font: inherit; }
+button { background: var(--gold); color: #000; border: 0; border-radius: 10px; padding: 10px 18px; font-weight: 700; cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 4px solid #4da3ff; outline-offset: 2px; }
+button:disabled { opacity: 0.5; cursor: default; }
+button.small { padding: 2px 10px; font-size: 0.75rem; margin-left: 8px; background: var(--line); color: var(--text); }
+select, input[type=text], input:not([type]) { background: var(--panel); color: var(--text); border: 2px solid var(--line); border-radius: 10px; padding: 9px 12px; }
+section { background: var(--panel); border: 2px solid var(--line); border-radius: 16px; padding: 18px 22px; margin: 18px 0; }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 10px 0; }
+.row input { flex: 1 1 340px; }
+.status { color: var(--dim); }
+.contest { border-color: var(--gold); }
+.contest ol { margin: 0.3em 0 0.6em 1.2em; padding: 0; }
+.mycode { background: #000; color: var(--gold); padding: 10px 14px; border-radius: 10px; font-size: 1.05rem; word-break: break-all; flex: 1 1 340px; }
+/* the 35 keys, G2-F5 */
+.keyboard { position: relative; display: flex; height: 220px; user-select: none; touch-action: none; }
+.keyboard .white { flex: 1; height: 100%; background: #f4f4f4; color: #444; border: 2px solid #000; border-radius: 0 0 10px 10px; padding: 0 0 10px; display: flex; align-items: flex-end; justify-content: center; font-size: 0.75rem; }
+.keyboard .black { position: absolute; top: 0; width: 2.6%; height: 60%; background: #111; border: 2px solid #000; border-radius: 0 0 8px 8px; padding: 0; z-index: 2; }
+.keyboard .on { background: var(--on) !important; }
+/* sliders */
+.sliders { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; background: none; border: 0; padding: 0; }
+fieldset { background: var(--panel); border: 2px solid var(--line); border-radius: 16px; padding: 12px 18px 16px; margin: 0; }
+legend { font-weight: 800; color: var(--gold); font-size: 1.15rem; padding: 0 6px; }
+.slider { margin: 14px 0; }
+.slider label { display: flex; align-items: center; flex-wrap: wrap; font-weight: 600; }
+.slider .val { margin-left: auto; color: var(--gold); font-variant-numeric: tabular-nums; }
+.slider input[type=range] { width: 100%; height: 34px; accent-color: var(--gold); }
+.help { margin: 2px 0 0; color: var(--dim); font-size: 0.85rem; }
+.foot { color: var(--dim); font-size: 0.9rem; }
+/* home */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 24px 0; }
+.card { display: block; background: var(--panel); border: 2px solid var(--line); border-radius: 16px; padding: 20px; text-decoration: none; color: var(--text); }
+.card:hover { border-color: var(--gold); }
+.card h2 { color: var(--gold); }
+.support { color: var(--dim); }
