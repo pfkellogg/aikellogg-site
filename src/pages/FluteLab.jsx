@@ -104,7 +104,7 @@ export default function FluteLab() {
         <div className="keyboard" role="group" aria-label="Keys, G2 to F5">
           {whites.map((m) => (
             <button key={m} className={"white" + (sounding.has(m) ? " on" : "")} aria-label={noteName(m)}
-              onPointerDown={(e) => { e.currentTarget.setPointerCapture(e.pointerId); noteOn(m); }}
+              onPointerDown={(e) => { try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* (a pen or a test) */ } noteOn(m); }}
               onPointerUp={() => noteOff(m)} onPointerCancel={() => noteOff(m)}>
               {m % 12 === 0 ? noteName(m) : ""}
             </button>
@@ -114,7 +114,7 @@ export default function FluteLab() {
             return (
               <button key={m} className={"black" + (sounding.has(m) ? " on" : "")} aria-label={noteName(m)}
                 style={{ left: `calc(${(left + 1) / whites.length * 100}% - 1.3%)` }}
-                onPointerDown={(e) => { e.currentTarget.setPointerCapture(e.pointerId); noteOn(m); }}
+                onPointerDown={(e) => { try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* (a pen or a test) */ } noteOn(m); }}
                 onPointerUp={() => noteOff(m)} onPointerCancel={() => noteOff(m)} />
             );
           })}
