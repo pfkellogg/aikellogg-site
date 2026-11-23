@@ -23,6 +23,10 @@ export default function Home() {
           <h2>Viewer for H5P</h2>
           <p>A WordPress plugin: see every question and answer in the H5P content on a page, the right ones marked.</p>
         </Link>
+        <Link to="/mark-complete-gate" className="card">
+          <h2>Mark Complete Gate</h2>
+          <p>A WordPress plugin: LearnDash's Mark Complete stays locked until the learner has done the H5P.</p>
+        </Link>
         <a className="card" href="https://www.youtube.com/@AIKellogg">
           <h2>YouTube</h2>
           <p>Videos about all of it.</p>

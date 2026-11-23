@@ -92,3 +92,11 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .detail .fix { margin: 18px 0; padding: 18px 22px; border: 2px solid #ffd60a; border-radius: 14px; background: #1b1a12; }
 .detail .fix h3 { margin: 0 0 8px; font-size: 26px; }
 .detail .banner { width: 100%; height: auto; border-radius: 14px; margin: 0 0 22px; display: block; }
+/* the drawing of a gated lesson */
+.mcg-lesson { max-width: 560px; margin: 0 auto; background: #fff; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,.15); padding: 18px 20px; font-size: 15px; }
+.mcg-q { font-weight: 600; margin-bottom: 10px; }
+.mcg-a { background: #ececec; border-radius: 4px; padding: 7px 10px; margin: 5px 0; }
+.mcg-check { display: inline-block; background: #1a73d9; color: #fff; border-radius: 16px; padding: 5px 16px; margin: 8px 0 16px; font-weight: 600; }
+.mcg-msg { border-left: 4px solid #dba617; background: #f8f8f8; padding: 8px 12px; color: #1d2327; }
+.mcg-btn { display: inline-block; margin-top: 10px; background: #a7aaad; color: #fff; border-radius: 20px; padding: 8px 20px; font-weight: 700; }
+.mcg-mock { padding-bottom: 24px; }
