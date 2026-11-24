@@ -209,3 +209,9 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .bs .bs-big { width: 100%; max-width: 720px; aspect-ratio: 1; border-radius: 10px; background: #000; display: block; }
 .bs .bs-big.pixel { image-rendering: pixelated; }
 .bs .bs-nopreview img { max-width: 320px; width: 100%; border-radius: 12px; }
+
+.bs .bs-disclaimer { border: 4px solid var(--gold); background: #2a2200; border-radius: 16px; padding: 18px 22px; margin: 8px 0 24px; font-size: 1.15rem; line-height: 1.5; }
+.bs .bs-disclaimer p { margin: 0 0 10px; }
+.bs .bs-disclaimer p:last-child { margin-bottom: 0; }
+.bs .bs-disclaimer-title { font-size: 1.6rem; font-weight: 800; color: var(--gold); }
+.bs .bs-disclaimer a { color: var(--gold); }

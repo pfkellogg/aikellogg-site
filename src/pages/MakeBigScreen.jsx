@@ -206,6 +206,19 @@ export default function MakeBigScreen() {
 
   return (
     <div className="detail bs">
+      <div className="bs-disclaimer" role="note" aria-label="Disclaimer">
+        <p className="bs-disclaimer-title">⚠ Use at your own risk</p>
+        <p>
+          These are <b>unofficial builds</b>, made by us from each author's published source. Most have been tested on
+          only a few FM-1s, or none. They are <b>not made, checked or supported</b> by the firmware authors, by The
+          Firmware Hub, or by M-VAVE: please don't ask them for help with these builds.
+        </p>
+        <p>
+          <b>Back up your FM-1 with <a href={MFLASHER}>M-Flasher</a> before you install anything</b>, so you can always
+          put it back exactly as it was. They come <b>with no warranty</b>: if something goes wrong, restore your backup,
+          or install the author's original from <a href={HUB}>The Firmware Hub</a>.
+        </p>
+      </div>
       <p className="kicker">M-VAVE FM-1 · free · unofficial builds</p>
       <h1>Big Screen Firmwares</h1>
       <p className="lead">
