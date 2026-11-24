@@ -13,11 +13,11 @@ export default function Home() {
         </Link>
         <a className="card" href="https://github.com/pfkellogg/fm1-mirror">
           <h2>FM-1 Big Screen</h2>
-          <p>The FM-1's screen, big, on Mac, Windows and Linux, with the spyglass and the Mellotron.</p>
+          <p>The FM-1's screen, big, on Mac, Windows and Linux: Big Knobs, Key Lights, the spyglass and the Mellotron.</p>
         </a>
         <a className="card" href="https://github.com/pfkellogg/fm1-mirror-spyglass-android">
           <h2>FM-1 Big Screen for Android</h2>
-          <p>Tablets, phones and Fire TV: the big screen, the spyglass, the piano and the Mellotron.</p>
+          <p>Tablets, phones and Fire TV: the big screen, Big Knobs, Key Lights, the spyglass, the piano and the Mellotron.</p>
         </a>
         <Link to="/lms-plugins" className="card">
           <h2>LMS plugins</h2>
