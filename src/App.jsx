@@ -7,6 +7,7 @@ import ViewerForH5P from "./pages/ViewerForH5P.jsx";
 import MarkCompleteGate from "./pages/MarkCompleteGate.jsx";
 import CertificateVerifier from "./pages/CertificateVerifier.jsx";
 import SecureAnswers from "./pages/SecureAnswers.jsx";
+import LmsPlugins from "./pages/LmsPlugins.jsx";
 import Contact from "./components/Contact.jsx";
 
 export default function App() {
@@ -17,10 +18,7 @@ export default function App() {
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/flute-lab">Flute Lab</NavLink>
-          <NavLink to="/viewer-for-h5p">Viewer for H5P</NavLink>
-          <NavLink to="/mark-complete-gate">Mark Complete Gate</NavLink>
-          <NavLink to="/certificate-verifier">Certificate Verifier</NavLink>
-          <NavLink to="/secure-answers-for-h5p">Secure Answers</NavLink>
+          <NavLink to="/lms-plugins">LMS Plugins</NavLink>
           <Contact className="nav-contact" />
         </nav>
       </header>
@@ -28,6 +26,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/flute-lab" element={<FluteLab />} />
+          <Route path="/lms-plugins" element={<LmsPlugins />} />
           <Route path="/viewer-for-h5p" element={<ViewerForH5P />} />
           <Route path="/mark-complete-gate" element={<MarkCompleteGate />} />
           <Route path="/certificate-verifier" element={<CertificateVerifier />} />
