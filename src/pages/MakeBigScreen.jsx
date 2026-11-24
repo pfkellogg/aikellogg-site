@@ -170,15 +170,38 @@ function Maker({ fw }) {
 export default function MakeBigScreen() {
   const [data, setData] = useState(null);
   const [q, setQ] = useState("");
+  const [kind, setKind] = useState("all");
+  const [parent, setParent] = useState("all");
+  const [sort, setSort] = useState("downloads");
+  const [readyOnly, setReadyOnly] = useState(false);
   const [sel, setSel] = useState(null);
   useEffect(() => {
     fetch("bigscreen/builds.json", { cache: "no-cache" }).then((r) => r.json()).then(setData).catch(() => setData(false));
   }, []);
+  const ready = (f) => f.state === "built" || f.state === "squeeze";
+  // the types and parents there are, most common first, each with how many
+  const tally = (key) => {
+    const m = new Map();
+    for (const f of (data && data.firmwares) || []) for (const v of [].concat(f[key] || [])) m.set(v, (m.get(v) || 0) + 1);
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  };
+  const kinds = useMemo(() => tally("kinds"), [data]);
+  const parents = useMemo(() => tally("parent"), [data]);
   const list = useMemo(() => {
     if (!data) return [];
     const t = q.trim().toLowerCase();
-    return data.firmwares.filter((f) => !t || `${f.name} ${f.author} ${f.kind}`.toLowerCase().includes(t));
-  }, [data, q]);
+    const out = data.firmwares.filter((f) =>
+      (!t || `${f.name} ${f.author} ${(f.kinds || []).join(" ")} ${f.parent}`.toLowerCase().includes(t)) &&
+      (kind === "all" || (f.kinds || []).includes(kind)) &&
+      (parent === "all" || f.parent === parent) &&
+      (!readyOnly || ready(f)));
+    const by = {
+      downloads: (a, b) => (b.installs || 0) - (a.installs || 0),
+      name: (a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+      newest: (a, b) => String(b.date || "").localeCompare(String(a.date || "")),
+    }[sort];
+    return [...out].sort(by);
+  }, [data, q, kind, parent, sort, readyOnly]);
   const fw = data && sel ? data.firmwares.find((f) => f.id === sel) : null;
 
   return (
@@ -203,14 +226,45 @@ export default function MakeBigScreen() {
             {data.counts.unavailable} not available yet
           </p>
           <div className="row">
-            <input type="text" placeholder="Search by name, author or kind (synth, drums…)" value={q}
+            <input type="text" placeholder="Search by name, author, type or parent…" value={q}
               onChange={(e) => setQ(e.target.value)} aria-label="Search the firmwares" />
+          </div>
+          <div className="bs-kinds" role="group" aria-label="Type">
+            <button className={kind === "all" ? "on" : ""} aria-pressed={kind === "all"} onClick={() => setKind("all")}>All types</button>
+            {kinds.map(([k, n]) => (
+              <button key={k} className={kind === k ? "on" : ""} aria-pressed={kind === k} onClick={() => setKind(k)}>
+                {k[0].toUpperCase() + k.slice(1)} <span>{n}</span>
+              </button>
+            ))}
+          </div>
+          <div className="row bs-filters">
+            <label>Parent{" "}
+              <select value={parent} onChange={(e) => setParent(e.target.value)}>
+                <option value="all">All parents</option>
+                {parents.map(([p, n]) => <option key={p} value={p}>{p} ({n})</option>)}
+              </select>
+            </label>
+            <label>Sort{" "}
+              <select value={sort} onChange={(e) => setSort(e.target.value)}>
+                <option value="downloads">Most downloaded</option>
+                <option value="name">Name, A to Z</option>
+                <option value="newest">Newest</option>
+              </select>
+            </label>
+            <label className="bs-check">
+              <input type="checkbox" checked={readyOnly} onChange={(e) => setReadyOnly(e.target.checked)} />{" "}
+              Ready to download only
+            </label>
+            <span className="status">{list.length} shown</span>
           </div>
           <div className="bs-list" role="listbox" aria-label="Firmwares">
             {list.map((f) => (
               <button key={f.id} role="option" aria-selected={f.id === sel}
                 className={`bs-item ${f.state}${f.id === sel ? " sel" : ""}`} onClick={() => setSel(f.id)}>
                 <b>{f.name}</b> <span className="by">by {f.author}</span>
+                <span className="meta">
+                  {(f.installs || 0).toLocaleString()} downloads · {(f.kinds || []).join(", ")} · on {f.parent}
+                </span>
                 <span className="tag">{f.state === "built" ? "Big Screen ready" : f.state === "squeeze" ? "Squeeze it" : f.state === "already" ? (f.why.includes("my FM-1 Big Screen code") ? "Already Big Screen" : "Already big") : "Not yet"}</span>
               </button>
             ))}

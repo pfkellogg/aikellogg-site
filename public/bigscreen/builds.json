@@ -18,6 +18,11 @@
 "card": null,
 "installs": 14265,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-04T02:36:41Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sloop-2.8.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sloop-2.8.5-bigscreen.patch",
 "sha256": "115ecdeb1c7b9b9cd21a8891b37481a0e8ab5c7c07ae14773de66998227667f4",
@@ -45,6 +50,11 @@
 "card": null,
 "installs": 9773,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-24T11:49:29Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/jiant-V10.8.25-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/jiant-V10.8.25-bigscreen.patch",
 "sha256": "b75739d62af864686ab3d9208a311dfa7f195fec886868a009b2dc94d12000a6",
@@ -73,6 +83,11 @@
 "card": null,
 "installs": 7335,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-17T00:14:54Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/skiff-2.7-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/skiff-2.7-bigscreen.patch",
 "sha256": "3d359c0c750ae39374473467a3c25982358e3ad0933cde8cbfc3ac1b979592fa",
@@ -103,6 +118,12 @@
 "card": null,
 "installs": 5284,
 "chip": "new",
+"kinds": [
+"groove",
+"dev"
+],
+"parent": "Felucca",
+"date": "2026-11-22T13:29:51Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/felucca-1.8.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/felucca-1.8.3-bigscreen.patch",
 "sha256": "cf3495bcd2a8aff382f2f5fee9777c9893bb9694c1804107c101a7bf98f96575",
@@ -131,6 +152,11 @@
 "card": null,
 "installs": 3688,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-24T10:00:50Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/obervave-3.5.4-knobs-lights.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/obervave-3.5.4-knobs-lights.patch",
 "sha256": "7f7df4394ef3a626d9ccef48a870f1c54ac3312b4e91239785d750a3c18b0b37",
@@ -158,6 +184,11 @@
 "card": null,
 "installs": 3410,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-02T22:18:38Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/melodee-1.6.1-bigscreen-squeezed.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/melodee-1.6.1-bigscreen-squeezed.patch",
 "sha256": "bf6f34d7e9e8b0c05325ab29d916de610168a4d5abcb572e1762c474a2102dfd",
@@ -188,6 +219,11 @@
 "card": null,
 "installs": 2882,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "SLOOP",
+"date": "2026-11-04T02:34:23Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/clipper-1.3.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/clipper-1.3.1-bigscreen.patch",
 "sha256": "97f07d32571557908201c241487988607a51eb9fc4f5f225e11e5393188e96a5",
@@ -215,6 +251,11 @@
 "card": null,
 "installs": 2528,
 "chip": "new",
+"kinds": [
+"chords"
+],
+"parent": "Felucca",
+"date": "2026-11-10T14:26:18Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/coralflower-0.7.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/coralflower-0.7.1-bigscreen.patch",
 "sha256": "d6723d9cc76ecca781c83b4b13a8c23a6df2f2b7e4985f46d652568468b2a665",
@@ -242,6 +283,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/grimm-7a2d1bc1.w640.webp",
 "installs": 2355,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-03T19:19:44Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/grimm-2.0.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/grimm-2.0.2-bigscreen.patch",
 "sha256": "5a4f06e91c6ac870104b068a5d98a91f8a8705b578a561accdf07cecf5df5f3a",
@@ -269,6 +315,11 @@
 "card": null,
 "installs": 2119,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-24T11:29:25Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/ghoulbox-2.4-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/ghoulbox-2.4-bigscreen.patch",
 "sha256": "acbdf5b71a9e9c9b8630f5c402e14a41aea654891d444e518bd5f26c48dcadab",
@@ -297,6 +348,11 @@
 "card": null,
 "installs": 1306,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-24T07:40:49Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dub-1.5.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dub-1.5.0-bigscreen.patch",
 "sha256": "a40ee56c6cbc2c6e4d63607405f1541de9d49a50ef1790dac8b3dccc0096a8d4",
@@ -324,6 +380,11 @@
 "card": null,
 "installs": 1249,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-17T15:32:38Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/niagara-0.3.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/niagara-0.3.1-bigscreen.patch",
 "sha256": "ab1b467f0a06e00998e29f6f95ca1d82ed2b73a9e3f0be046885c45b7865694f",
@@ -351,6 +412,11 @@
 "card": null,
 "installs": 1220,
 "chip": "old",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-10-23T01:06:57Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fart-1.1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fart-1.1.0-bigscreen.patch",
 "sha256": "621d5282c26f92bb7b9e6b99ba3f600ad2828f1428b15561fb14d104797596c8",
@@ -378,6 +444,11 @@
 "card": null,
 "installs": 1116,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-15T15:05:56Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/spampy-1.1-r058-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/spampy-1.1-r058-bigscreen.patch",
 "sha256": "206311721efe2381b637b0dbb08e2759fb02f394e879ac9bd866fcaa884ea376",
@@ -405,6 +476,11 @@
 "card": null,
 "installs": 1071,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "AMB-1",
+"date": "2026-11-17T20:28:09Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hyp1-1.5.70-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hyp1-1.5.70-bigscreen.patch",
 "sha256": "774e4e8a8c2379a87dc2022ac6683b8001d8b52c571af2d7259f48a7dcefc870",
@@ -432,6 +508,11 @@
 "card": null,
 "installs": 1054,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-15T01:27:12Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/nachtfahrt-1.0.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/nachtfahrt-1.0.2-bigscreen.patch",
 "sha256": "5da4a2ee4e0bde5e49c11b4f7abbb58a109e052e5dea5c771db1e25c4915ade3",
@@ -459,6 +540,11 @@
 "card": null,
 "installs": 926,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-17T19:54:05Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/rainbow-1.1.5-rb-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/rainbow-1.1.5-rb-bigscreen.patch",
 "sha256": "763699f31f8cd19c894dfe2b63d87844bc071f334553328c29b375c6885f033a",
@@ -487,6 +573,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/perf1-6f971f93.w640.webp",
 "installs": 701,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-07T21:10:58Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/perf1-0.17.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/perf1-0.17.0-bigscreen.patch",
 "sha256": "0e2139ef4d925c94509afd1feb089c5cddfa9096b495470d2e0ae86aef13cc91",
@@ -514,6 +605,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/karma-e3d6ab57.w640.webp",
 "installs": 639,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-22T15:19:20Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/karma-3.1.6-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/karma-3.1.6-bigscreen.patch",
 "sha256": "dce866cf95c3250e2815b920dfca48aeb3f6ba730337d93ab3dac5c7feb808f6",
@@ -541,6 +637,11 @@
 "card": null,
 "installs": 598,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-03T10:20:59Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sloopdx-4.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sloopdx-4.0.1-bigscreen.patch",
 "sha256": "2e793c32b0aeeb21de8fcfed0fb4ee13d40979b6cd9e047bea99caf1533d6999",
@@ -568,6 +669,11 @@
 "card": null,
 "installs": 567,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-13T18:44:32Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/s1vave-2.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/s1vave-2.0.1-bigscreen.patch",
 "sha256": "20c7650d3c4f70b8c2c824ccdbe750de94f5ad0f5e379e6c40cd88705d00f777",
@@ -595,6 +701,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/choppah-424094fc.w640.webp",
 "installs": 561,
 "chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T14:41:45Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/choppah-1.6-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/choppah-1.6-bigscreen.patch",
 "sha256": "2a6a05b11329a5d78e57256d62b70a976919a2027b8e30eb85bb76e00fa28e54",
@@ -622,6 +733,11 @@
 "card": null,
 "installs": 503,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-15T10:37:13Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1dock-0.9.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1dock-0.9.0-bigscreen.patch",
 "sha256": "77a095b1ebde76bd080b49a24202a957f8bb2c7b17b8409dead8f835f57f5135",
@@ -649,6 +765,11 @@
 "card": null,
 "installs": 491,
 "chip": "old",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-10-24T08:58:41Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/zp12-2.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/zp12-2.5-bigscreen.patch",
 "sha256": "7bb60a83c54f6a8f1cc28ad7579d42a7a760f1f664437e6eab9781974d69c8c8",
@@ -676,6 +797,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/dark1-ec1b22dd.w640.webp",
 "installs": 486,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "PERF-1",
+"date": "2026-11-14T03:30:14Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dark1-1.0.7-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dark1-1.0.7-bigscreen.patch",
 "sha256": "90f7f1c3c2f3b705dd5fb6c0bd708098c50d394eb221c33e862d2e550f0d1740",
@@ -703,6 +829,11 @@
 "card": null,
 "installs": 479,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-10-22T14:46:11Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/cs1-2026.10.22-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/cs1-2026.10.22-bigscreen.patch",
 "sha256": "5889e473543271428f7561238bf60a267c62eb38743a99fe1ac5cb8e89db0421",
@@ -731,6 +862,11 @@
 "card": null,
 "installs": 459,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-09T18:42:00Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fimba-0.7.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fimba-0.7.0-bigscreen.patch",
 "sha256": "6bfb2a6088233856d66e19924fb797649da060d86292e6463c8719417542f366",
@@ -758,6 +894,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/kwasub-7fdc732f.w640.webp",
 "installs": 451,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-18T03:40:02Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/kwasub-1.2.1b-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/kwasub-1.2.1b-bigscreen.patch",
 "sha256": "7091415d470133a5066cf8113bf6ffa3219070057da4a6d1e06af24d4fdac282",
@@ -785,6 +926,11 @@
 "card": null,
 "installs": 446,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-10T10:38:55Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmel-1.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmel-1.3-bigscreen.patch",
 "sha256": "96c4fce83eec6e97604099e766bbaee497e51906c821d928871624e9771d814f",
@@ -812,6 +958,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/guru600-aa3821f9.w640.webp",
 "installs": 403,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-19T14:42:33Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/guru600-1.3.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/guru600-1.3.1-bigscreen.patch",
 "sha256": "79c13d549fddd513e4b833bbf07ed3479e4977504e4451e469187b9e5e853fed",
@@ -840,6 +991,11 @@
 "card": null,
 "installs": 396,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-10-26T11:17:04Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/golana-1.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/golana-1.3-bigscreen.patch",
 "sha256": "622c747aae305a7935a012e41edca4c0b6c79831c648f1d68d89b72baf259247",
@@ -868,6 +1024,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/arctic-195934ec.w640.webp",
 "installs": 387,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-24T09:41:58Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/arctic-2.1.6-knobs-lights.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/arctic-2.1.6-knobs-lights.patch",
 "sha256": "e9867d2f0331c0b89190a70b371bef9f5679116d6f1e4abc9ef6e7fc77fa3ee7",
@@ -895,6 +1056,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/h1-7cfb63d9.w640.webp",
 "installs": 381,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-20T19:39:54Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/h1-0.3.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/h1-0.3.0-bigscreen.patch",
 "sha256": "3848bdfdabe5e097922937d47de16f69f76d393e81a5a1ed8d7e908322627a5a",
@@ -922,6 +1088,11 @@
 "card": null,
 "installs": 369,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "SLOOP",
+"date": "2026-11-04T11:39:31Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/orbit-1.0.1B-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/orbit-1.0.1B-bigscreen.patch",
 "sha256": "25a4b1262c57487452509fd63918af45eff094d4dec60b718812802f15891966",
@@ -949,6 +1120,11 @@
 "card": null,
 "installs": 363,
 "chip": "new",
+"kinds": [
+"chords"
+],
+"parent": "Felucca",
+"date": "2026-11-18T11:14:02Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fumi-1.1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fumi-1.1.1-bigscreen.patch",
 "sha256": "c7ad66405bbe8e61153469f60246d71ba0597ac0d1d7f991596af62b317aacf2",
@@ -976,6 +1152,11 @@
 "card": null,
 "installs": 356,
 "chip": "old",
+"kinds": [
+"chords"
+],
+"parent": "Felucca",
+"date": "2026-10-09T20:14:27Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/chord-0.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/chord-0.3-bigscreen.patch",
 "sha256": "bfc70192db73ca01e2532b01b7a7760e02b76de6647662bdad07cd18e2d49b81",
@@ -1003,6 +1184,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/penumbra-69265ee6.w640.webp",
 "installs": 346,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-23T21:49:42Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/penumbra-1.12-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/penumbra-1.12-bigscreen.patch",
 "sha256": "20ec35ab1d434ab2c7f42da1834f7dec256ead18b909e6099891a0a1f1c23d4a",
@@ -1030,6 +1216,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/chipbox-06e9e10c.w640.webp",
 "installs": 340,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-14T02:25:59Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/chipbox-1.7.0-signatureshowcase-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/chipbox-1.7.0-signatureshowcase-bigscreen.patch",
 "sha256": "dd8e5c94e915553fde0de27e319a692bf76a6181f5b4ee446cdd9d641db8c7fb",
@@ -1057,6 +1248,11 @@
 "card": null,
 "installs": 326,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-12T11:36:41Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/frodhes-0.9.11-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/frodhes-0.9.11-bigscreen.patch",
 "sha256": "c9dd381ed83ed418fcaa7a767b7fdd4872a682e4114539bee7f2512f42f7f255",
@@ -1084,6 +1280,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/aisling-bb640f40.w640.webp",
 "installs": 303,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "NACHTFAHRT",
+"date": "2026-11-22T22:57:38Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/aisling-1.6.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/aisling-1.6.1-bigscreen.patch",
 "sha256": "bf89a20404bd07291274c0ffbcce4b4e37265f472aa8b5ba366e605c0950de08",
@@ -1111,6 +1312,11 @@
 "card": null,
 "installs": 303,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-26T10:13:19Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/minitone-1.0.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/minitone-1.0.5-bigscreen.patch",
 "sha256": "28a5ffdc6e686787615bb6e57830311b474fe00c6b75db35dc66b25a352651d5",
@@ -1139,6 +1345,11 @@
 "card": null,
 "installs": 288,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-16T06:04:51Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/maku-1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/maku-1.0-bigscreen.patch",
 "sha256": "023ef6e41dbdb6a3bf3861baf4351c84b4ed2440db507e929305406dd3886722",
@@ -1166,6 +1377,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/blop-f13ef1ff.w640.webp",
 "installs": 277,
 "chip": "old",
+"kinds": [
+"chords"
+],
+"parent": "fm1-base",
+"date": "2026-11-03T21:34:07Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/blop-1.1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/blop-1.1.0-bigscreen.patch",
 "sha256": "de9d1d229c15e6cb44d55a07d695f4580d7c3b504b22d7ab3753bbcabb2333d9",
@@ -1193,6 +1409,11 @@
 "card": null,
 "installs": 266,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-10-15T05:15:44Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/noizdemons-666-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/noizdemons-666-bigscreen.patch",
 "sha256": "fd7ccabae4faedb639081a73568f9e52912f2d4ff746604fecf220399de50569",
@@ -1221,6 +1442,11 @@
 "card": null,
 "installs": 249,
 "chip": "new",
+"kinds": [
+"tracker"
+],
+"parent": "Dinghy",
+"date": "2026-11-09T02:08:10Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/kawa-0.9-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/kawa-0.9-bigscreen.patch",
 "sha256": "8731bec44545dcc718cc1f40579cc6721b1ac2919e71d1a39df2389ac5f65368",
@@ -1248,6 +1474,11 @@
 "card": null,
 "installs": 237,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "OberVave",
+"date": "2026-11-12T07:07:13Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/shineon-3.5-knobs-lights.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/shineon-3.5-knobs-lights.patch",
 "sha256": "f4bd803c74936f692b270b6db461d302da6f9355a09d05bbd8a53b06be261644",
@@ -1275,6 +1506,11 @@
 "card": null,
 "installs": 224,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-09T15:59:34Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/waveloop-1.0.5.2-midi23-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/waveloop-1.0.5.2-midi23-bigscreen.patch",
 "sha256": "41045e0ee220f4f3234c1fdcde538ee664ca38c6d4f7d8ffae2e13ddffed6716",
@@ -1303,6 +1539,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/hadal1-fd397cb5.w640.webp",
 "installs": 222,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-15T18:55:27Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hadal1-1.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hadal1-1.0.1-bigscreen.patch",
 "sha256": "1b2a7c6b9233e5042d552b9168f66a28a619db119c40caaa35840a08b175ffcb",
@@ -1330,6 +1571,11 @@
 "card": null,
 "installs": 216,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-09T12:13:03Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sloopbanks-2.5-b28-test-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sloopbanks-2.5-b28-test-bigscreen.patch",
 "sha256": "bd5d19b62792afd8ec9cd51ef5fc01290dd8b63053c44f1dbc6e481bae901114",
@@ -1357,6 +1603,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/smileyface-7ffd9366.w640.webp",
 "installs": 205,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Chipbox",
+"date": "2026-11-14T02:31:05Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/smileyface-1.3.0-tutorialtime-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/smileyface-1.3.0-tutorialtime-bigscreen.patch",
 "sha256": "ea2429271ce7307c1c4cc208c2041067912fd32d368e7c3fe83bb7cc96e55482",
@@ -1384,6 +1635,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/sloopdub-c980df2a.w640.webp",
 "installs": 204,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-20T20:47:15Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sloopdub-1.8-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sloopdub-1.8-bigscreen.patch",
 "sha256": "acdce3fe225fb659483ab9e67915de158df66b677b3dc2708e43f04eebffaf71",
@@ -1411,6 +1667,11 @@
 "card": null,
 "installs": 201,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-08T10:33:54Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/purplemonkey-0.12-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/purplemonkey-0.12-bigscreen.patch",
 "sha256": "369fb6463a7c3c707362a135487ad2e7ab8666b967152ee1069fea7750722c52",
@@ -1438,6 +1699,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/tuna-eefb8c1c.w640.webp",
 "installs": 184,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-13T17:02:34Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/tuna-1.2-99d50fb-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/tuna-1.2-99d50fb-bigscreen.patch",
 "sha256": "d671decc70195bac40b29cdaa6ad2ec2f0d0715a64eee341ba1f7f574d38963f",
@@ -1466,6 +1732,11 @@
 "card": null,
 "installs": 178,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-02T17:51:05Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/drift-0.9.6-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/drift-0.9.6-bigscreen.patch",
 "sha256": "2ac3eb7fb7f309f3819ab973c432f8cdd2422334021e3a9c8ef8837f92efea98",
@@ -1494,6 +1765,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/artihive-df1ba774.w640.webp",
 "installs": 170,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-22T09:22:28Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/artihive-2.0.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/artihive-2.0.5-bigscreen.patch",
 "sha256": "b571e426cc323fb4a58609f55ab28f2565699295a64eaa57d0682de0faffcd14",
@@ -1521,6 +1797,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/arcturus-7b338464.w640.webp",
 "installs": 164,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-01T23:14:34Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/arcturus-1.7-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/arcturus-1.7-bigscreen.patch",
 "sha256": "ba5f486bd869a7972d3edf2ee125a1fe6a5964bebf2bd4a9e168caf7df4d5b62",
@@ -1548,6 +1829,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/satie1-9c0c4556.w640.webp",
 "installs": 164,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-10T21:53:13Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/satie1-0.1.3-beta-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/satie1-0.1.3-beta-bigscreen.patch",
 "sha256": "915cc94232264d1194428b961771731ff4e5c88c67d75cc30ca23ac7668aca5d",
@@ -1575,6 +1861,11 @@
 "card": null,
 "installs": 151,
 "chip": "old",
+"kinds": [
+"other"
+],
+"parent": "SLOOP",
+"date": "2026-11-02T19:23:53Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1quest-43-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1quest-43-bigscreen.patch",
 "sha256": "6918656de5eb6c528f21ba830c2c379e21d89a66d1b81f7e9bcdc7d17402827c",
@@ -1602,6 +1893,11 @@
 "card": null,
 "installs": 143,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-26T21:14:32Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/gammawave-1.2.1-GW-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/gammawave-1.2.1-GW-bigscreen.patch",
 "sha256": "8717e0d114debbae0dbb87f77b564edbadf450577725623a123211e2f2ac3137",
@@ -1630,6 +1926,11 @@
 "card": null,
 "installs": 138,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-10-29T19:58:58Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/j6-1.4.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/j6-1.4.0-bigscreen.patch",
 "sha256": "74b80b9c4fc4237460df453966acca994bfa693c15dd83b1379ba36ed8975759",
@@ -1657,6 +1958,11 @@
 "card": null,
 "installs": 134,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-12T22:03:22Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/scintilla-0.3.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/scintilla-0.3.2-bigscreen.patch",
 "sha256": "60e4fcd75db1168bbd9f80b9e11a80e763312d22eda4944395ed536fe5672161",
@@ -1684,6 +1990,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/delrio-fd6a9aff.w640.webp",
 "installs": 133,
 "chip": "old",
+"kinds": [
+"drums"
+],
+"parent": "fm1-base",
+"date": "2026-11-20T00:29:42Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/delrio-1.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/delrio-1.0.1-bigscreen.patch",
 "sha256": "d18065cecc2982fe0718146bf7e794193211254011f34f3d05e2a0055132d0da",
@@ -1711,6 +2022,11 @@
 "card": null,
 "installs": 130,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-10-06T05:41:45Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/floyd-2.4-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/floyd-2.4-bigscreen.patch",
 "sha256": "092cd820c5c109a386cf92db7aa04618d7d96271b938a352661460476d14f8d2",
@@ -1738,6 +2054,11 @@
 "card": null,
 "installs": 129,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-16T13:17:09Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/jangada-1.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/jangada-1.0.1-bigscreen.patch",
 "sha256": "291c5f372590b058f0391beb0173c368995773da355449f8dfc5f154409312df",
@@ -1765,6 +2086,11 @@
 "card": null,
 "installs": 127,
 "chip": "old",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-10-16T03:14:29Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/min1-0.2.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/min1-0.2.1-bigscreen.patch",
 "sha256": "defb3cd7c8ffeeae78ac0223e06a9024804ac8bf7244af91f00e8b2b9c9b475d",
@@ -1792,6 +2118,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/atlatl-9aa2a5a0.w640.webp",
 "installs": 106,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Skiff",
+"date": "2026-11-21T16:45:29Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/atlatl-1.2.5-knobs-lights.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/atlatl-1.2.5-knobs-lights.patch",
 "sha256": "1a213a4cd69c81ed8fe3e14be645bee68352a842d85e90f53ac9dd1cf0a1d983",
@@ -1819,6 +2150,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/drumlab-99daafed.w640.webp",
 "installs": 104,
 "chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "Chipbox",
+"date": "2026-11-14T02:31:37Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/drumlab-1.0.0-graduationday-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/drumlab-1.0.0-graduationday-bigscreen.patch",
 "sha256": "7000cb53f12b4e4a8fc53fc932fd4d3e437199028ed538a125a49fec4950bbae",
@@ -1846,6 +2182,11 @@
 "card": null,
 "installs": 99,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-08T11:33:57Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1gm-1.2.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1gm-1.2.0-bigscreen.patch",
 "sha256": "418a6ab49e259218b74d0aaa41851674eed72a336f5d8b67bb8e043a74b33b30",
@@ -1873,6 +2214,11 @@
 "card": null,
 "installs": 92,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-13T21:43:02Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/vector37-0.3.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/vector37-0.3.2-bigscreen.patch",
 "sha256": "25412b45f2be4f87c5c9d864a480d5b11f24cd05ee6992ea013ce1ede5723071",
@@ -1900,6 +2246,11 @@
 "card": null,
 "installs": 91,
 "chip": "old",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-10-18T16:10:18Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/cutador-1.2.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/cutador-1.2.1-bigscreen.patch",
 "sha256": "dec724c765d0efef0aac78c0763879e1cebe09d0d701743d5594d6e6a3112f28",
@@ -1927,6 +2278,11 @@
 "card": null,
 "installs": 91,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-05T06:28:31Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/salt-0.9-salt14-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/salt-0.9-salt14-bigscreen.patch",
 "sha256": "d69fe9ca4e7feb2355859b5f85a4572fabdde933dd017e6e8bb3fde46b448f4d",
@@ -1954,6 +2310,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/felucca8-e91a86f9.w640.webp",
 "installs": 90,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-16T02:20:24Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/felucca8-1.8.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/felucca8-1.8.5-bigscreen.patch",
 "sha256": "ade719a03232bbfb51cee4a46f322cfbbbc6a4a23e8be551340068e2ee09f6fe",
@@ -1981,6 +2342,11 @@
 "card": null,
 "installs": 88,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-10-22T12:28:20Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/modelar-0.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/modelar-0.3-bigscreen.patch",
 "sha256": "b785af5c025c62f319cfbb2291556bc7a6b3486abcd556487a05ffb8e480b904",
@@ -2008,6 +2374,11 @@
 "card": null,
 "installs": 88,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-13T14:00:32Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/opn1-2.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/opn1-2.0.1-bigscreen.patch",
 "sha256": "e43d26df82f09485ab503e96f1db7df345fef75165786ef6ab7bac7c9cc7d263",
@@ -2035,6 +2406,11 @@
 "card": null,
 "installs": 87,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-10-21T22:10:27Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hera-1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hera-1.1-bigscreen.patch",
 "sha256": "5fd7a622a6bc1c7fac606b87930dae7166484ad63da8bfad3a8877151534388e",
@@ -2062,6 +2438,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/neon-35951a1b.w640.webp",
 "installs": 86,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-20T22:28:59Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/neon-0.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/neon-0.2-bigscreen.patch",
 "sha256": "7035f0dbbebf5054645b4a12889b2b97e6570e77839fc9dff5ba3238cd0ce5cb",
@@ -2089,6 +2470,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/andromeda-6965c5f4.w640.webp",
 "installs": 85,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-17T23:18:52Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/andromeda-1.8.2-an2-r5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/andromeda-1.8.2-an2-r5-bigscreen.patch",
 "sha256": "34aff0a50ccca26fd35c1f28d0ac895c63d88de0ccc6a7a221ded0829937a3a4",
@@ -2116,6 +2502,11 @@
 "card": null,
 "installs": 82,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-13T14:03:01Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sid1-1.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sid1-1.0.1-bigscreen.patch",
 "sha256": "ff92f1ced60d3c4e5a9ed09c42c2e0396a59c8b8cf26304c40e08ef3f0ba5b17",
@@ -2143,6 +2534,11 @@
 "card": null,
 "installs": 75,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-23T18:47:08Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/bytemania-1.3.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/bytemania-1.3.3-bigscreen.patch",
 "sha256": "48f61558133e418a489db052ffa59f544dfe871f321e8766b826f46e1f080b3b",
@@ -2170,6 +2566,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/zenith1-006818ba.w640.webp",
 "installs": 74,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-18T14:41:04Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/zenith1-1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/zenith1-1.0-bigscreen.patch",
 "sha256": "b9fb89cb8252c15e0ac391f3f72e9b965ad5ff1299a20c43c529ea867af29832",
@@ -2197,6 +2598,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/b3organ-71b884ee.w640.webp",
 "installs": 73,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-22T10:44:13Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/b3organ-0.6.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/b3organ-0.6.1-bigscreen.patch",
 "sha256": "8c93aad23ea25b7df6f211320171efb82ff799839a4b0de37aa206805f2936f1",
@@ -2224,6 +2630,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/ombak-7ad44467.w640.webp",
 "installs": 64,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Penumbra",
+"date": "2026-11-23T17:18:12Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/ombak-1.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/ombak-1.3-bigscreen.patch",
 "sha256": "dbf58860d081fbc55c509f7df78473979119662285e912c2fab5babe21299094",
@@ -2251,6 +2662,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/strangersynth-4a20e061.w640.webp",
 "installs": 62,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-22T17:16:57Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/strangersynth-0.7.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/strangersynth-0.7.0-bigscreen.patch",
 "sha256": "ac0764f1bba17c4662feb4caa53b91d70f6bac096e05c0f9d84eda818ec2c433",
@@ -2278,6 +2694,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/glitch-e474697a.w640.webp",
 "installs": 60,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-15T19:55:35Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/glitch-2.0.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/glitch-2.0.2-bigscreen.patch",
 "sha256": "76db260b44ed174caeda47f7506566b08303fab6a7aef57f8505c4bfac09ba31",
@@ -2305,6 +2726,11 @@
 "card": null,
 "installs": 60,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-18T14:35:38Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/loomfm1-0.1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/loomfm1-0.1.0-bigscreen.patch",
 "sha256": "e82f9a5cb2cca84a54dcb6250134688bb0f0f9de8c4bbdeb82897180fc6e9750",
@@ -2333,6 +2759,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/dabke-4ba45494.w640.webp",
 "installs": 58,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-24T10:52:18Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dabke-0.20-beta-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dabke-0.20-beta-bigscreen.patch",
 "sha256": "dc65e3b436f2ab9849f8c554ae5256fb1297a8b43d05bf6f7db203cd5ec7d51d",
@@ -2360,6 +2791,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/trumpagotchi-6a16409b.w640.webp",
 "installs": 58,
 "chip": "old",
+"kinds": [
+"other"
+],
+"parent": "FoMni",
+"date": "2026-11-11T02:49:32Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/trumpagotchi-1.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/trumpagotchi-1.0.1-bigscreen.patch",
 "sha256": "0cc596508021043ecceb2913802e3391b6ff2986e1e7f3be7d53868150c54a97",
@@ -2387,6 +2823,11 @@
 "card": null,
 "installs": 57,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Dinghy",
+"date": "2026-11-07T20:20:09Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/vibe-link-0.4-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/vibe-link-0.4-bigscreen.patch",
 "sha256": "63f3d971d4943463fcb327b0fb857b399e756dad8a4f27a8f324e78e214c7e83",
@@ -2414,6 +2855,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/daurade-b760ab97.w640.webp",
 "installs": 56,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-08T18:39:00Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/daurade-1.0.1-01d6bd0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/daurade-1.0.1-01d6bd0-bigscreen.patch",
 "sha256": "07a7c9ad0c7fff6194e9cf9849d062d8f737c2f2a445a4035afa1630f2dda102",
@@ -2441,6 +2887,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/aetherfm1-7a2d1bc1.w640.webp",
 "installs": 54,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-14T16:57:30Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/aetherfm1-2.0.4-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/aetherfm1-2.0.4-bigscreen.patch",
 "sha256": "4e4107ae53f7cbe0ff43e6bdf2f902b7dea489503b03ea7f046e2596f1310489",
@@ -2468,6 +2919,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/mvsynth2-10b602b9.w640.webp",
 "installs": 54,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-19T23:40:30Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mvsynth2-1.5.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mvsynth2-1.5.2-bigscreen.patch",
 "sha256": "032bea2938cbf03e142d218357183ba34560804624ff9d28c26e2d79eaaea6b8",
@@ -2495,6 +2951,11 @@
 "card": null,
 "installs": 54,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-10-26T00:56:45Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/tastywaves-1.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/tastywaves-1.0.1-bigscreen.patch",
 "sha256": "a3128f9380aa9bf14e77f903bde83571a940f6d421ddf60d67d7dcb385e6a16f",
@@ -2522,6 +2983,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/cultbox-0ed2ec01.w640.webp",
 "installs": 53,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-05T22:16:11Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/cultbox-1.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/cultbox-1.2-bigscreen.patch",
 "sha256": "19609e193d529cb3ff746066f447ec98609cf960f417bf25465212da3c0be4ad",
@@ -2549,6 +3015,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/kriechstrom-235ab69f.w640.webp",
 "installs": 53,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-20T01:48:39Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/kriechstrom-0.5.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/kriechstrom-0.5.2-bigscreen.patch",
 "sha256": "ba0f3eec58445b454ea47a65d919f8ea88f4874954c18cbf2fd24cf1dd5fe1df",
@@ -2576,6 +3047,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/darkfunkdurcalsynt-54807d2a.w640.webp",
 "installs": 49,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-17T23:03:52Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/darkfunkdurcalsynt-1.8.2-dfd10-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/darkfunkdurcalsynt-1.8.2-dfd10-bigscreen.patch",
 "sha256": "ca5878638ce2bcbbda58638680a6630cb94c5d396676e4c4a8a4bc27d63ce72f",
@@ -2603,6 +3079,11 @@
 "card": null,
 "installs": 48,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-29T14:13:28Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/jam-1.2.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/jam-1.2.0-bigscreen.patch",
 "sha256": "01ed0dadb8ef67e78a6d693a53b54d4a9bcf0752f45be18c1a8faaa093661006",
@@ -2630,6 +3111,11 @@
 "card": null,
 "installs": 48,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-22T17:19:15Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/pulhra-1.5.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/pulhra-1.5.1-bigscreen.patch",
 "sha256": "c133cac7824d9f7b4f86c6cc32b719bb640c75bcd60b468d2dc58e35a9b5491d",
@@ -2658,6 +3144,11 @@
 "card": null,
 "installs": 47,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-21T22:01:23Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/estampie-0.4.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/estampie-0.4.0-bigscreen.patch",
 "sha256": "b863bc2477cbeafba0d051d0b5e5d2e898830c34e5cf82a337794c501700d459",
@@ -2685,6 +3176,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/bluesbox-c78b4665.w640.webp",
 "installs": 45,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-21T22:36:38Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/bluesbox-2.2.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/bluesbox-2.2.3-bigscreen.patch",
 "sha256": "43dd50c55b6c65cbe6658fd80024eac2acfabbd186bd77f2f5e1757de84ac69a",
@@ -2712,6 +3208,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/hawkchua-568b8bf9.w640.webp",
 "installs": 44,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-15T17:08:01Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hawkchua-2.1.7-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hawkchua-2.1.7-bigscreen.patch",
 "sha256": "a8eec2f749ef953bb95284325f1e342144c4eff8cfd0093cc54d7133a3f60fc3",
@@ -2739,6 +3240,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/alter-837868db.w640.webp",
 "installs": 43,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-21T22:48:39Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/alter-1.01-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/alter-1.01-bigscreen.patch",
 "sha256": "e47980a0739db1ee4431872cc130c872c49f2df86669be5f15f089943a0227b4",
@@ -2767,6 +3273,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/dungeontracker-120549dc.png",
 "installs": 42,
 "chip": "old",
+"kinds": [
+"tracker"
+],
+"parent": "Felucca",
+"date": "2026-11-04T03:53:55Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dungeontracker-1.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dungeontracker-1.5-bigscreen.patch",
 "sha256": "4c17f53fad21bb80f95f6551950814ab77ea537d05d0cdba905e97b03c5191a2",
@@ -2795,6 +3306,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/cord-b35d655c.w640.webp",
 "installs": 36,
 "chip": "new",
+"kinds": [
+"chords"
+],
+"parent": "Felucca",
+"date": "2026-11-09T22:19:38Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/cord-1.0.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/cord-1.0.3-bigscreen.patch",
 "sha256": "67bbb379bc8ebc79500132d710d52cb61f60f734050624c7d57b1087d518a270",
@@ -2822,6 +3338,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/coqui-7de5412f.w640.webp",
 "installs": 35,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "GR!MM",
+"date": "2026-11-07T18:44:02Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/coqui-1.1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/coqui-1.1.1-bigscreen.patch",
 "sha256": "962110710fd2c5c1302ea944f68f8ab2ed3aabc50e33ec7710477108c9d8ad69",
@@ -2849,6 +3370,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/ambpond-4de912cb.w640.webp",
 "installs": 33,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-17T11:34:17Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/ambpond-0.1.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/ambpond-0.1.2-bigscreen.patch",
 "sha256": "61f462c2dbdb0fa92ccc7250b7ebe62af7d911167671a76980c8d4fa17d9ea9a",
@@ -2876,6 +3402,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/makohai-9099a26d.w640.webp",
 "installs": 33,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-04T22:22:45Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/makohai-1.4-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/makohai-1.4-bigscreen.patch",
 "sha256": "718e39119b64028e7d50353f9b10c12c5a7816979102c18b9d2b8032f9936ed9",
@@ -2903,6 +3434,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/fm1800-e54db7fc.w640.webp",
 "installs": 32,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-20T21:08:23Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1800-0.12.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1800-0.12.5-bigscreen.patch",
 "sha256": "7a4c5dce8bf99b5a70da516e791878241503b537ad8e87c178ddb9e896a46cd9",
@@ -2931,6 +3467,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/castletunia-a04447c6.w640.webp",
 "installs": 31,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-21T16:56:10Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/castletunia-1.4.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/castletunia-1.4.1-bigscreen.patch",
 "sha256": "eb21ec0df54dfab8a2fa029157138f78970cac7af789f3d556327c1064c43cc9",
@@ -2958,6 +3499,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/paperlagoon-5498e6f2.w640.webp",
 "installs": 31,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-14T07:25:18Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/paperlagoon-1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/paperlagoon-1.1-bigscreen.patch",
 "sha256": "ae1c23d6deeda8f2fc54f85118bcebb31c50cb3f71898365513c45c3e5bf53fb",
@@ -2985,6 +3531,11 @@
 "card": null,
 "installs": 30,
 "chip": "new",
+"kinds": [
+"dev"
+],
+"parent": "Felucca",
+"date": "2026-11-07T13:02:09Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dinghy-0.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dinghy-0.5-bigscreen.patch",
 "sha256": "e2bf33dcc7b1002d8fcbdb9d8a7ae88c56fe4a46afafca2500ff0a023f46c8ae",
@@ -3012,6 +3563,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/offworld-6cb12590.w640.webp",
 "installs": 30,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-22T12:50:07Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/offworld-0.4.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/offworld-0.4.2-bigscreen.patch",
 "sha256": "25118e6d2267e21f8a6a1bc129569455271c59245aac14f308a9342ce63bb147",
@@ -3039,6 +3595,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/quartet-8130001a.w640.webp",
 "installs": 30,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-23T06:21:20Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/quartet-3.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/quartet-3.1-bigscreen.patch",
 "sha256": "09431a5b7c925e5be60e5bcda2b4f0e5da346fa7d5a1d25f5e1cc116ca1863f7",
@@ -3066,6 +3627,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/samsara-df0a2d41.w640.webp",
 "installs": 30,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "AMB-1",
+"date": "2026-11-17T18:01:02Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/samsara-1.0.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/samsara-1.0.0-bigscreen.patch",
 "sha256": "3eb90b7248e5b461a5f16df75ecf45bc0faf25c2f0f08169fcae3ddcd9902fed",
@@ -3093,6 +3659,11 @@
 "card": null,
 "installs": 29,
 "chip": "old",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-10-27T10:45:29Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/berlinan-0.5.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/berlinan-0.5.1-bigscreen.patch",
 "sha256": "b40a222a39fca30d7d9e45746028424444cf5292641587cca4803b59dfda2d7f",
@@ -3120,6 +3691,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/arpwav09-b1d7002f.w640.webp",
 "installs": 26,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-22T11:33:22Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/arpwav09-1.0.7-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/arpwav09-1.0.7-bigscreen.patch",
 "sha256": "155e69f29c44f3b66c074e4ec7ee6bcfe62ed61afd92825dbf9b95b919c2a582",
@@ -3147,6 +3723,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/flat20-de846c77.w640.webp",
 "installs": 26,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-22T17:12:53Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/flat20-0.3.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/flat20-0.3.2-bigscreen.patch",
 "sha256": "ffb889810ec1a62381333729504aa140cb5a2d5aac5534d2540afee6d0d4b69d",
@@ -3174,6 +3755,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/dfdacidengine-c412f5d8.w640.webp",
 "installs": 22,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-19T18:17:41Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dfdacidengine-1-v1.8.2-da1-r7-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dfdacidengine-1-v1.8.2-da1-r7-bigscreen.patch",
 "sha256": "36c7e3c22bbac5ed9483b4def4f0da94364f1cc3aa9307c9c26f8ecdf1c3b5d5",
@@ -3201,6 +3787,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/orbita-959fa634.w640.webp",
 "installs": 22,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-19T21:16:19Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/orbita-2.0.12-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/orbita-2.0.12-bigscreen.patch",
 "sha256": "d1fdadd52b19bb2773d8f081875ed3153ee83fd5eb6c7aee48783fcb60c9643d",
@@ -3228,6 +3819,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/conductor-3111bc8f.w640.webp",
 "installs": 21,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-17T05:39:24Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/conductor-1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/conductor-1.0-bigscreen.patch",
 "sha256": "fe73d3ecdcc5150c3222fd579b985cc7bafabbbba66eabd97e3cca9332f95277",
@@ -3255,6 +3851,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/rambeaver-1c9f5fde.w640.webp",
 "installs": 21,
 "chip": "old",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-11T02:49:33Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/rambeaver-745-hub-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/rambeaver-745-hub-bigscreen.patch",
 "sha256": "5a9c47b038dece216e2ad79d6d1c6aeff5a2838bd788a18b6235c07a973220a3",
@@ -3282,6 +3883,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/viber-931d1367.w640.webp",
 "installs": 21,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-22T13:34:12Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/viber-1.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/viber-1.2-bigscreen.patch",
 "sha256": "d6b47072e9654fbf108c5b559e73a33b47f5c5d3390269b466d629c6a3fdeec9",
@@ -3309,6 +3915,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/clairpiano-e20a2975.w640.webp",
 "installs": 20,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-20T09:32:01Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/clairpiano-1.0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/clairpiano-1.0.1-bigscreen.patch",
 "sha256": "18adc9f9725bd76603732f72ea8e030eb4a8cccfa90a46d76c7328bb40f991fd",
@@ -3336,6 +3947,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/prophet67-8761c904.w640.webp",
 "installs": 19,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-24T07:59:50Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/prophet67-1.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/prophet67-1.2-bigscreen.patch",
 "sha256": "a943bef48479a2bb83b939c144bc62abbdfb2fcae28ae3b061745ec114e33ffc",
@@ -3363,6 +3979,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/splitmilk-c2542f14.w640.webp",
 "installs": 18,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-11T23:57:11Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/splitmilk-1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/splitmilk-1.0-bigscreen.patch",
 "sha256": "9f99a4dbe48836ed6891e240983ac3dc5d64a2a0a1aed8135ba39197c4269126",
@@ -3390,6 +4011,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/chordrun-2fcb3eff.w640.webp",
 "installs": 17,
 "chip": "new",
+"kinds": [
+"chords"
+],
+"parent": "fm1-base",
+"date": "2026-11-21T13:30:52Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/chordrun-2.6-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/chordrun-2.6-bigscreen.patch",
 "sha256": "59671307eeeca4c21daceb638cc96a8ce18a6c4118947e011015f5a1126b8080",
@@ -3417,6 +4043,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/grainpiano-aa28e792.w640.webp",
 "installs": 17,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-21T17:53:07Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/grainpiano-1.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/grainpiano-1.3-bigscreen.patch",
 "sha256": "f8a0556767be0b0419851b349ce456dec19b5775cf982df33853fe88f448f98e",
@@ -3444,6 +4075,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/a22-d9f0bd59.w640.webp",
 "installs": 16,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T22:30:44Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/a22-0.5.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/a22-0.5.0-bigscreen.patch",
 "sha256": "80c320ba1af02fa1f28880428133648e9440f644813d80a15753dcfc8ae14a85",
@@ -3471,6 +4107,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/insertcoin-a93d3aca.w640.webp",
 "installs": 16,
 "chip": "new",
+"kinds": [
+"chords"
+],
+"parent": "fm1-base",
+"date": "2026-11-21T22:17:16Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/insertcoin-0.8-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/insertcoin-0.8-bigscreen.patch",
 "sha256": "ed822b5545aa2cc08ca98f204cbf94d310067664abae738ebe919bf81110c743",
@@ -3498,6 +4139,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/pocketband-c1e58ec8.w640.webp",
 "installs": 16,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-11T10:32:30Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/pocketband-0.4-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/pocketband-0.4-bigscreen.patch",
 "sha256": "7229af0d4c067d71a2231028f7b0d23fe16de5db8e2943e1734649789d15d008",
@@ -3525,6 +4171,11 @@
 "card": null,
 "installs": 15,
 "chip": "old",
+"kinds": [
+"other"
+],
+"parent": "Dinghy",
+"date": "2026-10-19T17:04:13Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/morpheus-1.0.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/morpheus-1.0.0-bigscreen.patch",
 "sha256": "92ef817972a09a826f81cfb5fa4da16a0675d6904ca60a5475f6ea4d48e8d595",
@@ -3552,6 +4203,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/sardine-16934a9e.w640.webp",
 "installs": 15,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-08T20:38:48Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sardine-1.0.6-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sardine-1.0.6-bigscreen.patch",
 "sha256": "7c9adb8e58838cac244e38567bfd62d129ba3a161d7cb2d6b98e6ff219f8f1d3",
@@ -3580,6 +4236,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/stallion-a47d51e2.w640.webp",
 "installs": 15,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-17T13:17:59Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/stallion-1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/stallion-1.1-bigscreen.patch",
 "sha256": "7559a72ee71f95ae34a94e086f08db706b2d23b9ddd2417eb21afdb47b2b97d3",
@@ -3607,6 +4268,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/minigrain-b4468a2b.w640.webp",
 "installs": 14,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-15T06:50:44Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/minigrain-1.0.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/minigrain-1.0.0-bigscreen.patch",
 "sha256": "bfb8a20185753c6ac3c04fc16cad2f535526a523aaf3b033c3f375ee3f6a409e",
@@ -3634,6 +4300,11 @@
 "card": null,
 "installs": 14,
 "chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-10-13T23:50:21Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/unholy-0.2.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/unholy-0.2.3-bigscreen.patch",
 "sha256": "e933c629b24bdf6c3cbe3d66c28b600ae4dbbe0f699279b4213c192c1e935e32",
@@ -3662,6 +4333,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/vnl1-5352757f.w640.webp",
 "installs": 14,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-15T02:53:29Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/vnl1-0.9.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/vnl1-0.9.2-bigscreen.patch",
 "sha256": "c4bcd8fa420a7406f086ca6347997925b68c812afb07ec93522cce9d1ad6780f",
@@ -3689,6 +4365,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/fm1trax-81bdc3b1.w640.webp",
 "installs": 13,
 "chip": "new",
+"kinds": [
+"tracker"
+],
+"parent": "Felucca",
+"date": "2026-11-08T12:23:51Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1trax-0.9.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1trax-0.9.5-bigscreen.patch",
 "sha256": "8f7a6e20a2a9530049b1c0022fd79633eeb6f5d11157bd77d5df8167415fdc21",
@@ -3716,6 +4397,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/hungrytravis-fb229ed9.w640.webp",
 "installs": 13,
 "chip": "old",
+"kinds": [
+"other"
+],
+"parent": "FoMni",
+"date": "2026-11-10T02:06:31Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hungrytravis-2026.11.10-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/hungrytravis-2026.11.10-bigscreen.patch",
 "sha256": "0112c60cb9133cd54be8236546519bd8cb7192937a542a7fff57822b054ff400",
@@ -3743,6 +4429,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/sixmachines-de262c89.w640.webp",
 "installs": 13,
 "chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T19:52:37Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sixmachines-0.1.6-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sixmachines-0.1.6-bigscreen.patch",
 "sha256": "13dd9e8a8349cd964d9e82a2e33f904793c05e2ab6ad7bae0ccf8acacfbf267e",
@@ -3770,6 +4461,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/mightyarcade-d5e7d7be.w640.webp",
 "installs": 12,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T14:51:43Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mightyarcade-1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mightyarcade-1.0-bigscreen.patch",
 "sha256": "c156f0fbd853cbdf6a8f07625b5ecd6fd0172c38dc96be136c95d71802c53b34",
@@ -3797,6 +4493,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/rhinotiger-aa0e23ab.w640.webp",
 "installs": 12,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-24T08:05:35Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/rhinotiger-1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/rhinotiger-1.1-bigscreen.patch",
 "sha256": "0e97334251e4672ca6642c0d2b5870ff4021d0cd69f8bb2ca5213076d110b7ed",
@@ -3824,6 +4525,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/argo-e91a86f9.w640.webp",
 "installs": 11,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-16T02:20:24Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/argo-1.8.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/argo-1.8.5-bigscreen.patch",
 "sha256": "23a63e273d1dbf8642ac20362cdc5d343020b17a9978360865883f9c1bc3ccf5",
@@ -3851,6 +4557,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/collapse-496ce588.w640.webp",
 "installs": 11,
 "chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T19:59:36Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/collapse-0.3.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/collapse-0.3.2-bigscreen.patch",
 "sha256": "fbf2e16a08bc4b0ebb31e7fafdc2e7d6ba4876e1a2641bd0917c3c035e905fd3",
@@ -3878,6 +4589,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/kurzhaar-f771fb5e.w640.webp",
 "installs": 11,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-14T22:20:47Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/kurzhaar-1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/kurzhaar-1.1-bigscreen.patch",
 "sha256": "9104a2c1f7b70941829f1121ce26718cab7fffc8f1f0ee04f5cd67a0edfef28b",
@@ -3905,6 +4621,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/loopheads-cd0d7e5f.w640.webp",
 "installs": 11,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-19T03:23:43Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/loopheads-0.1.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/loopheads-0.1.2-bigscreen.patch",
 "sha256": "ca32f9c2fe7a80bd683b9b433aae0200ecc5120a457a1492a70bdbce0567999a",
@@ -3932,6 +4653,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/miniju08-6a5ef005.w640.webp",
 "installs": 10,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Mini-Tone",
+"date": "2026-11-11T06:42:57Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/miniju08-08-1.00-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/miniju08-08-1.00-bigscreen.patch",
 "sha256": "d1dbca7f9ca8fd875218706d19f6126f697964d12782cdf8bb105df1b27b863f",
@@ -3960,6 +4686,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/fmav1-409abc4b.w640.webp",
 "installs": 9,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-20T19:33:11Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmav1-0.6.4-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmav1-0.6.4-bigscreen.patch",
 "sha256": "dc6b4e125e1398abbf315894ab44a36e909d4fe3562464630e92047e746d370a",
@@ -3987,6 +4718,11 @@
 "card": null,
 "installs": 9,
 "chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-17T00:04:09Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/golanadz-0.1.0-beta-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/golanadz-0.1.0-beta-bigscreen.patch",
 "sha256": "83658f212e0a63afaf55de12bc3ee8253f01530f2a3b3e98469d0eb481776fb9",
@@ -4015,6 +4751,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/mightyarp-3d30b035.w640.webp",
 "installs": 9,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-16T17:06:43Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mightyarp-1.5-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mightyarp-1.5-bigscreen.patch",
 "sha256": "6a39f7582ed14a5ab4ed935809073b0457dc5bcfbae1b7cccdac76f269d512ef",
@@ -4042,6 +4783,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/mumble-35ca6648.w640.webp",
 "installs": 7,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T12:17:08Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mumble-0.1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mumble-0.1.1-bigscreen.patch",
 "sha256": "51f161f6158cf093870f08b359927c2c826c58bb6c4e3deb8ac6c281369995e7",
@@ -4069,6 +4815,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/volna-c198a1a7.w640.webp",
 "installs": 6,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-21T10:58:14Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/volna-1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/volna-1.1-bigscreen.patch",
 "sha256": "245e93ab6971f98a654be9e1c49df4dbedcb771bf0df6a8c840ca24b023b4043",
@@ -4096,6 +4847,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/dayvx-89356da4.w640.webp",
 "installs": 5,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-12T21:39:13Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dayvx-0.1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dayvx-0.1.1-bigscreen.patch",
 "sha256": "1065e248f419fe02f67341b85f87f2545413037e8d151563a6b4aa3fcab0e6be",
@@ -4123,6 +4879,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/juicy-3c562727.w640.webp",
 "installs": 5,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Dinghy",
+"date": "2026-11-15T15:27:37Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/juicy-0.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/juicy-0.1-bigscreen.patch",
 "sha256": "a56b76cf6b7e68b17df631860fc36da152ae23bbcc719c235468427cdd210f16",
@@ -4150,6 +4911,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/aislingfx1-5dcb3878.w640.webp",
 "installs": 4,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-16T19:18:33Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/aislingfx1-1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/aislingfx1-1.1-bigscreen.patch",
 "sha256": "0c5a6702b45433b6e9f8d0a5847a61b6629229686d9aff57d930b00e0ee24897",
@@ -4177,6 +4943,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/brussels-e9a9aab9.w640.webp",
 "installs": 1,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-24T04:34:19Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/brussels-0.9.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/brussels-0.9.1-bigscreen.patch",
 "sha256": "4e7b8bee0d911816d959da6350cbb07ab0cdce68495cad63e2c062b5a3fc34fe",
@@ -4204,6 +4975,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/nccnovationcircuitcompan-d637ab5a.w640.webp",
 "installs": 1,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-15T10:17:41Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/nccnovationcircuitcompan-0.7-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/nccnovationcircuitcompan-0.7-bigscreen.patch",
 "sha256": "a0da42834a24d17a770110b92244b6ed9c0ae2bc15d8b9614816e2f0a5c883c6",
@@ -4232,6 +5008,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/opdream-0389336a.w640.webp",
 "installs": 1,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Skiff",
+"date": "2026-11-18T22:47:36Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/opdream-1.2.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/opdream-1.2.3-bigscreen.patch",
 "sha256": "4fa538747c83572b5a752f989a2b11386f06dcfc7a71f5ad2ea961495d988bbb",
@@ -4259,6 +5040,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/agtdeck-d36e82f3.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Dinghy",
+"date": "2026-11-13T18:19:46Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/agtdeck-0.6.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/agtdeck-0.6.3-bigscreen.patch",
 "sha256": "9c8216b58b8eb88ec256c360e4e6ba39f2c845e3f94f535c89af5b8cff38654f",
@@ -4286,6 +5072,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/clavioline-f64bf099.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-13T22:30:27Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/clavioline-1.3-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/clavioline-1.3-bigscreen.patch",
 "sha256": "e0a33093e76c08ffc24688364c0d2f09e00be6f633307ec6596a24f83a68f2fc",
@@ -4313,6 +5104,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/drumtonic-76080818.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "Dinghy",
+"date": "2026-11-19T00:44:46Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/drumtonic-0.9.6-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/drumtonic-0.9.6-bigscreen.patch",
 "sha256": "bd53a0ef1de2696c6747f64809ea2a8e757f843a600c70572ee83bf7f622d3cf",
@@ -4340,6 +5136,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/dg5-5e9bd220.png",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-23T19:11:04Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dg5-0.5.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/dg5-0.5.1-bigscreen.patch",
 "sha256": "4b5a34bf91a06bb1cd0e7b27b91aa957adc0ad40ca0a89e87b9e478a3ff8e583",
@@ -4367,6 +5168,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/fm1midimania-a246f837.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-20T13:32:56Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1midimania-0.9.4-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1midimania-0.9.4-bigscreen.patch",
 "sha256": "6feb1e05930ac2164b0abb774360783d1b9a624ad9f51bbd07e1fa880c0f3af5",
@@ -4394,6 +5200,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/fm1pockettutor-3d3b353e.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Dinghy",
+"date": "2026-11-23T04:57:37Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1pockettutor-0.7-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fm1pockettutor-0.7-bigscreen.patch",
 "sha256": "1e9c74087812120fe1f7d891fdf9f3cef96d7f9c690a09a7dab6272e49fba347",
@@ -4421,6 +5232,11 @@
 "card": null,
 "installs": 0,
 "chip": "old",
+"kinds": [
+"tracker"
+],
+"parent": "Felucca",
+"date": "2026-10-22T10:10:13Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmdj-2026.10.22-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmdj-2026.10.22-bigscreen.patch",
 "sha256": "8115425cc7952305fca206a4b78e5328bca43b3d61c875bf916f8ee4d1ab4257",
@@ -4449,6 +5265,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/fmlarynx-4f8d8d31.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-15T11:29:14Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmlarynx-0.4.2-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmlarynx-0.4.2-bigscreen.patch",
 "sha256": "17cb1592358f78e7bf6cebc09bdd06ded79963cd32f47f4f8cb96b09e85993c9",
@@ -4476,6 +5297,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/mvaneyard-886cb3d9.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"chords"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T12:02:01Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mvaneyard-0.15-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mvaneyard-0.15-bigscreen.patch",
 "sha256": "4e0fe2b3f9603338e82301c250d61e444899b4efdb5ff47b39d3ab051c4b5750",
@@ -4503,6 +5329,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/orgigs-05ee8318.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Dinghy",
+"date": "2026-11-20T15:59:58Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/orgigs-1.1-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/orgigs-1.1-bigscreen.patch",
 "sha256": "0b98d1169ff86e3a9efccfd3e9000a3b02e44eb47f85fb1d1e85909eb43a11e6",
@@ -4530,6 +5361,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/plissken-59cebbe9.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-22T19:46:34Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/plissken-0.31-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/plissken-0.31-bigscreen.patch",
 "sha256": "c743c85cec9ef2c3fe2ae6a055fdc3fb7931f0234791ffe5b5fc0005290b1750",
@@ -4557,6 +5393,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/shifl-3c5dc454.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-18T16:34:41Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/shifl-1.0.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/shifl-1.0.0-bigscreen.patch",
 "sha256": "f25f6a4babbb4d2dd0e9a74f348bbdc52574a097aac311ec2cc3d6638607ebe9",
@@ -4584,6 +5425,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/tether-76f8b802.w640.webp",
 "installs": 0,
 "chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-20T00:28:41Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/tether-1.0-bigscreen.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/tether-1.0-bigscreen.patch",
 "sha256": "52c5e4571c9224f7cdd8d006b5d252aa038d66ff75e7f2a59f64dda6757db319",
@@ -4611,6 +5457,11 @@
 "card": null,
 "installs": 3904,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-15T23:43:19Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmini-2.6.0-bigscreen-squeezed.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/fmini-2.6.0-bigscreen-squeezed.patch",
 "sha256": "8ffed035553c2f739256e3f1156117df54c57bbfe904e725694f9053a17da1ef",
@@ -4646,6 +5497,11 @@
 "card": null,
 "installs": 2384,
 "chip": "new",
+"kinds": [
+"chords"
+],
+"parent": "Felucca",
+"date": "2026-11-24T07:37:16Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/choralroot-0.46-bigscreen-squeezed.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/choralroot-0.46-bigscreen-squeezed.patch",
 "sha256": "159bef04e42253a75d6705fe9ffe0191366da6ad498b7198279c39ec2bfff1d6",
@@ -4675,6 +5531,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/caravel-9db3968b.w640.webp",
 "installs": 148,
 "chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-23T08:53:23Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/caravel-1.1.1-bigscreen-squeezed.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/caravel-1.1.1-bigscreen-squeezed.patch",
 "sha256": "1b315f0c17f6fd26876e1911123c2095d58a813a872afb58a74a1d727087b0a7",
@@ -4706,6 +5567,11 @@
 "card": "https://thefirmwarehub.com/fw/cards/burgerstudiofm1-1feaaf85.w640.webp",
 "installs": 1,
 "chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-11-21T17:03:43Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/burgerstudiofm1-1.8.2-bs19-bigscreen-squeezed.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/burgerstudiofm1-1.8.2-bs19-bigscreen-squeezed.patch",
 "sha256": "2d91b8311ef40de8197871d006d4e91b4d41ec5efdbcbccd9ab746d5d0c295a1",
@@ -4738,7 +5604,13 @@
 "hub_sha256": "0923a0e1bb05f8b0fc6111e4274be38436e37a2a66790a58d12bf60bb7a2e004",
 "card": null,
 "installs": 3170,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove",
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T19:03:47Z"
 },
 {
 "id": "loafbreaker",
@@ -4755,7 +5627,12 @@
 "hub_sha256": "3a0c79206348e306e0a5e9045d7f8df4d06a6c14a6c60d533a1dda674b38116c",
 "card": "https://thefirmwarehub.com/fw/cards/loafbreaker-02fdfb29.w640.webp",
 "installs": 397,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "CHOPPAH",
+"date": "2026-11-23T23:27:35Z"
 },
 {
 "id": "echofield",
@@ -4772,7 +5649,12 @@
 "hub_sha256": "d536bce30b1fd5726002497e17637f810373651c6e49157e17beac736498120e",
 "card": "https://thefirmwarehub.com/fw/cards/echofield-27867774.w640.webp",
 "installs": 287,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-17T13:29:54Z"
 },
 {
 "id": "jamtrack",
@@ -4789,7 +5671,12 @@
 "hub_sha256": "4111f8e9b2019ba4bbc1d3137c490ffcd4261574ad7265992dc15ef0806e1902",
 "card": "https://thefirmwarehub.com/fw/cards/jamtrack-eaf7fbef.w640.webp",
 "installs": 171,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-09T18:58:06Z"
 },
 {
 "id": "patchwerk",
@@ -4806,7 +5693,12 @@
 "hub_sha256": "c8d0f861dc7104f59106a3bd80c32b7b7e3e859790d5cbe1a360cb9845d575d1",
 "card": "https://thefirmwarehub.com/fw/cards/patchwerk-538c3edc.w640.webp",
 "installs": 80,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-08T20:47:24Z"
 },
 {
 "id": "golf",
@@ -4823,7 +5715,12 @@
 "hub_sha256": "adf966894bb1040f57a48d062e537feb5bace11f54b86087240cd0a0b3c0f99e",
 "card": "https://thefirmwarehub.com/fw/cards/golf-6ba6ea34.w640.webp",
 "installs": 20,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-14T21:04:31Z"
 },
 {
 "id": "trapstationos",
@@ -4840,7 +5737,12 @@
 "hub_sha256": "03806aa55c06f2fa973bbb181dd2837f4345dbe7e00aa2d99a213a8e0a4850d8",
 "card": "https://thefirmwarehub.com/fw/cards/trapstationos-f392b66e.w640.webp",
 "installs": 18,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-16T21:44:35Z"
 },
 {
 "id": "tekstuur",
@@ -4857,7 +5759,12 @@
 "hub_sha256": "36f5cf9076efd41598cae41a1a67f740e7f7635b9d937a74193161462e131d32",
 "card": "https://thefirmwarehub.com/fw/cards/tekstuur-6a29689a.w640.webp",
 "installs": 1,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-14T21:04:36Z"
 },
 {
 "id": "gio",
@@ -4874,7 +5781,12 @@
 "hub_sha256": "c29512d8db308fa57bf8be159336403e866288679d16a4744948b65abcba91ce",
 "card": "https://thefirmwarehub.com/fw/cards/gio-aacda145.w640.webp",
 "installs": 0,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-17T00:02:14Z"
 },
 {
 "id": "frasil",
@@ -4891,7 +5803,12 @@
 "hub_sha256": "288f8fb0f64a5811ebd781a986d7c93237e21bbc1e437a05eb89a5c7aba403c5",
 "card": "https://thefirmwarehub.com/fw/cards/frasil-1c22fa0e.png",
 "installs": 2267,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-21T04:07:32Z"
 },
 {
 "id": "tonitor",
@@ -4908,7 +5825,12 @@
 "hub_sha256": "c5d8838dc39505be4948f5ce4583c734bbec5130912e59f3a83d91ad73d26f79",
 "card": null,
 "installs": 1464,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-10T07:01:31Z"
 },
 {
 "id": "zen",
@@ -4925,7 +5847,12 @@
 "hub_sha256": "e3c51c045b1a763b6d16d2a7e783289ee874b25790e9010c0a5a084ddb65a125",
 "card": null,
 "installs": 1399,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-10-21T20:37:01Z"
 },
 {
 "id": "hortator",
@@ -4942,7 +5869,12 @@
 "hub_sha256": "ac81af292e035ee0c4b8b7ab3a78b942e4f03deee31ae213a2613c743cd9110f",
 "card": null,
 "installs": 903,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-11-03T23:10:49Z"
 },
 {
 "id": "fm106",
@@ -4959,7 +5891,12 @@
 "hub_sha256": "f3a1229b4176de901191a6ce1da2985daa7de925bedda78bae20325e47190034",
 "card": null,
 "installs": 895,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-14T22:27:01Z"
 },
 {
 "id": "ravel",
@@ -4976,7 +5913,12 @@
 "hub_sha256": "d4ae162225a6d1df8045ddf688e55e756546bbe7490d8d9830a18d7f2d3d89e2",
 "card": null,
 "installs": 830,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "its own code",
+"date": "2026-11-24T09:53:58Z"
 },
 {
 "id": "mono2k",
@@ -4993,7 +5935,12 @@
 "hub_sha256": "d04b5b1d9e00a5173ee92e30c41c10d309a8409feb895713a888e326139bdf4d",
 "card": "https://thefirmwarehub.com/fw/cards/mono2k-cc67d0ba.png",
 "installs": 787,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "its own code",
+"date": "2026-11-20T14:45:48Z"
 },
 {
 "id": "tessera",
@@ -5010,7 +5957,12 @@
 "hub_sha256": "da1875463783d43115e89c1ec0885ab41e3542e095b205a1fca4d7135f1e7e08",
 "card": "https://thefirmwarehub.com/fw/cards/tessera-04e98220.w640.webp",
 "installs": 417,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-22T05:25:26Z"
 },
 {
 "id": "atek303",
@@ -5027,7 +5979,12 @@
 "hub_sha256": "f1c13ebe30cdf0e403cf7d0ec06b58d12c041321322c9d82f5b19339760bb23b",
 "card": "https://thefirmwarehub.com/fw/cards/atek303-07ef929e.w640.webp",
 "installs": 396,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-20T08:12:52Z"
 },
 {
 "id": "demake",
@@ -5044,7 +6001,12 @@
 "hub_sha256": "426b322abb001271eab63787463884395c73641be35830f6f3ac630bf0b3bd48",
 "card": null,
 "installs": 396,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-15T21:49:24Z"
 },
 {
 "id": "vesper",
@@ -5061,7 +6023,12 @@
 "hub_sha256": "c6f40b9a832f069f43c7aa9cb6ef0211d8316c5f4ea870f7e18daa99946a45f3",
 "card": "https://thefirmwarehub.com/fw/cards/vesper-a1cfcd2c.w640.webp",
 "installs": 263,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-09T18:47:29Z"
 },
 {
 "id": "mnm1",
@@ -5078,7 +6045,12 @@
 "hub_sha256": "d44011bf035314c037e16ab36a8e7895d9274732329e1d60e0bd94bd512eabf9",
 "card": null,
 "installs": 249,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Hortator",
+"date": "2026-10-27T12:53:48Z"
 },
 {
 "id": "bigorna",
@@ -5095,7 +6067,12 @@
 "hub_sha256": "51e81b4d5387ea92ba63505cfb1c6a1ae718e9f62c6f1e9f436d4fee16459795",
 "card": null,
 "installs": 210,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Tonitor",
+"date": "2026-11-24T12:03:46Z"
 },
 {
 "id": "winampfm",
@@ -5112,7 +6089,12 @@
 "hub_sha256": "32a78b18132be64b83557886f9fc1c8c4419adb8932a2b8bc83bb5fb7e681b0b",
 "card": null,
 "installs": 208,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "SLOOP",
+"date": "2026-10-14T16:09:19Z"
 },
 {
 "id": "kitten",
@@ -5129,7 +6111,12 @@
 "hub_sha256": "7a9c4c3416e763b4d845259afd1dd5de4bb59daae8a435f337e3ea22c37e252d",
 "card": "https://thefirmwarehub.com/fw/cards/kitten-ae1b7c18.w640.webp",
 "installs": 198,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "its own code",
+"date": "2026-11-20T21:02:12Z"
 },
 {
 "id": "elixir",
@@ -5146,7 +6133,12 @@
 "hub_sha256": "7997ca6ade67edbbd990e5fa4d649bf994eeeb52f88aa8acc0ba867b66b8032d",
 "card": "https://thefirmwarehub.com/fw/cards/elixir-be282a31.w640.webp",
 "installs": 186,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-11-24T05:58:54Z"
 },
 {
 "id": "mpyre",
@@ -5163,7 +6155,12 @@
 "hub_sha256": "aa6ed19b0cc13b703cfefb5fb972cb8e4f881a93894eba2d72944447e7430728",
 "card": "https://thefirmwarehub.com/fw/cards/mpyre-14a55649.w640.webp",
 "installs": 175,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-10T19:43:30Z"
 },
 {
 "id": "bunker",
@@ -5180,7 +6177,12 @@
 "hub_sha256": "db0b50d0ae9c3bfccee76e3b93de09fffa55389169278a0c5899dad9c79e6bb8",
 "card": null,
 "installs": 173,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-10-17T01:20:13Z"
 },
 {
 "id": "bubba",
@@ -5197,7 +6199,12 @@
 "hub_sha256": "e1f444059553b7a8e9ea6b916fed0ea3c7d5404a6e913a130f11b9d3d9624e7d",
 "card": null,
 "installs": 169,
-"chip": "any"
+"chip": "any",
+"kinds": [
+"groove"
+],
+"parent": "its own code",
+"date": "2026-10-25T00:44:28Z"
 },
 {
 "id": "duell",
@@ -5214,7 +6221,12 @@
 "hub_sha256": "e6754a533cf970e01e0e7dad6297db48244f0bfdca1859d4b6cfd21a9e3adb38",
 "card": "https://thefirmwarehub.com/fw/cards/duell-a9ecb1e5.w640.webp",
 "installs": 164,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-22T17:09:31Z"
 },
 {
 "id": "carnac",
@@ -5231,7 +6243,12 @@
 "hub_sha256": "6d81a8d1186fecc8c4e8be082c163f5cc3d2a3286b70f66e42b4b941e604f1b2",
 "card": null,
 "installs": 150,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-10-29T14:09:25Z"
 },
 {
 "id": "amenity",
@@ -5248,7 +6265,12 @@
 "hub_sha256": "698cdcf3748190c93d4420f9492eb74d705c90233d69dd2e241dcefc971cb62b",
 "card": "https://thefirmwarehub.com/fw/cards/amenity-ee0f1f83.w640.webp",
 "installs": 131,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "fm1-base",
+"date": "2026-11-15T12:06:45Z"
 },
 {
 "id": "x0xrmx",
@@ -5265,7 +6287,12 @@
 "hub_sha256": "b343c135779c1de933d655236b14628103816036e170d65faed706aba620dcaa",
 "card": null,
 "installs": 131,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "X0X",
+"date": "2026-10-18T11:43:41Z"
 },
 {
 "id": "nmsfm",
@@ -5282,7 +6309,12 @@
 "hub_sha256": "3633c4ff4955ab107df2bec30919017ab40c02469d8e922f64f8b9963db623f0",
 "card": null,
 "installs": 129,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"other"
+],
+"parent": "SLOOP",
+"date": "2026-11-02T23:00:38Z"
 },
 {
 "id": "tribe",
@@ -5299,7 +6331,12 @@
 "hub_sha256": "daa953ea5c37a5612d6db6f508a86879a79214768acc79d6ae04f2e0b93b6f6b",
 "card": null,
 "installs": 121,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "X0X",
+"date": "2026-10-22T20:25:21Z"
 },
 {
 "id": "fm1chimeravocal",
@@ -5316,7 +6353,12 @@
 "hub_sha256": "4c525b66fa1684f42e9218c8a73180979632777def6bd3fbbd983ce6e36e6ac0",
 "card": "https://thefirmwarehub.com/fw/cards/fm1chimeravocal-d7154e51.w640.webp",
 "installs": 118,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T14:15:44Z"
 },
 {
 "id": "guitchordi",
@@ -5333,7 +6375,12 @@
 "hub_sha256": "330396f043093bcdda65aacbd0098dd1fc1f253a17d5707db19ff5d971e05217",
 "card": null,
 "installs": 117,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"chords"
+],
+"parent": "Felucca",
+"date": "2026-10-26T21:21:21Z"
 },
 {
 "id": "etch",
@@ -5350,7 +6397,12 @@
 "hub_sha256": "65bcb51012d81c9c8206c4843ce04b5c03177b8f09ed74313799ebec0798330f",
 "card": "https://thefirmwarehub.com/fw/cards/etch-246c899b.w640.webp",
 "installs": 116,
-"chip": "any"
+"chip": "any",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-10-30T14:19:27Z"
 },
 {
 "id": "sill",
@@ -5367,7 +6419,12 @@
 "hub_sha256": "e4ded606db54e7e0cdb0a45063e4f693444ad96d0e7923d02fec4aaef0d68cc3",
 "card": "https://thefirmwarehub.com/fw/cards/sill-8a50f9cb.w640.webp",
 "installs": 116,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-13T17:04:06Z"
 },
 {
 "id": "hortator-bt",
@@ -5384,7 +6441,12 @@
 "hub_sha256": "3d5fc15367945576cc590dac20269b108658fd592200b9e4c3626f9b7c8aab61",
 "card": null,
 "installs": 111,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-11-03T23:10:49Z"
 },
 {
 "id": "sidou",
@@ -5401,7 +6463,12 @@
 "hub_sha256": "e285a67e7ae461544a06826abc780ce6f55a8280df50dbc4bed4d65ace712087",
 "card": "https://thefirmwarehub.com/fw/cards/sidou-91bee8a0.w640.webp",
 "installs": 111,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"tracker"
+],
+"parent": "its own code",
+"date": "2026-11-18T19:35:02Z"
 },
 {
 "id": "mycelium",
@@ -5418,7 +6485,12 @@
 "hub_sha256": "9aa2802a0ac07f412e36c079c8034820b7405e3477468d0b3cfc7fd3f93e0da8",
 "card": null,
 "installs": 108,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-10-14T06:04:02Z"
 },
 {
 "id": "mope1",
@@ -5435,7 +6507,12 @@
 "hub_sha256": "fe51bcf00364b86b4fea8f23f602b7213f16df1a079d6e5de3b09ae25670520e",
 "card": "https://thefirmwarehub.com/fw/cards/mope1-371dde44.png",
 "installs": 87,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-21T11:04:49Z"
 },
 {
 "id": "nauclerus",
@@ -5452,7 +6529,12 @@
 "hub_sha256": "68e15f3bfed73bb3202f18ed877be6716b7aa99a6686036780e2a48e533413dd",
 "card": "https://thefirmwarehub.com/fw/cards/nauclerus-ad61704e.w640.webp",
 "installs": 80,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Hortator",
+"date": "2026-11-21T12:33:56Z"
 },
 {
 "id": "bocjuhn",
@@ -5469,7 +6551,12 @@
 "hub_sha256": "91ef02e0e0f7868c94e2a781449e512fb34070309565533d7ccaeec413e0c09d",
 "card": "https://thefirmwarehub.com/fw/cards/bocjuhn-eae033f3.w640.webp",
 "installs": 75,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Tonitor",
+"date": "2026-11-11T05:28:20Z"
 },
 {
 "id": "adrift",
@@ -5486,7 +6573,12 @@
 "hub_sha256": "6135ebfb1a2dd33ca5f4a142571378dc9c084b0e7bc67c5d81685566fe2a7360",
 "card": "https://thefirmwarehub.com/fw/cards/adrift-5a5daf7e.w640.webp",
 "installs": 71,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-15T21:58:33Z"
 },
 {
 "id": "assid",
@@ -5503,7 +6595,12 @@
 "hub_sha256": "f869992c2d387301ffc1d099fffe733096ed134e10bbb8d59a642e52997a3ba4",
 "card": "https://thefirmwarehub.com/fw/cards/assid-0aecc465.w640.webp",
 "installs": 71,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-11T01:09:35Z"
 },
 {
 "id": "fomajam",
@@ -5520,7 +6617,12 @@
 "hub_sha256": "b18d747f4e005f392a4071a00847268fe244d5e4e7d8bd7a359c25bd9dc3ac88",
 "card": null,
 "installs": 71,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "its own code",
+"date": "2026-11-10T02:31:16Z"
 },
 {
 "id": "mc1",
@@ -5537,7 +6639,12 @@
 "hub_sha256": "cb0b5454d3e459da11489f73818d4537093907aa13adee0230f3404227a701e4",
 "card": null,
 "installs": 69,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "its own code",
+"date": "2026-10-20T15:51:04Z"
 },
 {
 "id": "pingos1",
@@ -5554,7 +6661,12 @@
 "hub_sha256": "0bb517ed4a1b32ae233ed6416057f8fda286cf203272a64d3553d6a91bd162ae",
 "card": "https://thefirmwarehub.com/fw/cards/pingos1-477e0aa0.w640.webp",
 "installs": 63,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-20T12:57:20Z"
 },
 {
 "id": "ptfm",
@@ -5571,7 +6683,12 @@
 "hub_sha256": "91deae9e804c737e2e78ae88726dbd9e52ca40fc552ea87e3924d98a83681b2a",
 "card": "https://thefirmwarehub.com/fw/cards/ptfm-915c9f1a.w640.webp",
 "installs": 62,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"tracker"
+],
+"parent": "its own code",
+"date": "2026-10-28T16:32:31Z"
 },
 {
 "id": "manifold",
@@ -5588,7 +6705,12 @@
 "hub_sha256": "89e96fbb9fda2df5f26d207fdf4b7553900453f875d2a44f024e6d625f375d60",
 "card": "https://thefirmwarehub.com/fw/cards/manifold-84ac8c2a.w640.webp",
 "installs": 59,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T20:56:04Z"
 },
 {
 "id": "fizz",
@@ -5605,7 +6727,12 @@
 "hub_sha256": "f695bf2256f948caa4782fdc0554df17bca83d4b61f23453a5414dec7c614da2",
 "card": null,
 "installs": 56,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-15T21:31:36Z"
 },
 {
 "id": "pigeon",
@@ -5622,7 +6749,12 @@
 "hub_sha256": "a6cbb4fbd80baa38eb99400bb4bef5ddd5d4167024a8342189a07bc6b8861bed",
 "card": null,
 "installs": 56,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-10-21T18:40:27Z"
 },
 {
 "id": "386dx",
@@ -5639,7 +6771,12 @@
 "hub_sha256": "2ba90c24c0586c7519bc524113a9727e43fec60dd3314ddc245179833871e059",
 "card": null,
 "installs": 54,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-04T01:06:34Z"
 },
 {
 "id": "ruido",
@@ -5656,7 +6793,12 @@
 "hub_sha256": "92517639124d54c7e074560da72bedc034bb504fde5173e5fef479126165c058",
 "card": "https://thefirmwarehub.com/fw/cards/ruido-16fde3ed.w640.webp",
 "installs": 53,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-23T23:50:15Z"
 },
 {
 "id": "spellbox",
@@ -5673,7 +6815,12 @@
 "hub_sha256": "b4b3f5ca96c4f7f5971586e9ada95cc343d789a8d4b3761b832c39f0920a4c05",
 "card": null,
 "installs": 49,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-10-28T14:37:13Z"
 },
 {
 "id": "cursedos",
@@ -5690,7 +6837,12 @@
 "hub_sha256": "38e713f21689e498fd834129d845e2faf6b06a091c0a5041e3d3a8f27d9b792e",
 "card": "https://thefirmwarehub.com/fw/cards/cursedos-17548837.w640.webp",
 "installs": 48,
-"chip": "any"
+"chip": "any",
+"kinds": [
+"groove"
+],
+"parent": "JIANT FM",
+"date": "2026-11-20T20:29:40Z"
 },
 {
 "id": "dx747",
@@ -5707,7 +6859,12 @@
 "hub_sha256": "91f9acd06e37cea10d2af519d74a50343507709f5edd69b635d7711b69520934",
 "card": "https://thefirmwarehub.com/fw/cards/dx747-5e499d7b.w640.webp",
 "installs": 47,
-"chip": "any"
+"chip": "any",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-06T00:37:20Z"
 },
 {
 "id": "quantumgammawave",
@@ -5724,7 +6881,12 @@
 "hub_sha256": "1839a619fac866fa13a2d8f8ad85830bdb12f2e73f8739acbc45bdd3073b67ff",
 "card": "https://thefirmwarehub.com/fw/cards/quantumgammawave-5e14f111.w640.webp",
 "installs": 42,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-24T10:25:53Z"
 },
 {
 "id": "emb",
@@ -5741,7 +6903,12 @@
 "hub_sha256": "4316a6e114912952ed70e1b230b0fc199b353f1fa0bc5c8c04ebb4bcd4801b57",
 "card": null,
 "installs": 41,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-10-16T23:24:58Z"
 },
 {
 "id": "textura",
@@ -5758,7 +6925,12 @@
 "hub_sha256": "2bbc3af7fbfaf21caea58e347b5a1782662bce1a9e875b4c988212dfa9ead1d2",
 "card": "https://thefirmwarehub.com/fw/cards/textura-adecb15d.w640.webp",
 "installs": 40,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-23T06:17:20Z"
 },
 {
 "id": "xmod",
@@ -5775,7 +6947,12 @@
 "hub_sha256": "2593ee154634ce948cf86136895956f5d8bef01f2ea879b9ca29db8bc2c28434",
 "card": "https://thefirmwarehub.com/fw/cards/xmod-a7737b2e.w640.webp",
 "installs": 40,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"tracker"
+],
+"parent": "its own code",
+"date": "2026-11-13T20:20:17Z"
 },
 {
 "id": "beetle",
@@ -5792,7 +6969,12 @@
 "hub_sha256": "1c88c620b6d8763835597e085c3287b54dba9921d535efc764f4b4c5f3468538",
 "card": "https://thefirmwarehub.com/fw/cards/beetle-caa935c6.png",
 "installs": 39,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"tracker"
+],
+"parent": "its own code",
+"date": "2026-11-09T10:17:49Z"
 },
 {
 "id": "evilgenius",
@@ -5809,7 +6991,12 @@
 "hub_sha256": "58399e80af1860ff142b1c45e578f910f195e84da1e0886fb8e8eff35d704a59",
 "card": "https://thefirmwarehub.com/fw/cards/evilgenius-90c10fb2.w640.webp",
 "installs": 37,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-17T07:23:46Z"
 },
 {
 "id": "valle",
@@ -5826,7 +7013,12 @@
 "hub_sha256": "60efe7c35842b704e0c53817462e8b73f2f27e3cdd16105dec97a1ad8e70745b",
 "card": "https://thefirmwarehub.com/fw/cards/valle-fda762f4.w640.webp",
 "installs": 33,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Skiff",
+"date": "2026-11-23T09:37:28Z"
 },
 {
 "id": "b1",
@@ -5843,7 +7035,12 @@
 "hub_sha256": "4efc8646d729844f78fa3f85093cdbc45250738e218526f3f06aa69ce81cac61",
 "card": null,
 "installs": 32,
-"chip": "any"
+"chip": "any",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-02T15:17:49Z"
 },
 {
 "id": "mvance",
@@ -5860,7 +7057,12 @@
 "hub_sha256": "22e4301d0322aa9399215fc8d57819316eba51208304bba3f48b5258c2077d6e",
 "card": "https://thefirmwarehub.com/fw/cards/mvance-3d0d41fc.w640.webp",
 "installs": 31,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-22T21:50:01Z"
 },
 {
 "id": "gator",
@@ -5877,7 +7079,12 @@
 "hub_sha256": "52bcd2428c098b373f237622a392424069219b83d87f7a5606ca91cf28430bfb",
 "card": null,
 "installs": 29,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-10-17T08:08:28Z"
 },
 {
 "id": "manta",
@@ -5894,7 +7101,12 @@
 "hub_sha256": "4221c4bf8fa9b583ca15cde255a6c790ea3c23067f39f1448eaae5ebe376e581",
 "card": "https://thefirmwarehub.com/fw/cards/manta-71e2d147.w640.webp",
 "installs": 29,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-15T22:28:28Z"
 },
 {
 "id": "kittenrack",
@@ -5911,7 +7123,12 @@
 "hub_sha256": "3ef77c39ec5d720d17b021fb936e73bef33dcb65560ae3e0e78e05eb5c1c261d",
 "card": null,
 "installs": 28,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Matryoshka",
+"date": "2026-11-15T23:00:10Z"
 },
 {
 "id": "quartz",
@@ -5928,7 +7145,12 @@
 "hub_sha256": "e129e48dadf43caf09f6d97728bb9a7f8f2b0a10a7834619970ac307a610c5fe",
 "card": "https://thefirmwarehub.com/fw/cards/quartz-13265095.w640.webp",
 "installs": 28,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-21T09:48:24Z"
 },
 {
 "id": "remotefm1",
@@ -5945,7 +7167,12 @@
 "hub_sha256": "27e4e4e523098c2480391636572e047f9076b96a91c77f4998a83b94bee67cbe",
 "card": "https://thefirmwarehub.com/fw/cards/remotefm1-3d113ed6.w640.webp",
 "installs": 28,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-20T03:53:39Z"
 },
 {
 "id": "basssomething2",
@@ -5962,7 +7189,12 @@
 "hub_sha256": "9fd268b0fd3d70c82dc294ba6b12a008ea9d07b1dedc997d11ae4d83a1969b9f",
 "card": "https://thefirmwarehub.com/fw/cards/basssomething2-3e02ff05.w640.webp",
 "installs": 27,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-19T05:42:05Z"
 },
 {
 "id": "fmfam",
@@ -5979,7 +7211,12 @@
 "hub_sha256": "209aa47e147cefb1d59c7bae5cff205a89808faf9d85ba033bee6ecbc990bba9",
 "card": "https://thefirmwarehub.com/fw/cards/fmfam-94307c11.w640.webp",
 "installs": 27,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-12T18:16:31Z"
 },
 {
 "id": "veffbox",
@@ -5996,7 +7233,12 @@
 "hub_sha256": "ef6fab94b8988ee3ef7b14d78c2b3af289758d76b0ff1850bb56f3ca50d40cf9",
 "card": "https://thefirmwarehub.com/fw/cards/veffbox-5067218e.w640.webp",
 "installs": 27,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-13T17:00:53Z"
 },
 {
 "id": "rupture",
@@ -6013,7 +7255,12 @@
 "hub_sha256": "7e6128aa0241060109d1f0f5b0f4a99cf5319e4bb987b716c2ebffd741763f86",
 "card": "https://thefirmwarehub.com/fw/cards/rupture-744446a6.w640.webp",
 "installs": 26,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-17T22:42:36Z"
 },
 {
 "id": "sq80",
@@ -6030,7 +7277,12 @@
 "hub_sha256": "fdb5880e611eb7107b03e800865a95b6e22d5b1e7bae5f05c62096517c188b28",
 "card": "https://thefirmwarehub.com/fw/cards/sq80-3fff9eaa.w640.webp",
 "installs": 26,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-24T06:22:16Z"
 },
 {
 "id": "moss1",
@@ -6047,7 +7299,12 @@
 "hub_sha256": "326209ce609fb4ed0a98768a30fdfa61a2bdaeefaff729a08c88cd1335aeff2d",
 "card": "https://thefirmwarehub.com/fw/cards/moss1-363762c6.w640.webp",
 "installs": 25,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-14T02:27:45Z"
 },
 {
 "id": "rhytmsec1",
@@ -6064,7 +7321,12 @@
 "hub_sha256": "4e176eb726d8da5b0a943865ccc1dc991b198e255acfe88596a597b2157f6c50",
 "card": "https://thefirmwarehub.com/fw/cards/rhytmsec1-aea8881f.w640.webp",
 "installs": 25,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "fm1-dock",
+"date": "2026-11-24T07:27:58Z"
 },
 {
 "id": "wanderer",
@@ -6081,7 +7343,12 @@
 "hub_sha256": "9135b62169409efb73a6492561673bb5465979563824605956ab3316c50d5b32",
 "card": "https://thefirmwarehub.com/fw/cards/wanderer-1f94c539.w640.webp",
 "installs": 25,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-02T15:46:56Z"
 },
 {
 "id": "clatter",
@@ -6098,7 +7365,12 @@
 "hub_sha256": "4d661dae903801385adc99abe3387474b059210f1c49037cef3ef1cacb6f5956",
 "card": "https://thefirmwarehub.com/fw/cards/clatter-5381947b.w640.webp",
 "installs": 24,
-"chip": "any"
+"chip": "any",
+"kinds": [
+"drums"
+],
+"parent": "its own code",
+"date": "2026-11-03T23:34:08Z"
 },
 {
 "id": "abyss",
@@ -6115,7 +7387,12 @@
 "hub_sha256": "855e3adc1b3b609eb0887c373f8496cbfb63f49f040c36a27c05f92419faea8d",
 "card": "https://thefirmwarehub.com/fw/cards/abyss-4a128b0a.png",
 "installs": 23,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-22T16:46:57Z"
 },
 {
 "id": "dp3oyb",
@@ -6132,7 +7409,12 @@
 "hub_sha256": "a0ff6081a4ff925e785edf087da04ab6339db1e4c3bb4826a0e7a91fd6c91d9b",
 "card": "https://thefirmwarehub.com/fw/cards/dp3oyb-5f3aaebb.w640.webp",
 "installs": 23,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-21T20:11:47Z"
 },
 {
 "id": "fm1yoga",
@@ -6149,7 +7431,12 @@
 "hub_sha256": "fd22c28c7d252fb1e599b93da8970687866952cfb85767323db1e768754f137d",
 "card": "https://thefirmwarehub.com/fw/cards/fm1yoga-9e8ed62f.w640.webp",
 "installs": 23,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-13T21:25:18Z"
 },
 {
 "id": "sidj",
@@ -6166,7 +7453,12 @@
 "hub_sha256": "4df5d3f1a7360b76974e13775ad15af376a1216e0c9318e8d5922dddf7b551a8",
 "card": "https://thefirmwarehub.com/fw/cards/sidj-6ab8f582.w640.webp",
 "installs": 22,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-07T08:40:16Z"
 },
 {
 "id": "sillage",
@@ -6183,7 +7475,12 @@
 "hub_sha256": "8bba5cbb0e42a0a50f5d4819b482f0132a66fbbc06c04298cbca56c66a476e36",
 "card": "https://thefirmwarehub.com/fw/cards/sillage-7eded664.w640.webp",
 "installs": 22,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-23T06:46:20Z"
 },
 {
 "id": "flyfish",
@@ -6200,7 +7497,12 @@
 "hub_sha256": "ba0908bce9dfa317e7364a8e6371b32f13d014d3c41562186d8476a8579b36db",
 "card": "https://thefirmwarehub.com/fw/cards/flyfish-2e547281.w640.webp",
 "installs": 21,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-08T18:39:04Z"
 },
 {
 "id": "deepfield",
@@ -6217,7 +7519,12 @@
 "hub_sha256": "74b1112eaaf22ce95a294aec16d499be1456483766d8e0b6c0690d0b42fbb500",
 "card": "https://thefirmwarehub.com/fw/cards/deepfield-c287a5b2.w640.webp",
 "installs": 20,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-17T06:28:04Z"
 },
 {
 "id": "luxr",
@@ -6234,7 +7541,12 @@
 "hub_sha256": "46e6c949c483db5f2ea5f5040975004e954d7f8e22e29996f63e1b50c7f2a365",
 "card": null,
 "installs": 19,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-11-02T21:01:56Z"
 },
 {
 "id": "dubbox",
@@ -6251,7 +7563,12 @@
 "hub_sha256": "8cc61f631178a86f842ed15990bdda7b697452a749bd0f22fe0b5c0f24aa9333",
 "card": "https://thefirmwarehub.com/fw/cards/dubbox-cee6a652.w640.webp",
 "installs": 16,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-14T23:04:52Z"
 },
 {
 "id": "mb1",
@@ -6268,7 +7585,12 @@
 "hub_sha256": "788a8ed971155b96b1c3ac7f0499437f4b213c85e3619a50131a0f735c510fbd",
 "card": "https://thefirmwarehub.com/fw/cards/mb1-8120f927.w640.webp",
 "installs": 13,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-23T00:38:17Z"
 },
 {
 "id": "sy1",
@@ -6285,7 +7607,12 @@
 "hub_sha256": "8a067ea3fb728775ec1e18c12132962fe4629c8f195e2243992852ff3c791a1f",
 "card": "https://thefirmwarehub.com/fw/cards/sy1-d2288403.png",
 "installs": 13,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-21T08:49:29Z"
 },
 {
 "id": "fm1amy",
@@ -6302,7 +7629,12 @@
 "hub_sha256": "6aeeddcc5737c8d92192943ffc3d42b4b4cffbc0a7b50b3cf0b09826eb77162d",
 "card": "https://thefirmwarehub.com/fw/cards/fm1amy-47a6c533.w640.webp",
 "installs": 12,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-10T14:03:17Z"
 },
 {
 "id": "yehnah",
@@ -6319,7 +7651,12 @@
 "hub_sha256": "75cc1017137ca62dcccdac25011f11df049cbc8dca27a3b676639875ae38425a",
 "card": "https://thefirmwarehub.com/fw/cards/yehnah-bed3fb65.w640.webp",
 "installs": 12,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-16T21:49:45Z"
 },
 {
 "id": "fm1sid",
@@ -6336,7 +7673,12 @@
 "hub_sha256": "30fbbeb839e34eb9cd06b543b9142cce3a937d6b0a221e9985412cebba324ed3",
 "card": null,
 "installs": 11,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"tracker"
+],
+"parent": "fm1-dock",
+"date": "2026-10-25T22:08:25Z"
 },
 {
 "id": "monohull",
@@ -6353,7 +7695,12 @@
 "hub_sha256": "6ed6e01d76066f1e7cefae7b528822de89d62b77ca2e7470d7ce81ee0570a83c",
 "card": null,
 "installs": 11,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-10-25T10:19:58Z"
 },
 {
 "id": "midimon",
@@ -6370,7 +7717,12 @@
 "hub_sha256": "8d13651e14a84a68107832de5d5fa569fa1b645a051745d8f6aed9356c254159",
 "card": null,
 "installs": 10,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-08T03:47:09Z"
 },
 {
 "id": "rakt",
@@ -6387,7 +7739,12 @@
 "hub_sha256": "8a7bbb7133b6d3e2a2cc48aaa2bf250bcca9e40e899c39724a1183aa61ef4b57",
 "card": "https://thefirmwarehub.com/fw/cards/rakt-a383cd77.w640.webp",
 "installs": 9,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-13T18:16:55Z"
 },
 {
 "id": "astra",
@@ -6404,7 +7761,12 @@
 "hub_sha256": "13ac51b0051d66f30a17670511d5477eeff9dcfa80ef6ab9f97126cd10004613",
 "card": "https://thefirmwarehub.com/fw/cards/astra-c8c743c5.w640.webp",
 "installs": 8,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-13T14:30:47Z"
 },
 {
 "id": "bourdon",
@@ -6421,7 +7783,12 @@
 "hub_sha256": "15d46f201e6da30426b320d94d44855679b021c6a3eda7a9c7e6b1b2367c410c",
 "card": "https://thefirmwarehub.com/fw/cards/bourdon-0d68a20c.w640.webp",
 "installs": 8,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-23T05:20:25Z"
 },
 {
 "id": "fm1tonic",
@@ -6438,7 +7805,12 @@
 "hub_sha256": "5dba8dd0610f8d35dbb53d730cb3da3b123a35a1e8dd1bdd4b3cf79c5269f303",
 "card": "https://thefirmwarehub.com/fw/cards/fm1tonic-737d200d.w640.webp",
 "installs": 8,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-24T09:28:03Z"
 },
 {
 "id": "piterfly",
@@ -6455,7 +7827,12 @@
 "hub_sha256": "70906d9658b2d89779db94bcca35d19436825ac02b43f9911f3c06afc5d85535",
 "card": "https://thefirmwarehub.com/fw/cards/piterfly-75cee3bf.w640.webp",
 "installs": 8,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-17T23:28:30Z"
 },
 {
 "id": "xenolith",
@@ -6472,7 +7849,12 @@
 "hub_sha256": "3cf3093b31f88696461dfd3bb4e366328ba0780212366715690785c9d58f2611",
 "card": "https://thefirmwarehub.com/fw/cards/xenolith-7cc48dd2.w640.webp",
 "installs": 8,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-10T03:59:47Z"
 },
 {
 "id": "araminta",
@@ -6489,7 +7871,12 @@
 "hub_sha256": "2f19d2660f8f1f51228ae4357c1cad1b4eda037a59430333ddb014acffc400fb",
 "card": "https://thefirmwarehub.com/fw/cards/araminta-6d7e8fe8.w640.webp",
 "installs": 7,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-20T12:53:17Z"
 },
 {
 "id": "fmkick",
@@ -6506,7 +7893,12 @@
 "hub_sha256": "bae8ab53fe6c4b94a083a2ecd8f81c34df473695566d64401206f9d5f9f6ebf4",
 "card": "https://thefirmwarehub.com/fw/cards/fmkick-e174130c.w640.webp",
 "installs": 7,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "fm1-base",
+"date": "2026-11-19T13:54:24Z"
 },
 {
 "id": "tangram",
@@ -6523,7 +7915,12 @@
 "hub_sha256": "b18da5af0a29ee86c3f5f95a1560041c7dd01b87333c75acaa7d03dc8b6f37de",
 "card": "https://thefirmwarehub.com/fw/cards/tangram-290cda13.w640.webp",
 "installs": 6,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-21T21:12:52Z"
 },
 {
 "id": "bgirlfm1",
@@ -6540,7 +7937,12 @@
 "hub_sha256": "358dbfb8d71bd7055bf30773863fdb5dc9dad6e21a9440bd3d7270d29b2b0739",
 "card": "https://thefirmwarehub.com/fw/cards/bgirlfm1-c2f334b3.w640.webp",
 "installs": 5,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-24T00:10:37Z"
 },
 {
 "id": "krisjangle",
@@ -6557,7 +7959,12 @@
 "hub_sha256": "8f67370a58b435781011ab7b2a6d114d99a479f7c83b5bdd43f98e54ec2f4fb1",
 "card": "https://thefirmwarehub.com/fw/cards/krisjangle-07575c2a.w640.webp",
 "installs": 5,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-19T18:52:03Z"
 },
 {
 "id": "matryoshka",
@@ -6574,7 +7981,12 @@
 "hub_sha256": "b2d0c182a43744469610963c7d955fe3663e5e40151c6d35bd0c9983be3177a0",
 "card": "https://thefirmwarehub.com/fw/cards/matryoshka-92329bc2.w640.webp",
 "installs": 5,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-23T17:13:11Z"
 },
 {
 "id": "tack",
@@ -6591,7 +8003,12 @@
 "hub_sha256": "59a2ec8f4f6bdd68c4128db430fdef632e4818ff1d6196a2da284b8dba8042a0",
 "card": "https://thefirmwarehub.com/fw/cards/tack-ddf1fe99.w640.webp",
 "installs": 5,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "fm1-base",
+"date": "2026-11-14T09:35:17Z"
 },
 {
 "id": "keystepone",
@@ -6608,7 +8025,12 @@
 "hub_sha256": "9de60f29818022dd72cd2c098b91c9d27427bd8898682cf0c30863fc5754569b",
 "card": null,
 "installs": 4,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"groove"
+],
+"parent": "fm1-base",
+"date": "2026-11-10T11:34:04Z"
 },
 {
 "id": "beetleblue",
@@ -6625,7 +8047,12 @@
 "hub_sha256": "78de3d0ddd47ffdf98795b4a75c033c33ad96c5c8431cb7e8225e98580f3455d",
 "card": null,
 "installs": 3,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"tracker"
+],
+"parent": "BEETLE",
+"date": "2026-11-09T10:20:52Z"
 },
 {
 "id": "rdpno",
@@ -6642,7 +8069,12 @@
 "hub_sha256": "027b012336afd35d65aeb1dc6f8acaf4e8aba17e08f66d6cb9d0e8aea1e576a4",
 "card": "https://thefirmwarehub.com/fw/cards/rdpno-cb74adb9.w640.webp",
 "installs": 3,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-23T16:59:04Z"
 },
 {
 "id": "playa",
@@ -6659,7 +8091,12 @@
 "hub_sha256": "20bdbee984dde0e97dea8d6ff764b6144a0eaf7c111a339e02a67a8a302a5cce",
 "card": "https://thefirmwarehub.com/fw/cards/playa-5c658536.w640.webp",
 "installs": 1,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "its own code",
+"date": "2026-11-10T21:29:11Z"
 },
 {
 "id": "u0u",
@@ -6676,7 +8113,12 @@
 "hub_sha256": "be27b471ac6bfdce005e012886b546fca1c6554d8a72fbbe181fc66e8e848d30",
 "card": "https://thefirmwarehub.com/fw/cards/u0u-134f8e59.w640.webp",
 "installs": 1,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-11-20T16:15:03Z"
 },
 {
 "id": "atlatltheatltuner",
@@ -6693,7 +8135,12 @@
 "hub_sha256": "bdc5e981a4416736929df3601faac325fa9d75d2c1315150714daa7f5b82b633",
 "card": "https://thefirmwarehub.com/fw/cards/atlatltheatltuner-2e8b4f65.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "its own code",
+"date": "2026-11-15T17:23:50Z"
 },
 {
 "id": "bb1",
@@ -6710,7 +8157,12 @@
 "hub_sha256": "a272334fd67c16a825f30bb68684ed4dce95dcf571b9607d0530736b1561d23e",
 "card": "https://thefirmwarehub.com/fw/cards/bb1-e4153ef9.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Felucca",
+"date": "2026-11-19T14:05:57Z"
 },
 {
 "id": "beiwagen",
@@ -6727,7 +8179,12 @@
 "hub_sha256": "38b23c864ce29936af0c679317f22d3d83c10bd7e42e10479899e14867245e1a",
 "card": "https://thefirmwarehub.com/fw/cards/beiwagen-697a8a7d.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "its own code",
+"date": "2026-11-16T10:13:23Z"
 },
 {
 "id": "fernbedienung",
@@ -6744,7 +8201,12 @@
 "hub_sha256": "56a4998e4ed6491fad729c19db30878573ae5f4bc357916d8102d16d1dfa2051",
 "card": "https://thefirmwarehub.com/fw/cards/fernbedienung-b18f32b7.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "its own code",
+"date": "2026-11-23T07:44:20Z"
 },
 {
 "id": "fm1zx",
@@ -6761,7 +8223,12 @@
 "hub_sha256": "b3eabdda3ccc02a10aed9b48b2bb489d914b86707a38ded905e762773f8de1b6",
 "card": "https://thefirmwarehub.com/fw/cards/fm1zx-76dd30da.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "its own code",
+"date": "2026-11-19T20:22:23Z"
 },
 {
 "id": "audiorouter",
@@ -6778,7 +8245,12 @@
 "hub_sha256": "bd0e4f4b71a8c2c3fecb58295833ded5450a43d7f16dd13bdac42ae9960c79b9",
 "card": "https://thefirmwarehub.com/fw/cards/audiorouter-6e7be9bc.w640.webp",
 "installs": 0,
-"chip": "old"
+"chip": "old",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-16T23:00:31Z"
 },
 {
 "id": "frodhesbark",
@@ -6795,7 +8267,12 @@
 "hub_sha256": "bbc6bb9e9aefc74d282812b52c60315af99e582d212572a0eb4da20b99602def",
 "card": "https://thefirmwarehub.com/fw/cards/frodhesbark-26171296.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-23T02:39:03Z"
 },
 {
 "id": "lrry",
@@ -6812,7 +8289,12 @@
 "hub_sha256": "b6a4db70335a7c111dfdeb51fce44424ff1c598a609f5f9916d4abccc33b5571",
 "card": "https://thefirmwarehub.com/fw/cards/lrry-be7f5982.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-13T13:50:42Z"
 },
 {
 "id": "lsdjburrito",
@@ -6829,7 +8311,12 @@
 "hub_sha256": "5cf2d3caac4addc30840d57dd508f25982cbd10075462dc87bcd46b270ac629b",
 "card": "https://thefirmwarehub.com/fw/cards/lsdjburrito-387ee40e.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"tracker"
+],
+"parent": "Felucca",
+"date": "2026-11-08T17:44:49Z"
 },
 {
 "id": "metronome",
@@ -6846,7 +8333,12 @@
 "hub_sha256": "81a09bef0852ea0322edb6f4a71fb94e2bb19dee112da7753e08d4bdc1c3a19e",
 "card": "https://thefirmwarehub.com/fw/cards/metronome-415c9db8.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-20T12:19:29Z"
 },
 {
 "id": "mikufm",
@@ -6863,7 +8355,12 @@
 "hub_sha256": "2b26a30b46fda4ed7aa7e1b13f33e93d9c822d6d33b39cbeb2d5375e638321b1",
 "card": "https://thefirmwarehub.com/fw/cards/mikufm-8accfee5.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-19T15:01:41Z"
 },
 {
 "id": "morse",
@@ -6880,7 +8377,12 @@
 "hub_sha256": "76b0c2a02927fb88cec2f51a557a4e392b23210e4bbd93e5ba29c48a26bd92d5",
 "card": "https://thefirmwarehub.com/fw/cards/morse-c6d90d90.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "fm1-base",
+"date": "2026-11-18T11:49:36Z"
 },
 {
 "id": "obssynthfm1",
@@ -6897,7 +8399,12 @@
 "hub_sha256": "8af5e97d10e766172601bae9e12f0fcc014db200ccd36ef1cc696fb75cf0b4da",
 "card": "https://thefirmwarehub.com/fw/cards/obssynthfm1-95aa9018.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-15T20:56:24Z"
 },
 {
 "id": "rhythmer",
@@ -6914,7 +8421,12 @@
 "hub_sha256": "8b9d4af568135e76465ca73d20c9e544753babc1dcac60f7a0f76ebd6fa2feb1",
 "card": "https://thefirmwarehub.com/fw/cards/rhythmer-867bee78.w640.webp",
 "installs": 0,
-"chip": "new"
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "JIANT FM",
+"date": "2026-11-07T12:07:11Z"
 }
 ],
 "counts": {
