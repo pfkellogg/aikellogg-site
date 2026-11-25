@@ -252,7 +252,7 @@ export default function MakeBigScreen() {
             {data.counts.already} already Big Screen in their own release (not our builds, but they show big in the app just the same) ·{" "}
             {data.counts.unavailable} not available yet
           </p>
-          <p className="bs-dl-total"><b>{dl.total.toLocaleString()}</b> Big Screen downloads from this page so far</p>
+          <p className="bs-dl-total"><b>{dl.total.toLocaleString()}</b> Big Screen download{dl.total === 1 ? "" : "s"} from this page so far</p>
           <div className="row">
             <input type="text" placeholder="Search by name, author, type or parent…" value={q}
               onChange={(e) => setQ(e.target.value)} aria-label="Search the firmwares" />
@@ -292,7 +292,7 @@ export default function MakeBigScreen() {
                 className={`bs-item ${f.state}${f.id === sel ? " sel" : ""}`} onClick={() => setSel(f.id)}>
                 <b>{f.name}</b> <span className="by">by {f.author}</span>
                 <span className="meta">
-                  {dlOf(f.id).toLocaleString()} Big Screen downloads · {(f.installs || 0).toLocaleString()} on the Hub ·{" "}
+                  {dlOf(f.id).toLocaleString()} Big Screen download{dlOf(f.id) === 1 ? "" : "s"} · {(f.installs || 0).toLocaleString()} on the Hub ·{" "}
                   {(f.kinds || []).join(", ")} · on {f.parent}
                 </span>
                 <span className="tag">{f.state === "built" ? "Big Screen ready" : f.state === "squeeze" ? "Squeeze it" : f.state === "already" ? (f.why.includes("my FM-1 Big Screen code") ? "Already Big Screen" : "Already big") : "Not yet"}</span>
@@ -310,7 +310,7 @@ export default function MakeBigScreen() {
             {fw.kind}
           </p>
           <p className="status">{fw.what}</p>
-          <p className="status">⬇ {dlOf(fw.id).toLocaleString()} Big Screen downloads from this page · {(fw.installs || 0).toLocaleString()} downloads of the original on The Firmware Hub</p>
+          <p className="status">⬇ {dlOf(fw.id).toLocaleString()} Big Screen download{dlOf(fw.id) === 1 ? "" : "s"} from this page · {(fw.installs || 0).toLocaleString()} downloads of the original on The Firmware Hub</p>
           {(fw.state === "built" || fw.state === "squeeze") && (
             <>
               {fw.state === "squeeze" ? <Squeeze fw={fw} onDownload={counted} /> : <Maker fw={fw} onDownload={counted} />}
