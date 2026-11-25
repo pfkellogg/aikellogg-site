@@ -847,38 +847,6 @@
 "via": "our Big Screen code"
 },
 {
-"id": "h1",
-"name": "h1",
-"author": "Jake Handy",
-"repo": "jakehandy/h1",
-"version": "0.3.2",
-"lic": "MIT",
-"kind": "synth",
-"what": "handy-1 (h1): sixteen instruments, each a full-screen animated picture you play. PRESETS changes the instrument, ALGORITHM changes its character, and the four knobs always shape the sound and the picture together. Loop recorder, step sequencer, arpeggiator and metronome built in.",
-"state": "built",
-"why": "",
-"hub_pkg": "https://thefirmwarehub.com/fw/h1-0.3.2.fwsc",
-"hub_sha256": "aa0179ce212cb8956a3c3daa604c648c76d54eb6b3d49d51758e38ff59323820",
-"card": "https://thefirmwarehub.com/fw/cards/h1-7cfb63d9.w640.webp",
-"installs": 470,
-"chip": "new",
-"kinds": [
-"synth"
-],
-"parent": "fm1-base",
-"date": "2026-11-24T15:30:35Z",
-"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/h1-0.3.0-bigscreen.fwsc",
-"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/h1-0.3.0-bigscreen.patch",
-"sha256": "3848bdfdabe5e097922937d47de16f69f76d393e81a5a1ed8d7e908322627a5a",
-"size": 616003,
-"built_version": "0.3.0",
-"commit": "4cff9365806cae90149a59b5f9669b60491347ba",
-"master": true,
-"redraw": true,
-"squeezed": [],
-"via": "Charles Vestal's fm1-base mirror, turned on"
-},
-{
 "id": "fimba",
 "name": "FiMba-1",
 "author": "jadamsowers",
@@ -5460,6 +5428,41 @@
 "via": "our Big Screen code"
 },
 {
+"id": "h1",
+"name": "h1",
+"author": "Jake Handy",
+"repo": "jakehandy/h1",
+"version": "0.3.2",
+"lic": "MIT",
+"kind": "synth",
+"what": "handy-1 (h1): sixteen instruments, each a full-screen animated picture you play. PRESETS changes the instrument, ALGORITHM changes its character, and the four knobs always shape the sound and the picture together. Loop recorder, step sequencer, arpeggiator and metronome built in.",
+"state": "squeeze",
+"why": "",
+"hub_pkg": "https://thefirmwarehub.com/fw/h1-0.3.2.fwsc",
+"hub_sha256": "aa0179ce212cb8956a3c3daa604c648c76d54eb6b3d49d51758e38ff59323820",
+"card": "https://thefirmwarehub.com/fw/cards/h1-7cfb63d9.w640.webp",
+"installs": 470,
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "fm1-base",
+"date": "2026-11-24T15:30:35Z",
+"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/h1-0.3.2-bigscreen-squeezed.fwsc",
+"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/h1-0.3.2-bigscreen-squeezed.patch",
+"sha256": "e6da851cf408b699e3abb464a057880f57233e1cf5f77bcff0f30bdc8adeef07",
+"size": 616099,
+"built_version": "0.3.2",
+"commit": "c7734d9f765771aee69e1a305e47bde25c3325a1",
+"master": true,
+"redraw": true,
+"squeezed": [
+"the USB serial console (a developer's tool)",
+"the crash records kept across power-offs"
+],
+"via": "Charles Vestal's fm1-base mirror, turned on"
+},
+{
 "id": "caravel",
 "name": "Caravel",
 "author": "BonszaiMusic",
@@ -8673,8 +8676,8 @@
 }
 ],
 "counts": {
-"built": 166,
-"squeeze": 6,
+"built": 165,
+"squeeze": 7,
 "already": 16,
 "unavailable": 125
 }
