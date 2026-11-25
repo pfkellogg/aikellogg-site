@@ -215,3 +215,11 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .bs .bs-disclaimer p:last-child { margin-bottom: 0; }
 .bs .bs-disclaimer-title { font-size: 1.6rem; font-weight: 800; color: var(--gold); }
 .bs .bs-disclaimer a { color: var(--gold); }
+
+/* Fix your firmware */
+.fyf h3 { margin-top: 1.4rem; color: var(--gold); }
+.fyf-form { display: grid; gap: 0.8rem; max-width: 640px; }
+.fyf-form label { display: grid; gap: 0.3rem; font-weight: 600; }
+.fyf-form input, .fyf-form textarea { font: inherit; padding: 0.6rem 0.7rem; border-radius: 8px; border: 1px solid #555; background: #111; color: inherit; }
+.fyf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.fyf-sent { font-size: 1.15rem; }

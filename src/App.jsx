@@ -9,6 +9,7 @@ import CertificateVerifier from "./pages/CertificateVerifier.jsx";
 import SecureAnswers from "./pages/SecureAnswers.jsx";
 import LmsPlugins from "./pages/LmsPlugins.jsx";
 import MakeBigScreen from "./pages/MakeBigScreen.jsx";
+import FixYourFirmware from "./pages/FixYourFirmware.jsx";
 import Contact from "./components/Contact.jsx";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/make-big-screen">Big Screen FWs</NavLink>
+          <NavLink to="/fix-your-firmware">Fix your firmware</NavLink>
           <NavLink to="/flute-lab">Flute Lab</NavLink>
           <NavLink to="/lms-plugins">LMS Plugins</NavLink>
           <Contact className="nav-contact" />
@@ -29,6 +31,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/make-big-screen" element={<MakeBigScreen />} />
           <Route path="/bigscreen-fws" element={<MakeBigScreen />} />
+          <Route path="/fix-your-firmware" element={<FixYourFirmware />} />
           <Route path="/flute-lab" element={<FluteLab />} />
           <Route path="/lms-plugins" element={<LmsPlugins />} />
           <Route path="/viewer-for-h5p" element={<ViewerForH5P />} />

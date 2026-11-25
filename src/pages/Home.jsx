@@ -11,6 +11,10 @@ export default function Home() {
           <h2>Big Screen Firmwares</h2>
           <p>172 FM-1 firmwares from The Firmware Hub, already built Big Screen, with Big Knobs and Key Lights: pick one, see it big, download it.</p>
         </Link>
+        <Link to="/fix-your-firmware" className="card">
+          <h2>Fix your firmware</h2>
+          <p>For FM-1 firmware authors: the best-practice guide for FM-1 Big Screen, and a free fix for yours.</p>
+        </Link>
         <Link to="/flute-lab" className="card">
           <h2>Mellotron Flute Lab</h2>
           <p>Shape your own Mellotron flute with sliders, play it, and enter the contest.</p>
