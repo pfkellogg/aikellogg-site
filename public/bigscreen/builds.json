@@ -5450,7 +5450,7 @@
 "date": "2026-11-24T15:30:35Z",
 "fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/h1-0.3.2-bigscreen-squeezed.fwsc",
 "patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/h1-0.3.2-bigscreen-squeezed.patch",
-"sha256": "e6da851cf408b699e3abb464a057880f57233e1cf5f77bcff0f30bdc8adeef07",
+"sha256": "ae92e320450721715535aec0beda4d14abcc5e87dbcc4b685ae6eac94fb7bb4f",
 "size": 616099,
 "built_version": "0.3.2",
 "commit": "c7734d9f765771aee69e1a305e47bde25c3325a1",
