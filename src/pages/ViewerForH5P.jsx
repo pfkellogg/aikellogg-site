@@ -9,7 +9,7 @@ function Mock() {
   return (
     <div className="h5pv-mock" aria-label="A drawing of the viewer's panel">
       <div className="h5pv-panel">
-        <div className="h5pv-head">Viewer for H5P <span>×</span></div>
+        <div className="h5pv-head">AIKellogg Viewer for H5P <span>×</span></div>
         <div className="h5pv-item">
           <div><b>Type:</b> H5P.InteractiveVideo 1.27</div>
           <div><b>Title:</b> Safety walkthrough · <b>ID:</b> 12</div>
@@ -40,7 +40,7 @@ export default function ViewerForH5P() {
     <div className="detail">
       <img className="banner" src="img/viewer-for-h5p-banner.png" alt="Viewer for H5P: see every question and answer on the page, the right ones marked" />
       <p className="kicker">WordPress plugin · free · GPL</p>
-      <h1>Viewer for H5P</h1>
+      <h1>AIKellogg Viewer for H5P</h1>
       <p className="lead">
         See every question and answer in the H5P content on a page: its type, its ID, and which answers are right. For
         course builders and reviewers.
@@ -82,7 +82,7 @@ export default function ViewerForH5P() {
       <h2>Who sees it</h2>
       <p>
         Only logged-in users with a role you allow, <b>administrators by default</b>. Choose the roles under{" "}
-        <b>Settings → Viewer for H5P</b>. If you allow a learner role, the settings page warns you: learners would see the
+        <b>Settings → AIKellogg Viewer for H5P</b>. If you allow a learner role, the settings page warns you: learners would see the
         correct answers. The answers come from a REST route that checks the same roles.
       </p>
 
@@ -123,7 +123,7 @@ export default function ViewerForH5P() {
       <ol>
         <li>Install and activate the <b>H5P</b> plugin, if you haven't.</li>
         <li>Download the zip above, then in WordPress: <b>Plugins → Add New → Upload Plugin</b>, choose it, and activate.</li>
-        <li>Optional: choose who sees it under <b>Settings → Viewer for H5P</b>.</li>
+        <li>Optional: choose who sees it under <b>Settings → AIKellogg Viewer for H5P</b>.</li>
         <li>Open a page with H5P content while logged in: the <b>H5P</b> button is in the bottom-right corner.</li>
       </ol>
 
