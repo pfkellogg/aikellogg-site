@@ -9,7 +9,7 @@ export default function Home() {
       <div className="cards">
         <Link to="/make-big-screen" className="card">
           <h2>Big Screen Firmwares</h2>
-          <p>169 FM-1 firmwares from The Firmware Hub, already built Big Screen, with Big Knobs and Key Lights: pick one, see it big, download it.</p>
+          <p>173 FM-1 firmwares from The Firmware Hub, already built Big Screen, with Big Knobs and Key Lights: pick one, see it big, download it.</p>
         </Link>
         <Link to="/flute-lab" className="card">
           <h2>Mellotron Flute Lab</h2>

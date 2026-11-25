@@ -3676,6 +3676,40 @@
 "via": "our Big Screen code"
 },
 {
+"id": "sidj",
+"name": "SiDJ",
+"author": "thomasj (tubesockor)",
+"repo": "thomasj/fm1-sidj",
+"version": "1.5.1",
+"lic": "GPL-3.0",
+"kind": "other",
+"what": "Plays C64 SID music from HVSC on an emulated 6581 or 8580 and lets you remix every voice live: transpose, mute, solo, swap waveforms, bend envelopes and filter, add LFOs, ride the tempo. Out of the jack, as USB audio or over ASID to a real SID. MIDI clock from the tune, or the tune synced to yours.",
+"state": "built",
+"why": "",
+"hub_pkg": "https://thefirmwarehub.com/fw/sidj-1.5.1.fwsc",
+"hub_sha256": "4df5d3f1a7360b76974e13775ad15af376a1216e0c9318e8d5922dddf7b551a8",
+"card": "https://thefirmwarehub.com/fw/cards/sidj-6ab8f582.w640.webp",
+"installs": 22,
+"chip": "new",
+"kinds": [
+"other"
+],
+"parent": "Felucca",
+"date": "2026-11-07T08:40:16Z",
+"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sidj-1.5.1-bigscreen-squeezed.fwsc",
+"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/sidj-1.5.1-bigscreen-squeezed.patch",
+"sha256": "d62c6e0aeee9ceda81427dcb265db3dcaaaa59fbe3df22ffb50ae8a024bf5e24",
+"size": 609970,
+"built_version": "1.5.1",
+"commit": "c9544f238109617fd22fdea913e48e6aa504c632",
+"master": true,
+"redraw": false,
+"squeezed": [
+"nothing: the screen's send buffer moves to the firmware's .pool memory (RAM was short)"
+],
+"via": "our Big Screen code"
+},
+{
 "id": "conductor",
 "name": "CONDUCTOR",
 "author": "MammothCheese",
@@ -4897,6 +4931,41 @@
 "via": "our Big Screen code"
 },
 {
+"id": "u0u",
+"name": "U0U",
+"author": "@Y_oulisse",
+"repo": "youlisse/U0U",
+"version": "0.4",
+"lic": "GPL-3.0",
+"kind": "drums",
+"what": "A drum machine for the FM-1: 16 steps, 11 synthesized drums, and a step FX engine on the master bus where each effect lands only on the steps you choose. Patterns chain into a song, and it follows your computer's MIDI clock over USB.",
+"state": "built",
+"why": "",
+"hub_pkg": "https://thefirmwarehub.com/fw/u0u-0.4.fwsc",
+"hub_sha256": "be27b471ac6bfdce005e012886b546fca1c6554d8a72fbbe181fc66e8e848d30",
+"card": "https://thefirmwarehub.com/fw/cards/u0u-134f8e59.w640.webp",
+"installs": 1,
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "Felucca",
+"date": "2026-11-20T16:15:03Z",
+"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/u0u-0.4-bigscreen-squeezed.fwsc",
+"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/u0u-0.4-bigscreen-squeezed.patch",
+"sha256": "2bcfa5261079d64f8587a14b4f86d9c3de5451eac3ddfed8b8dfeccec2db4eec",
+"size": 610286,
+"built_version": "0.4",
+"commit": "ab778aa64743ad4fcb4d3c554b06208c1d0fc146",
+"master": true,
+"redraw": false,
+"squeezed": [
+"nothing: the screen's send buffer moves to the firmware's .pool memory (RAM was short)"
+],
+"via": "our Big Screen code",
+"preview": "bigscreen/previews/u0u.png"
+},
+{
 "id": "agtdeck",
 "name": "AGTDECK",
 "author": "Kevin Elliott",
@@ -5388,6 +5457,41 @@
 "via": "our Big Screen code"
 },
 {
+"id": "zen",
+"name": "ZEN-1",
+"author": "aceyprime",
+"repo": "aceyprime/zen-1",
+"version": "1.2",
+"lic": "GPL-3.0",
+"kind": "synth",
+"what": "Ambient as a living window: cherry petals on a river, koi in a pond, fireflies under a real moon, and every movement a note. Set it down and let it play; the keys play along, the knobs shape the scene.",
+"state": "squeeze",
+"why": "",
+"hub_pkg": "https://thefirmwarehub.com/fw/zen-1.2.fwsc",
+"hub_sha256": "e3c51c045b1a763b6d16d2a7e783289ee874b25790e9010c0a5a084ddb65a125",
+"card": null,
+"installs": 1399,
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-10-21T20:37:01Z",
+"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/zen-1.2-bigscreen-squeezed.fwsc",
+"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/zen-1.2-bigscreen-squeezed.patch",
+"sha256": "a65e117e38af94abc6b03bd8da7000bbf9626ba5ed275bfbf90d07b0d4721318",
+"size": 609657,
+"built_version": "1.2",
+"commit": "ec9295233ea64ddac224b58b4d07216706c1b8ee",
+"master": false,
+"redraw": false,
+"squeezed": [
+"nothing: the screen's send buffer moves to the firmware's .pool memory (RAM was short)",
+"the firmware's name in the app, and Big Knobs' MASTER (the other knobs stay)"
+],
+"via": "our Big Screen code"
+},
+{
 "id": "caravel",
 "name": "Caravel",
 "author": "BonszaiMusic",
@@ -5422,6 +5526,41 @@
 ],
 "via": "our Big Screen code",
 "preview": "bigscreen/previews/caravel.png"
+},
+{
+"id": "mope1",
+"name": "MOPE-1",
+"author": "slothpallas",
+"repo": "slothpallas/mope-1",
+"version": "0.5.0",
+"lic": "GPL-3.0-only",
+"kind": "synth",
+"what": "A sad wavetable synth played by a pixel blob in a rainy room: its eyes are the filter, its mouth the envelope, its tears the delay. Gloomy beats with auto-bass, an arpeggiator, a pattern sequencer, twelve punch effects on the black keys, and presets of your own.",
+"state": "squeeze",
+"why": "",
+"hub_pkg": "https://thefirmwarehub.com/fw/mope1-0.5.0.fwsc",
+"hub_sha256": "fe51bcf00364b86b4fea8f23f602b7213f16df1a079d6e5de3b09ae25670520e",
+"card": "https://thefirmwarehub.com/fw/cards/mope1-371dde44.png",
+"installs": 87,
+"chip": "old",
+"kinds": [
+"synth"
+],
+"parent": "Felucca",
+"date": "2026-11-21T11:04:49Z",
+"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mope1-0.5.0-bigscreen-squeezed.fwsc",
+"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/mope1-0.5.0-bigscreen-squeezed.patch",
+"sha256": "470e9da0ab00d11715f5c02f852f55db6e28af175988dcac1246f30f90091d9d",
+"size": 609657,
+"built_version": "0.5.0",
+"commit": "36b0d9fa3e77fd10207988e587b1cddbb0549936",
+"master": false,
+"redraw": false,
+"squeezed": [
+"nothing: the screen's send buffer moves to the firmware's .pool memory (RAM was short)",
+"the firmware's name in the app, and Big Knobs' MASTER (the other knobs stay)"
+],
+"via": "our Big Screen code"
 },
 {
 "id": "burgerstudiofm1",
@@ -5813,28 +5952,6 @@
 ],
 "parent": "Felucca",
 "date": "2026-11-10T07:01:31Z"
-},
-{
-"id": "zen",
-"name": "ZEN-1",
-"author": "aceyprime",
-"repo": "aceyprime/zen-1",
-"version": "1.2",
-"lic": "GPL-3.0",
-"kind": "synth",
-"what": "Ambient as a living window: cherry petals on a river, koi in a pond, fireflies under a real moon, and every movement a note. Set it down and let it play; the keys play along, the knobs shape the scene.",
-"state": "unavailable",
-"why": "didn't build with our tools (too little memory left, or tools we don't have)",
-"hub_pkg": "https://thefirmwarehub.com/fw/zen-1.2.fwsc",
-"hub_sha256": "e3c51c045b1a763b6d16d2a7e783289ee874b25790e9010c0a5a084ddb65a125",
-"card": null,
-"installs": 1399,
-"chip": "old",
-"kinds": [
-"synth"
-],
-"parent": "Felucca",
-"date": "2026-10-21T20:37:01Z"
 },
 {
 "id": "hortator",
@@ -6473,28 +6590,6 @@
 ],
 "parent": "Felucca",
 "date": "2026-10-14T06:04:02Z"
-},
-{
-"id": "mope1",
-"name": "MOPE-1",
-"author": "slothpallas",
-"repo": "slothpallas/mope-1",
-"version": "0.5.0",
-"lic": "GPL-3.0-only",
-"kind": "synth",
-"what": "A sad wavetable synth played by a pixel blob in a rainy room: its eyes are the filter, its mouth the envelope, its tears the delay. Gloomy beats with auto-bass, an arpeggiator, a pattern sequencer, twelve punch effects on the black keys, and presets of your own.",
-"state": "unavailable",
-"why": "didn't build with our tools (too little memory left, or tools we don't have)",
-"hub_pkg": "https://thefirmwarehub.com/fw/mope1-0.5.0.fwsc",
-"hub_sha256": "fe51bcf00364b86b4fea8f23f602b7213f16df1a079d6e5de3b09ae25670520e",
-"card": "https://thefirmwarehub.com/fw/cards/mope1-371dde44.png",
-"installs": 87,
-"chip": "old",
-"kinds": [
-"synth"
-],
-"parent": "Felucca",
-"date": "2026-11-21T11:04:49Z"
 },
 {
 "id": "nauclerus",
@@ -7399,28 +7494,6 @@
 "date": "2026-11-13T21:25:18Z"
 },
 {
-"id": "sidj",
-"name": "SiDJ",
-"author": "thomasj (tubesockor)",
-"repo": "thomasj/fm1-sidj",
-"version": "1.5.1",
-"lic": "GPL-3.0",
-"kind": "other",
-"what": "Plays C64 SID music from HVSC on an emulated 6581 or 8580 and lets you remix every voice live: transpose, mute, solo, swap waveforms, bend envelopes and filter, add LFOs, ride the tempo. Out of the jack, as USB audio or over ASID to a real SID. MIDI clock from the tune, or the tune synced to yours.",
-"state": "unavailable",
-"why": "didn't build with our tools (too little memory left, or tools we don't have)",
-"hub_pkg": "https://thefirmwarehub.com/fw/sidj-1.5.1.fwsc",
-"hub_sha256": "4df5d3f1a7360b76974e13775ad15af376a1216e0c9318e8d5922dddf7b551a8",
-"card": "https://thefirmwarehub.com/fw/cards/sidj-6ab8f582.w640.webp",
-"installs": 22,
-"chip": "new",
-"kinds": [
-"other"
-],
-"parent": "Felucca",
-"date": "2026-11-07T08:40:16Z"
-},
-{
 "id": "sillage",
 "name": "Sillage",
 "author": "T-TAURI",
@@ -8059,28 +8132,6 @@
 "date": "2026-11-10T21:29:11Z"
 },
 {
-"id": "u0u",
-"name": "U0U",
-"author": "@Y_oulisse",
-"repo": "youlisse/U0U",
-"version": "0.4",
-"lic": "GPL-3.0",
-"kind": "drums",
-"what": "A drum machine for the FM-1: 16 steps, 11 synthesized drums, and a step FX engine on the master bus where each effect lands only on the steps you choose. Patterns chain into a song, and it follows your computer's MIDI clock over USB.",
-"state": "unavailable",
-"why": "didn't build with our tools (too little memory left, or tools we don't have)",
-"hub_pkg": "https://thefirmwarehub.com/fw/u0u-0.4.fwsc",
-"hub_sha256": "be27b471ac6bfdce005e012886b546fca1c6554d8a72fbbe181fc66e8e848d30",
-"card": "https://thefirmwarehub.com/fw/cards/u0u-134f8e59.w640.webp",
-"installs": 1,
-"chip": "new",
-"kinds": [
-"drums"
-],
-"parent": "Felucca",
-"date": "2026-11-20T16:15:03Z"
-},
-{
 "id": "atlatltheatltuner",
 "name": "Atl-Atl: The Atltuner",
 "author": "Jason Scheirer",
@@ -8390,9 +8441,9 @@
 }
 ],
 "counts": {
-"built": 165,
-"squeeze": 4,
+"built": 167,
+"squeeze": 6,
 "already": 14,
-"unavailable": 119
+"unavailable": 115
 }
 }
