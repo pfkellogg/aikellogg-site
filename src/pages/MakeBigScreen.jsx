@@ -235,7 +235,7 @@ export default function MakeBigScreen() {
           <h2>1. Choose a firmware</h2>
           <p className="status">
             {data.counts.built} Big Screen builds ready · {data.counts.squeeze || 0} ready once squeezed ·{" "}
-            {data.counts.already} already show big as they are ·{" "}
+            {data.counts.already} already Big Screen in their own release (not our builds, but they show big in the app just the same) ·{" "}
             {data.counts.unavailable} not available yet
           </p>
           <div className="row">
@@ -310,8 +310,9 @@ export default function MakeBigScreen() {
               <b>{fw.why}.</b>{" "}
               {fw.why.startsWith("Has ")
                 ? <>It isn't one we can show big yet. Get it from <a href={HUB}>The Firmware Hub</a>.</>
-                : <>{fw.name} shows big in FM-1 Big Screen as it is, so there's nothing to make: download the author's own
-                  file, straight from The Firmware Hub.</>}
+                : <>This Big Screen isn't one of our builds: it's in {fw.author}'s own release. <b>You can still use the
+                  free <a href={APP}>FM-1 Big Screen</a> app to see it big, just like the others.</b> There's nothing to
+                  make: download the author's own file, straight from The Firmware Hub.</>}
             </p>
           )}
           {fw.state === "already" && fw.hub_pkg && !fw.why.startsWith("Has ") && (
