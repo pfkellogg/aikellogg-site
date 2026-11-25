@@ -4962,6 +4962,38 @@
 "via": "our Big Screen code"
 },
 {
+"id": "erik37",
+"name": "Erik37",
+"author": "genkigenki",
+"repo": "genkigenki/erik37",
+"version": "1.3",
+"lic": "MPL-2.0",
+"kind": "keys",
+"what": "A grand piano for the FM-1: sampled concert grand with damper and pedal, release noise, a pad layer under the piano, page knobs, voices and presets on the pads.",
+"state": "built",
+"why": "",
+"hub_pkg": null,
+"hub_sha256": null,
+"card": null,
+"installs": 0,
+"chip": null,
+"kinds": [
+"keys"
+],
+"parent": "fm1-base",
+"date": "2026-11-13",
+"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/erik37-1.3-bigscreen.fwsc",
+"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/erik37-1.3-bigscreen.patch",
+"sha256": "c196113f6a8c30d26345be49cba2327946c0fab3aa62ee0c11aea1cf394ba23f",
+"size": 610108,
+"built_version": "1.3",
+"commit": "50b69578b40e5ba0b5687a2ebdff0d25b8221728",
+"master": true,
+"redraw": true,
+"squeezed": [],
+"via": "our Big Screen code"
+},
+{
 "id": "fm1midimania",
 "name": "FM-1 Midi-Mania",
 "author": "Shan-Sherif",
@@ -8676,7 +8708,7 @@
 }
 ],
 "counts": {
-"built": 165,
+"built": 166,
 "squeeze": 7,
 "already": 16,
 "unavailable": 125
