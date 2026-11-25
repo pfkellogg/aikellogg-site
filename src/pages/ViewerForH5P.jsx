@@ -3,7 +3,8 @@ import Video from "../components/Video.jsx";
 // ViewerForH5P.jsx: the detail page of the WordPress plugin Viewer for H5P (github.com/pfkellogg/h5p-viewer).
 // The picture is a drawing of the plugin's button and panel (HTML), until there are screenshots.
 const GITHUB = "https://github.com/pfkellogg/h5p-viewer";
-const ZIP = "https://github.com/pfkellogg/h5p-viewer/releases/latest/download/viewer-for-h5p.zip";
+const ZIP = "https://github.com/pfkellogg/h5p-viewer/releases/latest/download/aikellogg-viewer-for-h5p.zip";
+const WPORG = "https://wordpress.org/plugins/aikellogg-viewer-for-h5p/";
 
 function Mock() {
   return (
@@ -46,10 +47,11 @@ export default function ViewerForH5P() {
         course builders and reviewers.
       </p>
       <div className="actions">
-        <a className="btn" href={ZIP}>Download the plugin (zip)</a>
+        <a className="btn" href={WPORG}>Get it on WordPress.org</a>
+        <a className="btn ghost" href={ZIP}>Download the zip</a>
         <a className="btn ghost" href={GITHUB}>Source on GitHub</a>
       </div>
-      <p className="note">Coming soon to the WordPress.org plugin directory, so you can install it from Plugins → Add New.</p>
+      <p className="note">Now in the WordPress.org plugin directory: in WordPress, go to Plugins → Add New and search for <b>AIKellogg Viewer for H5P</b>.</p>
 
       <Mock />
 
@@ -122,7 +124,7 @@ export default function ViewerForH5P() {
       <h2>Install</h2>
       <ol>
         <li>Install and activate the <b>H5P</b> plugin, if you haven't.</li>
-        <li>Download the zip above, then in WordPress: <b>Plugins → Add New → Upload Plugin</b>, choose it, and activate.</li>
+        <li>In WordPress, go to <b>Plugins → Add New</b>, search for <b>AIKellogg Viewer for H5P</b>, then install and activate it. (Or download the zip above and use <b>Upload Plugin</b>.)</li>
         <li>Optional: choose who sees it under <b>Settings → AIKellogg Viewer for H5P</b>.</li>
         <li>Open a page with H5P content while logged in: the <b>H5P</b> button is in the bottom-right corner.</li>
       </ol>
