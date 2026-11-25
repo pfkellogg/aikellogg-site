@@ -6,6 +6,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { LOOKS, SIDE, SCALE, fromImageData, paint, smooth, draw } from "../lab/bigscreen.js";
 
 const BUILDS_REPO = "https://github.com/pfkellogg/fm1-big-screen-builds";
+// The download counter (a Cloudflare Worker of aikellogg.com's own): one count per Big Screen download.
+const COUNTER = "https://dl.aikellogg.com";
+function countDownload(id, done) {
+  fetch(`${COUNTER}/hit/${encodeURIComponent(id)}`, { method: "POST", keepalive: true })
+    .then((r) => r.json()).then((j) => j && typeof j.n === "number" && done && done(id, j.n)).catch(() => {});
+}
 const APP = "https://github.com/pfkellogg/fm1-mirror/releases/latest";
 const ANDROID = "https://github.com/pfkellogg/fm1-mirror-spyglass-android/releases/latest";
 const MFLASHER = "https://github.com/jvitkauskas/m-flasher/releases/latest";
@@ -83,7 +89,7 @@ function Preview({ fw }) {
 }
 
 // No room as it is: "Squeeze it" says what's switched off to make room, then it's made like any other.
-function Squeeze({ fw }) {
+function Squeeze({ fw, onDownload }) {
   const [open, setOpen] = useState(false);
   useEffect(() => setOpen(false), [fw]);
   if (!open)
@@ -104,12 +110,12 @@ function Squeeze({ fw }) {
         </>
       )}
       <p className="status">Everything else is {fw.author}'s {fw.name} as released. The original is always on The Firmware Hub.</p>
-      <Maker fw={fw} />
+      <Maker fw={fw} onDownload={onDownload} />
     </div>
   );
 }
 
-function Maker({ fw }) {
+function Maker({ fw, onDownload }) {
   const [steps, setSteps] = useState([]);
   const [file, setFile] = useState(null);
   const [busy, setBusy] = useState(false);
@@ -146,7 +152,7 @@ function Maker({ fw }) {
       <div className="row">
         <button onClick={make} disabled={busy}>{busy ? "Getting it…" : "Get the Big Screen build"}</button>
         {file && (
-          <a className="btn" href={file} download={name}>⬇ Download {name}</a>
+          <a className="btn" href={file} download={name} onClick={() => countDownload(fw.id, onDownload)}>⬇ Download {name}</a>
         )}
         {file && fw.res && (
           <a className="btn" href={fw.res}>⬇ Its resources file (-res.bin)</a>
@@ -175,6 +181,13 @@ export default function MakeBigScreen() {
   const [sort, setSort] = useState("downloads");
   const [readyOnly, setReadyOnly] = useState(false);
   const [sel, setSel] = useState(null);
+  // Big Screen downloads, counted on this site (from 2026-11-25): {total, counts: {id: n}}
+  const [dl, setDl] = useState({ total: 0, counts: {} });
+  const dlOf = (id) => dl.counts[id] || 0;
+  const counted = (id, n) => setDl((d) => ({ total: d.total + Math.max(0, n - (d.counts[id] || 0)), counts: { ...d.counts, [id]: n } }));
+  useEffect(() => {
+    fetch(`${COUNTER}/counts`, { cache: "no-store" }).then((r) => r.json()).then((j) => j && j.counts && setDl(j)).catch(() => {});
+  }, []);
   useEffect(() => {
     fetch("bigscreen/builds.json", { cache: "no-cache" }).then((r) => r.json()).then(setData).catch(() => setData(false));
   }, []);
@@ -196,12 +209,13 @@ export default function MakeBigScreen() {
       (parent === "all" || f.parent === parent) &&
       (!readyOnly || ready(f)));
     const by = {
+      bigscreen: (a, b) => dlOf(b.id) - dlOf(a.id) || (b.installs || 0) - (a.installs || 0),
       downloads: (a, b) => (b.installs || 0) - (a.installs || 0),
       name: (a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
       newest: (a, b) => String(b.date || "").localeCompare(String(a.date || "")),
     }[sort];
     return [...out].sort(by);
-  }, [data, q, kind, parent, sort, readyOnly]);
+  }, [data, q, kind, parent, sort, readyOnly, dl]);
   const fw = data && sel ? data.firmwares.find((f) => f.id === sel) : null;
 
   return (
@@ -238,6 +252,7 @@ export default function MakeBigScreen() {
             {data.counts.already} already Big Screen in their own release (not our builds, but they show big in the app just the same) ·{" "}
             {data.counts.unavailable} not available yet
           </p>
+          <p className="bs-dl-total"><b>{dl.total.toLocaleString()}</b> Big Screen downloads from this page so far</p>
           <div className="row">
             <input type="text" placeholder="Search by name, author, type or parent…" value={q}
               onChange={(e) => setQ(e.target.value)} aria-label="Search the firmwares" />
@@ -259,7 +274,8 @@ export default function MakeBigScreen() {
             </label>
             <label>Sort{" "}
               <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                <option value="downloads">Most downloaded</option>
+                <option value="bigscreen">Most Big Screen downloads</option>
+                <option value="downloads">Most downloaded on the Hub</option>
                 <option value="name">Name, A to Z</option>
                 <option value="newest">Newest</option>
               </select>
@@ -276,7 +292,8 @@ export default function MakeBigScreen() {
                 className={`bs-item ${f.state}${f.id === sel ? " sel" : ""}`} onClick={() => setSel(f.id)}>
                 <b>{f.name}</b> <span className="by">by {f.author}</span>
                 <span className="meta">
-                  {(f.installs || 0).toLocaleString()} downloads · {(f.kinds || []).join(", ")} · on {f.parent}
+                  {dlOf(f.id).toLocaleString()} Big Screen downloads · {(f.installs || 0).toLocaleString()} on the Hub ·{" "}
+                  {(f.kinds || []).join(", ")} · on {f.parent}
                 </span>
                 <span className="tag">{f.state === "built" ? "Big Screen ready" : f.state === "squeeze" ? "Squeeze it" : f.state === "already" ? (f.why.includes("my FM-1 Big Screen code") ? "Already Big Screen" : "Already big") : "Not yet"}</span>
               </button>
@@ -293,9 +310,10 @@ export default function MakeBigScreen() {
             {fw.kind}
           </p>
           <p className="status">{fw.what}</p>
+          <p className="status">⬇ {dlOf(fw.id).toLocaleString()} Big Screen downloads from this page · {(fw.installs || 0).toLocaleString()} downloads of the original on The Firmware Hub</p>
           {(fw.state === "built" || fw.state === "squeeze") && (
             <>
-              {fw.state === "squeeze" ? <Squeeze fw={fw} /> : <Maker fw={fw} />}
+              {fw.state === "squeeze" ? <Squeeze fw={fw} onDownload={counted} /> : <Maker fw={fw} onDownload={counted} />}
               {!fw.master && <p className="status">Big Knobs: the seven turning knobs (MASTER stays on the FM-1 itself).</p>}
               {!fw.redraw && (
                 <p className="status">
@@ -320,7 +338,7 @@ export default function MakeBigScreen() {
           )}
           {fw.state === "already" && fw.hub_pkg && !fw.why.startsWith("Has ") && (
             <div className="row">
-              <a className="btn" href={fw.hub_pkg} download>⬇ Download {fw.name} {fw.version} (the author's own)</a>
+              <a className="btn" href={fw.hub_pkg} download onClick={() => countDownload(fw.id, counted)}>⬇ Download {fw.name} {fw.version} (the author's own)</a>
             </div>
           )}
           {fw.state === "unavailable" && (
