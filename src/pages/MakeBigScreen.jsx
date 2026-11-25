@@ -253,6 +253,12 @@ export default function MakeBigScreen() {
             {data.counts.unavailable} not available yet
           </p>
           <p className="bs-dl-total"><b>{dl.total.toLocaleString()}</b> Big Screen download{dl.total === 1 ? "" : "s"} from this page so far</p>
+          <p className="status bs-own-screen">
+            <b>SHRUB</b> by Steve Duda (Xfer Records, the maker of Serum) has its own full screen: open its built-in
+            editor at <a href="https://shrub.audio">shrub.audio</a>. It also speaks its screen out loud with Charles
+            Vestal's <a href="https://charlesvestal.github.io/fm1-reader/">FM-1 Screen Reader</a>. SHRUB uses all of the
+            FM-1's memory, so it has no room for FM-1 Big Screen, and there's no Big Screen build of it here.
+          </p>
           <div className="row">
             <input type="text" placeholder="Search by name, author, type or parent…" value={q}
               onChange={(e) => setQ(e.target.value)} aria-label="Search the firmwares" />
