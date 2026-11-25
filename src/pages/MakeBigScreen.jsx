@@ -307,9 +307,17 @@ export default function MakeBigScreen() {
           )}
           {fw.state === "already" && (
             <p>
-              <b>{fw.why}.</b> {fw.name} shows big in FM-1 Big Screen as it is: no need to make anything. Get it from{" "}
-              <a href={HUB}>The Firmware Hub</a>.
+              <b>{fw.why}.</b>{" "}
+              {fw.why.startsWith("Has ")
+                ? <>It isn't one we can show big yet. Get it from <a href={HUB}>The Firmware Hub</a>.</>
+                : <>{fw.name} shows big in FM-1 Big Screen as it is, so there's nothing to make: download the author's own
+                  file, straight from The Firmware Hub.</>}
             </p>
+          )}
+          {fw.state === "already" && fw.hub_pkg && !fw.why.startsWith("Has ") && (
+            <div className="row">
+              <a className="btn" href={fw.hub_pkg} download>⬇ Download {fw.name} {fw.version} (the author's own)</a>
+            </div>
           )}
           {fw.state === "unavailable" && (
             <p>

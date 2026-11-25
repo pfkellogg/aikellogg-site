@@ -137,38 +137,6 @@
 "preview": "bigscreen/previews/felucca.png"
 },
 {
-"id": "obervave",
-"name": "OberVave",
-"author": "zvenson",
-"repo": "zvenson/obervave",
-"version": "3.5.4",
-"lic": "GPL-3.0",
-"kind": "synth",
-"what": "An 8-voice analog-style poly in the spirit of the classic American polys of 1979-84, now on four tracks: each its own sound, arp and sequence; a mixer with chorus, delay, plate reverb and drive sends, a master with DJ filter and compressor. Tracks start on the bar, patterns keep their sounds.",
-"state": "built",
-"why": "",
-"hub_pkg": "https://thefirmwarehub.com/fw/obervave-3.5.4.fwsc",
-"hub_sha256": "01493bbb857cfc610ba6ae68b456b7a6ef3ed80b015ac4c8f071d5ff328770be",
-"card": null,
-"installs": 3688,
-"chip": "new",
-"kinds": [
-"synth"
-],
-"parent": "Dinghy",
-"date": "2026-11-24T10:00:50Z",
-"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/obervave-3.5.4-knobs-lights.fwsc",
-"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/obervave-3.5.4-knobs-lights.patch",
-"sha256": "7f7df4394ef3a626d9ccef48a870f1c54ac3312b4e91239785d750a3c18b0b37",
-"size": 612223,
-"built_version": "3.5.4",
-"commit": "dae40e6ce77c4450ce98e0229ec89156a0bff831",
-"master": false,
-"redraw": true,
-"squeezed": [],
-"via": "our Big Screen code"
-},
-{
 "id": "melodee",
 "name": "Melodee",
 "author": "keremimo",
@@ -1009,38 +977,6 @@
 "preview": "bigscreen/previews/golana.png"
 },
 {
-"id": "arctic",
-"name": "Arctic Scream",
-"author": "PolarPatch",
-"repo": "PolarPatch/Arctic-scream-FM-1",
-"version": "2.1.6",
-"lic": "GPL-3.0",
-"kind": "synth",
-"what": "Long dark screaming ambient from the frozen Arctic. A living feedback loop creeps out of the cold and grows into a howl, ice sings when struck, wind drifts over the tundra. Four tracks, ten sound sources, endless reverb and shimmer. Let it play whole pieces by itself through the eight Sami seasons.",
-"state": "built",
-"why": "",
-"hub_pkg": "https://thefirmwarehub.com/fw/arctic-2.1.6.fwsc",
-"hub_sha256": "bb9bce1524eef184f65e665fa119041482b029e8b1ef0f894a38fa6d7c49a0c3",
-"card": "https://thefirmwarehub.com/fw/cards/arctic-195934ec.w640.webp",
-"installs": 387,
-"chip": "new",
-"kinds": [
-"synth"
-],
-"parent": "Dinghy",
-"date": "2026-11-24T09:41:58Z",
-"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/arctic-2.1.6-knobs-lights.fwsc",
-"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/arctic-2.1.6-knobs-lights.patch",
-"sha256": "e9867d2f0331c0b89190a70b371bef9f5679116d6f1e4abc9ef6e7fc77fa3ee7",
-"size": 612609,
-"built_version": "2.1.6",
-"commit": "3e7b3e4246eaf948e08cce9579fd83ab4ccb3881",
-"master": false,
-"redraw": true,
-"squeezed": [],
-"via": "our Big Screen code"
-},
-{
 "id": "h1",
 "name": "h1",
 "author": "Jake Handy",
@@ -1455,38 +1391,6 @@
 "commit": "757b4bdab86816351000dd7184e5d802398707f7",
 "master": true,
 "redraw": false,
-"squeezed": [],
-"via": "our Big Screen code"
-},
-{
-"id": "shineon",
-"name": "Shine On",
-"author": "zvenson",
-"repo": "zvenson/shineon",
-"version": "3.5",
-"lic": "GPL-3.0",
-"kind": "synth",
-"what": "A string ensemble in the spirit of the late-70s machines, grown out of OberVave: divide-down keyers with 16', 8' and 4' footages, register filters, a BBD ensemble and a phaser per sound. Now on four tracks with a mixer, delay, reverb, drive, a master and the step sequencer.",
-"state": "built",
-"why": "",
-"hub_pkg": "https://thefirmwarehub.com/fw/shineon-3.5.fwsc",
-"hub_sha256": "bdde36f1191e76ddb17c9da4b820f177c0d7e1350061c86406d861e5896379b0",
-"card": null,
-"installs": 237,
-"chip": "new",
-"kinds": [
-"synth"
-],
-"parent": "OberVave",
-"date": "2026-11-12T07:07:13Z",
-"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/shineon-3.5-knobs-lights.fwsc",
-"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/shineon-3.5-knobs-lights.patch",
-"sha256": "f4bd803c74936f692b270b6db461d302da6f9355a09d05bbd8a53b06be261644",
-"size": 612233,
-"built_version": "3.5",
-"commit": "91979ae74af5e8a90ade4ddcb1d6ef331e6b91a8",
-"master": false,
-"redraw": true,
 "squeezed": [],
 "via": "our Big Screen code"
 },
@@ -2099,38 +2003,6 @@
 "commit": "8d6dd77d34cde4f980bd84e726d6a923f951a0dd",
 "master": true,
 "redraw": false,
-"squeezed": [],
-"via": "our Big Screen code"
-},
-{
-"id": "atlatl",
-"name": "Skiff Atlatl",
-"author": "LIkst4",
-"repo": "LIkst4/skiff-atlatl",
-"version": "1.2.5",
-"lic": "GPL-3.0",
-"kind": "groove",
-"what": "A six-track groovebox for the FM-1, forked from Skiff 2.7: a SYNTH with analog, 303 and Plaits-style oscillators, an acid filter and OberVave presets, supersaw unison with stacks, a Minimoog voice, classic drum models, more trig conditions, a step arpeggiator, a multiband compressor, 8-channel USB\u2026",
-"state": "built",
-"why": "",
-"hub_pkg": "https://thefirmwarehub.com/fw/atlatl-1.2.5.fwsc",
-"hub_sha256": "8dad80fa607534900fa197105ba67a5da8ade7eeeb463f74ac33f87708343695",
-"card": "https://thefirmwarehub.com/fw/cards/atlatl-9aa2a5a0.w640.webp",
-"installs": 106,
-"chip": "new",
-"kinds": [
-"groove"
-],
-"parent": "Skiff",
-"date": "2026-11-21T16:45:29Z",
-"fwsc": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/atlatl-1.2.5-knobs-lights.fwsc",
-"patch": "https://pfkellogg.github.io/fm1-big-screen-builds/fw/atlatl-1.2.5-knobs-lights.patch",
-"sha256": "1a213a4cd69c81ed8fe3e14be645bee68352a842d85e90f53ac9dd1cf0a1d983",
-"size": 610433,
-"built_version": "1.2.5",
-"commit": "2d4e390bc024640d7c8ca0621fc475363be7dd6e",
-"master": false,
-"redraw": true,
 "squeezed": [],
 "via": "our Big Screen code"
 },
@@ -5587,6 +5459,28 @@
 "via": "our Big Screen code"
 },
 {
+"id": "obervave",
+"name": "OberVave",
+"author": "zvenson",
+"repo": "zvenson/obervave",
+"version": "3.5.4",
+"lic": "GPL-3.0",
+"kind": "synth",
+"what": "An 8-voice analog-style poly in the spirit of the classic American polys of 1979-84, now on four tracks: each its own sound, arp and sequence; a mixer with chorus, delay, plate reverb and drive sends, a master with DJ filter and compressor. Tracks start on the bar, patterns keep their sounds.",
+"state": "already",
+"why": "Already Big Screen, with my FM-1 Big Screen code, added by zvenson",
+"hub_pkg": "https://thefirmwarehub.com/fw/obervave-3.5.4.fwsc",
+"hub_sha256": "01493bbb857cfc610ba6ae68b456b7a6ef3ed80b015ac4c8f071d5ff328770be",
+"card": null,
+"installs": 3688,
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-24T10:00:50Z"
+},
+{
 "id": "mutable",
 "name": "Mutable Dreams",
 "author": "Kid Bunka",
@@ -5635,6 +5529,28 @@
 "date": "2026-11-23T23:27:35Z"
 },
 {
+"id": "arctic",
+"name": "Arctic Scream",
+"author": "PolarPatch",
+"repo": "PolarPatch/Arctic-scream-FM-1",
+"version": "2.1.6",
+"lic": "GPL-3.0",
+"kind": "synth",
+"what": "Long dark screaming ambient from the frozen Arctic. A living feedback loop creeps out of the cold and grows into a howl, ice sings when struck, wind drifts over the tundra. Four tracks, ten sound sources, endless reverb and shimmer. Let it play whole pieces by itself through the eight Sami seasons.",
+"state": "already",
+"why": "Already Big Screen, with my FM-1 Big Screen code, added by PolarPatch",
+"hub_pkg": "https://thefirmwarehub.com/fw/arctic-2.1.6.fwsc",
+"hub_sha256": "bb9bce1524eef184f65e665fa119041482b029e8b1ef0f894a38fa6d7c49a0c3",
+"card": "https://thefirmwarehub.com/fw/cards/arctic-195934ec.w640.webp",
+"installs": 387,
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "Dinghy",
+"date": "2026-11-24T09:41:58Z"
+},
+{
 "id": "echofield",
 "name": "ECHOFIELD",
 "author": "PhilipsKnobs",
@@ -5655,6 +5571,28 @@
 ],
 "parent": "fm1-base",
 "date": "2026-11-17T13:29:54Z"
+},
+{
+"id": "shineon",
+"name": "Shine On",
+"author": "zvenson",
+"repo": "zvenson/shineon",
+"version": "3.5",
+"lic": "GPL-3.0",
+"kind": "synth",
+"what": "A string ensemble in the spirit of the late-70s machines, grown out of OberVave: divide-down keyers with 16', 8' and 4' footages, register filters, a BBD ensemble and a phaser per sound. Now on four tracks with a mixer, delay, reverb, drive, a master and the step sequencer.",
+"state": "already",
+"why": "Already Big Screen, with my FM-1 Big Screen code, added by zvenson",
+"hub_pkg": "https://thefirmwarehub.com/fw/shineon-3.5.fwsc",
+"hub_sha256": "bdde36f1191e76ddb17c9da4b820f177c0d7e1350061c86406d861e5896379b0",
+"card": null,
+"installs": 237,
+"chip": "new",
+"kinds": [
+"synth"
+],
+"parent": "OberVave",
+"date": "2026-11-12T07:07:13Z"
 },
 {
 "id": "jamtrack",
@@ -5679,6 +5617,28 @@
 "date": "2026-11-09T18:58:06Z"
 },
 {
+"id": "atlatl",
+"name": "Skiff Atlatl",
+"author": "LIkst4",
+"repo": "LIkst4/skiff-atlatl",
+"version": "1.2.5",
+"lic": "GPL-3.0",
+"kind": "groove",
+"what": "A six-track groovebox for the FM-1, forked from Skiff 2.7: a SYNTH with analog, 303 and Plaits-style oscillators, an acid filter and OberVave presets, supersaw unison with stacks, a Minimoog voice, classic drum models, more trig conditions, a step arpeggiator, a multiband compressor, 8-channel USB\u2026",
+"state": "already",
+"why": "Already Big Screen, with my FM-1 Big Screen code, added by LIkst4",
+"hub_pkg": "https://thefirmwarehub.com/fw/atlatl-1.2.5.fwsc",
+"hub_sha256": "8dad80fa607534900fa197105ba67a5da8ade7eeeb463f74ac33f87708343695",
+"card": "https://thefirmwarehub.com/fw/cards/atlatl-9aa2a5a0.w640.webp",
+"installs": 106,
+"chip": "new",
+"kinds": [
+"groove"
+],
+"parent": "Skiff",
+"date": "2026-11-21T16:45:29Z"
+},
+{
 "id": "patchwerk",
 "name": "Patchwerk",
 "author": "Matt Kuebrich",
@@ -5699,6 +5659,28 @@
 ],
 "parent": "fm1-base",
 "date": "2026-11-08T20:47:24Z"
+},
+{
+"id": "fomajam",
+"name": "FOMAJAM",
+"author": "konsumer",
+"repo": "konsumer/fomajam",
+"version": "0.1.12",
+"lic": "GPL-3.0",
+"kind": "drums",
+"what": "A drum machine in the classic step-grid style: voices after the 909, 808, 707, 606, DMX and more, a machine per voice, accents and patterns. Play it in the browser first.",
+"state": "already",
+"why": "Already Big Screen, with konsumer's own Big Screen",
+"hub_pkg": "https://thefirmwarehub.com/fw/fomajam-0.1.12.fwsc",
+"hub_sha256": "b18d747f4e005f392a4071a00847268fe244d5e4e7d8bd7a359c25bd9dc3ac88",
+"card": null,
+"installs": 71,
+"chip": "new",
+"kinds": [
+"drums"
+],
+"parent": "its own code",
+"date": "2026-11-10T02:31:16Z"
 },
 {
 "id": "golf",
@@ -5732,7 +5714,7 @@
 "kind": "groove",
 "what": "A trap and phonk groovebox: six tracks with 808s, FM keys, bells and pads, generators for drums, hats, chords and bass, a sampler with slices, a piano roll, a live performance page with mutes, effect throws and bar jumps, and tape, VHS and vinyl colour on the master.",
 "state": "already",
-"why": "Already big, with Charles Vestal's fm1-base mirror on",
+"why": "Has Schlensog Audio Lab's own screen mirror (made for their own app; FM-1 Big Screen doesn't show it yet)",
 "hub_pkg": "https://thefirmwarehub.com/fw/trapstationos-1.1.0.2.fwsc",
 "hub_sha256": "03806aa55c06f2fa973bbb181dd2837f4345dbe7e00aa2d99a213a8e0a4850d8",
 "card": "https://thefirmwarehub.com/fw/cards/trapstationos-f392b66e.w640.webp",
@@ -6601,28 +6583,6 @@
 ],
 "parent": "fm1-base",
 "date": "2026-11-11T01:09:35Z"
-},
-{
-"id": "fomajam",
-"name": "FOMAJAM",
-"author": "konsumer",
-"repo": "konsumer/fomajam",
-"version": "0.1.12",
-"lic": "GPL-3.0",
-"kind": "drums",
-"what": "A drum machine in the classic step-grid style: voices after the 909, 808, 707, 606, DMX and more, a machine per voice, accents and patterns. Play it in the browser first.",
-"state": "unavailable",
-"why": "didn't build with our tools (too little memory left, or tools we don't have)",
-"hub_pkg": "https://thefirmwarehub.com/fw/fomajam-0.1.12.fwsc",
-"hub_sha256": "b18d747f4e005f392a4071a00847268fe244d5e4e7d8bd7a359c25bd9dc3ac88",
-"card": null,
-"installs": 71,
-"chip": "new",
-"kinds": [
-"drums"
-],
-"parent": "its own code",
-"date": "2026-11-10T02:31:16Z"
 },
 {
 "id": "mc1",
@@ -8430,9 +8390,9 @@
 }
 ],
 "counts": {
-"built": 169,
+"built": 165,
 "squeeze": 4,
-"already": 9,
-"unavailable": 120
+"already": 14,
+"unavailable": 119
 }
 }
