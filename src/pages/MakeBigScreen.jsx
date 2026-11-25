@@ -1,4 +1,4 @@
-// MakeBigScreen.jsx: pick an FM-1 firmware from The Firmware Hub, "Make it Big Screen", download it, and see what it
+// MakeBigScreen.jsx: pick an FM-1 firmware from The Firmware Hub, "Get the Big Screen build" (made ahead of time), download it, and see what it
 // will look like in FM-1 Big Screen (Smooth and the looks: src/lab/bigscreen.js, the app's own code ported).
 // The builds are made ahead of time from each author's source (github.com/pfkellogg/fm1-big-screen-builds); the
 // button checks the author's original at the Hub, then fetches and checks the Big Screen build.
@@ -96,7 +96,7 @@ function Squeeze({ fw }) {
   return (
     <div>
       {fw.squeezed.every((w) => w.startsWith("nothing")) ? (
-        <p>Nothing is switched off: to make room, the Big Screen part keeps its buffer in {fw.name}'s spare memory.</p>
+        <p>Nothing is switched off: to fit, the Big Screen part keeps its buffer in {fw.name}'s spare memory.</p>
       ) : (
         <>
           <p>To make room, this Big Screen version of {fw.name} has these switched off:</p>
@@ -130,7 +130,7 @@ function Maker({ fw }) {
         say(ok ? `✓ The original checks out (${(o.byteLength / 1024).toFixed(0)} KB, the Hub's checksum).`
                : "⚠ The Hub's file has changed since the Big Screen build was made: a newer version may be out.");
       }
-      say(`Adding Big Screen, Big Knobs and Key Lights (${fw.via || "our Big Screen code"}): the build made from ${fw.author}'s source, version ${fw.built_version}…`);
+      say(`Getting the Big Screen build, made ahead of time from ${fw.author}'s source, version ${fw.built_version} (${fw.via || "our Big Screen code"}, Big Knobs and Key Lights)…`);
       const b = await fetch(fw.fwsc).then((r) => (r.ok ? r.arrayBuffer() : Promise.reject(r.status)));
       if ((await sha256(b)) !== fw.sha256) throw new Error("the Big Screen file didn't check out: try again");
       say(`✓ Ready: ${fw.name} ${fw.built_version} + Big Screen (${(b.byteLength / 1024).toFixed(0)} KB, checked).`);
@@ -144,7 +144,7 @@ function Maker({ fw }) {
   return (
     <div>
       <div className="row">
-        <button onClick={make} disabled={busy}>{busy ? "Making…" : "Make it Big Screen"}</button>
+        <button onClick={make} disabled={busy}>{busy ? "Getting it…" : "Get the Big Screen build"}</button>
         {file && (
           <a className="btn" href={file} download={name}>⬇ Download {name}</a>
         )}
@@ -222,8 +222,8 @@ export default function MakeBigScreen() {
       <p className="kicker">M-VAVE FM-1 · free · unofficial builds</p>
       <h1>Big Screen Firmwares</h1>
       <p className="lead">
-        Choose any FM-1 firmware from <a href={HUB}>The Firmware Hub</a> and make it <b>Big Screen</b>: its screen
-        shown big on your computer, tablet or TV in the free <a href={APP}>FM-1 Big Screen</a> app. It also gets{" "}
+        Download Big Screen builds of FM-1 firmwares from <a href={HUB}>The Firmware Hub</a>, made ahead of time
+        from each author's source (you don't build anything): the firmware's screen shown big on your computer, tablet or TV in the free <a href={APP}>FM-1 Big Screen</a> app. It also gets{" "}
         <b>Big Knobs</b> (the FM-1's eight knobs, big, turned from the app) and <b>Key Lights</b> (the FM-1's lit
         keys and buttons, big, where your fingers don't hide them).
       </p>
@@ -234,7 +234,7 @@ export default function MakeBigScreen() {
         <section>
           <h2>1. Choose a firmware</h2>
           <p className="status">
-            {data.counts.built} ready to make Big Screen · {data.counts.squeeze || 0} ready once squeezed ·{" "}
+            {data.counts.built} Big Screen builds ready · {data.counts.squeeze || 0} ready once squeezed ·{" "}
             {data.counts.already} already show big as they are ·{" "}
             {data.counts.unavailable} not available yet
           </p>
