@@ -311,7 +311,10 @@ export default function MakeBigScreen() {
               {fw.why.startsWith("Has ")
                 ? <>It isn't one we can show big yet. Get it from <a href={HUB}>The Firmware Hub</a>.</>
                 : <>This Big Screen isn't one of our builds: it's in {fw.author}'s own release. <b>You can still use the
-                  free <a href={APP}>FM-1 Big Screen</a> app to see it big, just like the others.</b> There's nothing to
+                  free <a href={APP}>FM-1 Big Screen</a> app to see it big, just like the others
+                  {fw.why.includes("fm1-base") ? ", with the spyglass, Big Knobs and Key Lights." : ", with the spyglass."}</b>
+                  {!fw.why.includes("fm1-base") && <> (Big Knobs and Key Lights need the firmware's help, and this
+                  release doesn't have it yet.)</>} There's nothing to
                   make: download the author's own file, straight from The Firmware Hub.</>}
             </p>
           )}
