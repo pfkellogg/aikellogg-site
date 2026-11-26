@@ -17,7 +17,7 @@ export default function Home() {
         </Link>
         <a className="card" href="/fm1-v16-guide/">
           <h2>FM-1 V16 Guide</h2>
-          <p>M-VAVE's official V16 firmware, page by page, with the real screens: effects, envelopes, the six operators (the black keys pick them), voices, arpeggiator, sequencer and SAVE.</p>
+          <p>M-VAVE's official V16 firmware, page by page, with the real screens: effects, envelopes, the six operators (the black keys pick them), voices, arpeggiator, sequencer and SAVE. Free PDF to download.</p>
         </a>
         <Link to="/flute-lab" className="card">
           <h2>Mellotron Flute Lab</h2>
