@@ -177,8 +177,7 @@ export default function Play() {
   return (
     <div className="lab">
       <h1>Play with your FM-1</h1>
-      <p className="lead">Plug your M-VAVE FM-1 into this computer, click <b>Connect my FM-1</b>, and play its keys: you hear {list ? list.length : 16} Mellotron-style
-        sounds right here, nothing to install. Chrome or Edge. <b>Pick one sound, or several to layer them</b> (strings + choir…): click a sound
+      <p className="lead">Plug your M-VAVE FM-1 into this computer, click <b>Connect my FM-1</b>, and play its keys: you hear {list ? list.length : 17}         sounds right here, nothing to install. Chrome or Edge. <b>Pick one sound, or several to layer them</b> (strings + choir…): click a sound
         to add it or take it away, double-click for just that one. No FM-1? Play the keys below, or your computer's keys (A S D F G H J K L).</p>
 
       <section>
@@ -226,7 +225,7 @@ export default function Play() {
           <li><b>Hear only these sounds:</b> turn the FM-1's MASTER knob down. Or keep both, and play the FM-1's own sound with a Mellotron on top.</li>
           <li><b>Each sound loads once</b> (about 10 MB) and is kept by the browser. Like a real Mellotron, each note plays its tape strip for up to 8 seconds.</li>
           <li><b>Want them in the app?</b> <a href="https://github.com/pfkellogg/fm1-mirror">FM-1 Big Screen</a> plays the same sounds with no internet: Sound › Get sounds….</li>
-          <li>All the sounds are made from scratch by programs, no recordings: free to use in your own music.</li>
+          <li>All the sounds but one are made from scratch by programs, no recordings: free to use in your own music. The <b>Grand Piano</b> is made from the <a href="https://github.com/sfzinstruments/SalamanderGrandPiano">Salamander Grand Piano</a> (a Yamaha C5) by Alexander Holm, <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY 3.0</a>.</li>
         </ul>
       </section>
     </div>
