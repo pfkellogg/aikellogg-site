@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GOBBLE: Happy Thanksgiving FM-1 Firmware</title>
+<meta name="description" content="GOBBLE: a free, just-for-fun Thanksgiving firmware for the M-VAVE FM-1. Up to eight turkeys gobble Gobble Gobble Said the Turkey and Turkey in the Straw in twelve styles, with echo, reverb and a flanger. Shows big in FM-1 Big Screen.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: one warm column; a hero with the turkey and the big download, then styles, controls, install */
+:root{
+  --bg:#fbf3e6; --panel:#fffaf2; --fg:#2b1a0e; --muted:#6e5543; --line:#ead8bf;
+  --accent:#d66e24; --accent-fg:#2b1407; --deep:#6e3e1e; --ok:#2f7a3c;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1b130d; --panel:#251a12; --fg:#f6eadb; --muted:#c3a88f; --line:#3d2c1f;
+  --accent:#f08a3c; --accent-fg:#1b0d03; --deep:#f3b37a; --ok:#7bd28a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1b130d; --panel:#251a12; --fg:#f6eadb; --muted:#c3a88f; --line:#3d2c1f;
+  --accent:#f08a3c; --accent-fg:#1b0d03; --deep:#f3b37a; --ok:#7bd28a; color-scheme:dark}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 var(--body)}
+img{max-width:100%}
+.wrap{max-width:980px;margin:0 auto;padding-block:2rem 4rem;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,7vw,4.4rem);font-weight:800;color:var(--accent)}
+h2{font-size:1.8rem;font-weight:700}
+p{margin:0;max-width:66ch}
+.home{font-family:var(--display);font-size:.95rem;text-decoration:none;color:var(--accent)}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:center;padding-block:1.5rem 2rem}
+.hero img{width:100%;height:auto;image-rendering:pixelated;border-radius:14px;border:4px solid var(--accent);display:block}
+.hero .txt{display:grid;gap:1rem;min-width:0}
+.lede{font-size:1.2rem;color:var(--muted)}
+.dl{display:grid;gap:.6rem;background:var(--panel);border:2px solid var(--accent);border-radius:14px;padding:1.1rem 1.2rem}
+.dl a.big{display:inline-block;text-align:center;background:var(--accent);color:var(--accent-fg);font-family:var(--display);font-weight:800;font-size:1.8rem;text-decoration:none;padding:.75rem 1.4rem;border-radius:12px}
+.dl a.big:hover,.dl a.big:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.dl small{color:var(--muted);font-size:.95rem}
+audio{width:100%}
+section{display:grid;gap:1rem;padding-block:2rem;border-top:1px solid var(--line)}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem}
+figure{margin:0;display:grid;gap:.3rem}
+figure img{width:100%;height:auto;aspect-ratio:1;image-rendering:pixelated;border-radius:8px;border:1px solid var(--line);display:block}
+figcaption{font-size:.9rem;color:var(--muted)}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;min-width:440px;font-size:1rem}
+th,td{text-align:left;padding:.45rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--display);font-size:1.05rem}
+td:first-child{font-family:var(--display);font-weight:700;white-space:nowrap;color:var(--deep)}
+ol,ul{margin:0;padding-left:1.3rem;display:grid;gap:.4rem;max-width:66ch}
+.note{color:var(--muted);font-size:.95rem}
+a{color:var(--accent)}
+.lyric{font-family:var(--display);font-size:1.25rem;line-height:1.35;color:var(--deep);border-left:4px solid var(--accent);padding-left:1rem}
+@media (max-width:700px){.hero{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="home" href="/">← aikellogg.com</a>
+  <div class="hero">
+    <div class="txt">
+      <h1>GOBBLE</h1>
+      <p class="lede"><b>Happy Thanksgiving!</b> A free, just-for-fun firmware for the M-VAVE FM-1. A choir of turkeys gobbles its way through two songs in twelve styles, and shows big in FM-1 Big Screen.</p>
+      <div class="dl">
+        <a class="big" href="GOBBLE-1.0.fwsc" download>⬇ Download GOBBLE</a>
+        <small>GOBBLE-1.0.fwsc · 602 KB · works on old and new FM-1s · install it with M-Flasher (below)</small>
+      </div>
+      <audio controls preload="none" src="gobble-preview.mp3"></audio>
+      <small class="note">Listen first: a turkey's call, the song, three more turkeys, all twelve styles.</small>
+    </div>
+    <img src="img/five.png" alt="GOBBLE on the FM-1's screen: HAPPY THANKSGIVING, FIDDLE, five turkeys in pilgrim hats on a hay stage, singing" width="480" height="480">
+  </div>
+
+  <section>
+    <h2>The songs</h2>
+    <p class="lyric">Gobble gobble said the turkey, gobble gobble all day long,<br>gobble gobble said the turkey, sing a happy turkey song.<br>Pass the pie and pass the gravy, gather round, Thanksgiving day,<br>gobble gobble said the turkey, then he gobbled right away!</p>
+    <p><b>Gobble Gobble Said the Turkey</b> is an original tune, written for GOBBLE. Press <b>GLO</b> for <b>Turkey in the Straw</b>, the traditional fiddle tune (public domain). The turkeys don't sing words: they gobble every note, slow "gob-ble-ob-ble" bursts, and at the end of each line one of them lets out the full GOBBLE-OBBLE-OBBLE.</p>
+  </section>
+
+  <section>
+    <h2>Twelve styles, twelve hats</h2>
+    <p>Turn <b>PRESETS</b>: Fiddle, Country, Polka, Hip-Hop, Rap, Soul, Heavy Metal, Pop, K-Pop, Disco, Reggae and Swing. Each has its own band and its own hats.</p>
+    <div class="shots">
+      <figure><img src="img/one.png" alt="One turkey, Fiddle" width="480" height="480"><figcaption>It starts with one turkey</figcaption></figure>
+      <figure><img src="img/s01.png" alt="Country: cowboy hats" width="480" height="480"><figcaption>Country</figcaption></figure>
+      <figure><img src="img/s03.png" alt="Hip-hop: backwards caps and chains" width="480" height="480"><figcaption>Hip-Hop</figcaption></figure>
+      <figure><img src="img/s04.png" alt="Rap" width="480" height="480"><figcaption>Rap</figcaption></figure>
+      <figure><img src="img/s06.png" alt="Heavy metal: horns on a dark red stage" width="480" height="480"><figcaption>Heavy Metal</figcaption></figure>
+      <figure><img src="img/s08.png" alt="K-pop: pink hair and shades" width="480" height="480"><figcaption>K-Pop</figcaption></figure>
+      <figure><img src="img/s09.png" alt="Disco with a mirror ball" width="480" height="480"><figcaption>Disco</figcaption></figure>
+      <figure><img src="img/s10.png" alt="Reggae" width="480" height="480"><figcaption>Reggae</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Play it</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Control</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td>PLAY</td><td>Start and stop. It opens with one big gobble.</td></tr>
+        <tr><td>OCT+ / OCT−</td><td>One more turkey (up to 8), or one less. A new turkey gobbles hello.</td></tr>
+        <tr><td>PRESETS</td><td>The style.</td></tr>
+        <tr><td>ALGORITHM</td><td>How they sing together: Harmony, Round, Octaves or Chaos.</td></tr>
+        <tr><td>KNOB 1 – 4</td><td>Tempo · echo · reverb · how hard they gobble.</td></tr>
+        <tr><td>SELECT</td><td>The key.</td></tr>
+        <tr><td>FX · ENV</td><td>Echo on/off · reverb on/off.</td></tr>
+        <tr><td>LFO</td><td>A counter-melody, sung by a little chick.</td></tr>
+        <tr><td>EDIT · SEL · ARP</td><td>Drums · the band · shuffle.</td></tr>
+        <tr><td>SEQ</td><td>A drum fill, then every turkey gobbles on the one.</td></tr>
+        <tr><td>REC</td><td>GOBBLE! Every turkey, right now.</td></tr>
+        <tr><td>GLO</td><td>The other song.</td></tr>
+        <tr><td>Keys</td><td>You're a turkey too: a gobble at that pitch.</td></tr>
+        <tr><td>HOME · SAVE</td><td>The controls on the screen · keep your settings.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Install it</h2>
+    <ol>
+      <li>Download <b>GOBBLE-1.0.fwsc</b> above.</li>
+      <li>Open <a href="https://github.com/jvitkauskas/m-flasher">M-Flasher</a> (free, Mac, Windows, Linux), plug in the FM-1, click <b>Download mode</b>.</li>
+      <li><b>Backup full flash › Save full backup</b> first. It's your way back to the firmware you have now.</li>
+      <li><b>Flash firmware › Choose file › GOBBLE-1.0.fwsc › Review &amp; flash › Write.</b></li>
+      <li>The FM-1 restarts on GOBBLE. Open <a href="https://github.com/pfkellogg/fm1-mirror">FM-1 Big Screen</a> and the turkeys show big, by themselves.</li>
+    </ol>
+    <p class="note">Going back: M-Flasher › Restore full flash › your backup. This build talks over USB (no Bluetooth). Unofficial and just for fun: use it at your own risk.</p>
+  </section>
+
+  <section>
+    <h2>Credits</h2>
+    <p>GOBBLE by Patrick Kellogg (MIT), built on <a href="https://github.com/charlesvestal/fm1-base">fm1-base</a> by Charles Vestal (MPL-2.0). "Turkey in the Straw" is traditional (public domain). "Gobble Gobble Said the Turkey" is original. Support the Patrick Kellogg Foundation for the Performing Arts: <a href="https://ko-fi.com/aikellogg">ko-fi.com/aikellogg</a></p>
+  </section>
+</div>
+</body>
+</html>

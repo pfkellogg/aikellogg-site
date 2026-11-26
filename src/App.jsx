@@ -39,6 +39,7 @@ export default function App() {
           <Route path="/bigscreen-fws" element={<MakeBigScreen />} />
           <Route path="/fix-your-firmware" element={<FixYourFirmware />} />
           <Route path="/fm1-v16-guide" element={<GoTo href="/fm1-v16-guide/" />} />
+          <Route path="/gobble" element={<GoTo href="/gobble/" />} />
           <Route path="/flute-lab" element={<FluteLab />} />
           <Route path="/lms-plugins" element={<LmsPlugins />} />
           <Route path="/viewer-for-h5p" element={<ViewerForH5P />} />
