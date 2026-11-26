@@ -12,6 +12,12 @@ import MakeBigScreen from "./pages/MakeBigScreen.jsx";
 import FixYourFirmware from "./pages/FixYourFirmware.jsx";
 import Contact from "./components/Contact.jsx";
 
+// A static page outside the React app (public/...): go there.
+function GoTo({ href }) {
+  window.location.replace(href);
+  return null;
+}
+
 export default function App() {
   return (
     <HashRouter>
@@ -32,6 +38,7 @@ export default function App() {
           <Route path="/make-big-screen" element={<MakeBigScreen />} />
           <Route path="/bigscreen-fws" element={<MakeBigScreen />} />
           <Route path="/fix-your-firmware" element={<FixYourFirmware />} />
+          <Route path="/fm1-v16-guide" element={<GoTo href="/fm1-v16-guide/" />} />
           <Route path="/flute-lab" element={<FluteLab />} />
           <Route path="/lms-plugins" element={<LmsPlugins />} />
           <Route path="/viewer-for-h5p" element={<ViewerForH5P />} />

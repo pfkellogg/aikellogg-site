@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="An unofficial page-by-page guide to M-VAVE's V16 firmware for the FM-1, with the real screens: FX, ENV, LFO, EDIT and the black keys that pick operators, GLO, ARP, SEQ and SAVE.">
+<link rel="icon" href="/favicon.svg">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+.home-link{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size:.85rem;text-decoration:none}</style>
+<title>FM-1 V16 Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one reading column; each page of the synth = a section with its screens in a strip */
+:root{
+  --bg:#f3f4f6; --panel:#ffffff; --fg:#1d2128; --muted:#5b6270; --line:#d9dce2;
+  --accent:#c9791f; --key:#2b2f37; --keyfg:#f2f3f5;
+  --display:"Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17191d; --panel:#21242a; --fg:#e8eaee; --muted:#9aa1ad; --line:#353942;
+  --accent:#e59a45; --key:#3a3f49; --keyfg:#f2f3f5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17191d; --panel:#21242a; --fg:#e8eaee; --muted:#9aa1ad; --line:#353942;
+  --accent:#e59a45; --key:#3a3f49; --keyfg:#f2f3f5; color-scheme:dark}
+body{background:var(--bg); color:var(--fg); font:17px/1.6 var(--body)}
+.wrap{max-width:980px; margin:0 auto; padding-block:2.5rem 4rem;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display); line-height:1.15; text-wrap:balance; margin:0}
+h1{font-size:clamp(2.1rem, 5vw, 3.1rem); font-weight:700}
+h2{font-size:1.75rem; font-weight:700; padding-top:.4rem}
+h3{font-size:1.2rem; font-weight:600}
+p{margin:0; max-width:68ch}
+.lede{font-size:1.15rem; color:var(--muted)}
+.note{font-size:.95rem; color:var(--muted)}
+section{display:grid; gap:1rem; padding-block:2rem; border-top:1px solid var(--line)}
+header{display:grid; gap:1rem; padding-bottom:1.5rem}
+.panel{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:1rem}
+.hero{display:grid; gap:1.25rem}
+.hero img{border-radius:10px; border:1px solid var(--line); width:100%; height:auto; display:block}
+.btn{display:inline-block; font-family:var(--mono); font-size:.82em; background:var(--key); color:var(--keyfg);
+  padding:.05em .5em; border-radius:5px; white-space:nowrap; letter-spacing:.02em}
+.knob{display:inline-block; font-family:var(--mono); font-size:.82em; border:1.5px solid var(--accent); color:var(--fg);
+  padding:0 .5em; border-radius:999px; white-space:nowrap}
+.screens{display:grid; grid-template-columns:repeat(auto-fill, minmax(170px, 1fr)); gap:.9rem}
+figure{margin:0; display:grid; gap:.35rem; align-content:start}
+figure img{width:100%; height:auto; aspect-ratio:1; border-radius:8px; border:1px solid var(--line); image-rendering:auto; display:block}
+figcaption{font-size:.88rem; color:var(--muted); line-height:1.35}
+ul,ol{margin:0; padding-left:1.25rem; display:grid; gap:.35rem; max-width:68ch}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse; min-width:420px; font-size:.97rem}
+th,td{text-align:left; padding:.45rem .8rem; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-family:var(--display); font-weight:600; font-size:1.02rem}
+td:first-child{white-space:nowrap}
+.toc{display:flex; flex-wrap:wrap; gap:.4rem}
+.toc a{font-family:var(--mono); font-size:.85rem; text-decoration:none; color:var(--fg); border:1px solid var(--line); padding:.2rem .6rem; border-radius:6px; background:var(--panel)}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent); outline:none}
+a{color:var(--accent)}
+.keys{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:.5rem}
+.keys div{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:.5rem .7rem; display:grid; gap:.1rem}
+.keys b{font-family:var(--mono); font-size:.95rem; color:var(--accent)}
+.keys span{font-size:.95rem}
+footer{border-top:1px solid var(--line); padding-top:1.5rem; display:grid; gap:.5rem}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="home-link" href="/">← aikellogg.com</a>
+  <h1>FM-1 V16 Guide</h1>
+  <p class="lede">A walk through every page of M-VAVE's official V16 firmware for the FM-1, with the real screens. M-VAVE hasn't published a V16 manual, so this was mapped page by page on the firmware itself (Globe page 5 shows <b>Version 016</b>).</p>
+  <div class="hero">
+    <img src="img/panel.png" alt="The FM-1 front panel: MASTER, SELECT, PRESETS and ALGORITHM knobs on the left, the screen in the middle, KNOB 1 to 4 and twelve buttons on the right, keys below." width="1280" height="820">
+  </div>
+  <p class="note">How to read this guide: <span class="btn">BUTTON</span> means press a button, <span class="knob">KNOB</span> means turn a knob. On every page with four boxes, <span class="knob">KNOB 1</span> to <span class="knob">KNOB 4</span> change the four boxes in the same order (top left, top right, bottom left, bottom right), and <span class="knob">SELECT</span> turns the page. The bar at the bottom of the screen says which page you are on, like <b>2/6</b>.</p>
+  <nav class="toc" aria-label="Pages">
+    <a href="#home">HOME</a><a href="#presets">PRESETS</a><a href="#fx">FX</a><a href="#env">ENV</a><a href="#lfo">LFO</a><a href="#edit">EDIT</a><a href="#algorithm">ALGORITHM</a><a href="#glo">GLO</a><a href="#arp">ARP</a><a href="#seq">SEQ</a><a href="#save">SAVE</a><a href="#tips">Tips</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>HOME</h2>
+  <p>Press <span class="btn">HOME</span> to get back here from anywhere. The top line shows the sound's number and name; the middle is a live waveform (the bar says <b>OSC</b>) that moves while you play. <span class="btn">OCT−</span> and <span class="btn">OCT+</span> move the keyboard down or up an octave and show it on screen for a moment.</p>
+  <div class="screens">
+    <figure><img src="img/home.png" alt="HOME screen: 001 PIANO 3, a waveform line, OSC at the bottom" width="480" height="480"><figcaption>HOME: sound number and name, live waveform.</figcaption></figure>
+  </div>
+</section>
+
+<section id="presets">
+  <h2>PRESETS: pick a sound</h2>
+  <p>Turn <span class="knob">PRESETS</span> on any page and a list of sounds opens over the screen. Keep turning to move through the sounds; the list closes by itself a few seconds after you stop. A <b>*</b> after a name means it has changes you haven't saved.</p>
+  <p>Across the top of the list are tabs. Turn <span class="knob">SELECT</span> while the list is open to move between them. V16 is multitimbral, so on a voice tab (<b>Voice1</b>, <b>V2</b> …) the bottom row shows that voice's settings for the four knobs: <span class="knob">KNOB 1</span> MIDI channel, <span class="knob">KNOB 2</span> level, <span class="knob">KNOB 3</span> pan, <span class="knob">KNOB 4</span> on/off.</p>
+  <div class="screens">
+    <figure><img src="img/presets.png" alt="Preset list with tabs FX, P01, P02 and sounds 001 to 005" width="480" height="480"><figcaption>The preset list. SELECT moves along the tabs at the top.</figcaption></figure>
+    <figure><img src="img/presets-voice.png" alt="Preset list on the Voice1 tab, with MIDI Ch All, Level 100%, Pan Center, On" width="480" height="480"><figcaption>A voice tab: KNOB 1–4 set MIDI channel, level, pan, on/off.</figcaption></figure>
+  </div>
+</section>
+
+<section id="fx">
+  <h2>FX: six effects</h2>
+  <p>Press <span class="btn">FX</span>. The six effects are <b>Filter, Reverb, Delay, Distort, Chorus, Phaser</b>. Turn <span class="knob">SELECT</span> to move the red dot from one effect to the next; the bar at the bottom shows its main setting (Reverb <b>Type: Room</b>, Delay <b>Decay</b>, Distort <b>Gain</b>, Chorus and Phaser <b>Freq</b>). Press <span class="btn">SEL</span> and the bar says <b>SELECT Move / SEL Done</b>: turn SELECT to move the effect, then press SEL again.</p>
+  <div class="screens">
+    <figure><img src="img/fx-reverb.png" alt="FX page with the dot under Reverb, Type: Room" width="480" height="480"><figcaption>Reverb picked: Type Room.</figcaption></figure>
+    <figure><img src="img/fx-distort.png" alt="FX page with the dot under Distort, Gain 30%" width="480" height="480"><figcaption>Distort picked: Gain 30%.</figcaption></figure>
+    <figure><img src="img/fx-move.png" alt="FX page with SELECT Move / SEL Done in the bar" width="480" height="480"><figcaption>After SEL: move an effect, SEL again when done.</figcaption></figure>
+  </div>
+</section>
+
+<section id="env">
+  <h2>ENV: the volume envelope</h2>
+  <p>Press <span class="btn">ENV</span> for <b>Attack, Decay, Sustain, Release</b> on <span class="knob">KNOB 1</span> to <span class="knob">KNOB 4</span>. One page.</p>
+  <div class="screens">
+    <figure><img src="img/env.png" alt="ENV page: Attack 0%, Decay 0%, Sustain 100%, Release 0%" width="480" height="480"><figcaption>ENV: attack, decay, sustain, release.</figcaption></figure>
+  </div>
+</section>
+
+<section id="lfo">
+  <h2>LFO</h2>
+  <p>Press <span class="btn">LFO</span>. Two pages: <b>Wave, Speed, PMD</b> (pitch depth, vibrato) and <b>AMD</b> (volume depth, tremolo); then <b>Delay, Pitch Sens, LFO Sync, Osc Sync</b>.</p>
+  <div class="screens">
+    <figure><img src="img/lfo-1.png" alt="LFO page 1: Wave Triangle, Speed 45, PMD 0, AMD 0" width="480" height="480"><figcaption>1/2: wave, speed, pitch and volume depth.</figcaption></figure>
+    <figure><img src="img/lfo-2.png" alt="LFO page 2: Delay 0, Pitch Sens 4, Lfo Sync OFF, Osc Sync ON" width="480" height="480"><figcaption>2/2: delay, pitch sensitivity, syncs.</figcaption></figure>
+  </div>
+</section>
+
+<section id="edit">
+  <h2>EDIT: the six operators</h2>
+  <p>Press <span class="btn">EDIT</span> to edit the sound's FM operators. Each operator has six pages; turn <span class="knob">SELECT</span> to go through them. Press <span class="btn">EDIT</span> again to leave.</p>
+  <p><b>Picking the operator is the part people miss:</b> while EDIT is open, the <b>black keys</b> choose what you're editing. They don't play notes on this page, and the octave doesn't matter.</p>
+  <div class="keys" role="list">
+    <div role="listitem"><b>F♯ (1st black key)</b><span>Operator 1</span></div>
+    <div role="listitem"><b>G♯ (2nd)</b><span>Operator 2</span></div>
+    <div role="listitem"><b>A♯ (3rd)</b><span>Operator 3</span></div>
+    <div role="listitem"><b>C♯ (4th)</b><span>Operator 4</span></div>
+    <div role="listitem"><b>D♯ (5th)</b><span>Operator 5</span></div>
+    <div role="listitem"><b>F♯ (6th)</b><span>Operator 6</span></div>
+    <div role="listitem"><b>G♯ (7th)</b><span>Pitch envelope</span></div>
+    <div role="listitem"><b>A♯ (8th)</b><span>Voice: algorithm, feedback, init, rename, copy</span></div>
+  </div>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Page</th><th>KNOB 1</th><th>KNOB 2</th><th>KNOB 3</th><th>KNOB 4</th></tr></thead>
+    <tbody>
+      <tr><td>1/6 Tune &amp; Level</td><td>Detune</td><td>Freq Coarse</td><td>Freq Fine</td><td>Out Level</td></tr>
+      <tr><td>2/6 Envelope</td><td>Rate 1</td><td>Rate 2</td><td>Rate 3</td><td>Rate 4</td></tr>
+      <tr><td>3/6 Envelope</td><td>Level 1</td><td>Level 2</td><td>Level 3</td><td>Level 4</td></tr>
+      <tr><td>4/6 Sens &amp; Osc</td><td>Amp Mod Sens</td><td>Velocity</td><td>Osc Mode (Ratio / Fixed)</td><td></td></tr>
+      <tr><td>5/6 Scaling</td><td>L Depth</td><td>R Depth</td><td>Break Point</td><td></td></tr>
+      <tr><td>6/6 Scaling</td><td>L Curve</td><td>R Curve</td><td>Rate Scale</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="screens">
+    <figure><img src="img/edit-1.png" alt="EDIT 1/6 OP1 Tune and Level: Detune 3, Coarse 1, FreqFine 0, Out Level 86" width="480" height="480"><figcaption>1/6 OP1 Tune &amp; Level.</figcaption></figure>
+    <figure><img src="img/edit-2.png" alt="EDIT 2/6 OP1 Envelope rates" width="480" height="480"><figcaption>2/6 Envelope rates.</figcaption></figure>
+    <figure><img src="img/edit-3.png" alt="EDIT 3/6 OP1 Envelope levels" width="480" height="480"><figcaption>3/6 Envelope levels.</figcaption></figure>
+    <figure><img src="img/edit-4.png" alt="EDIT 4/6 OP1 Sens and Osc: ModSens, Velocity, OscMode Ratio" width="480" height="480"><figcaption>4/6 Sensitivity and oscillator mode.</figcaption></figure>
+    <figure><img src="img/edit-5.png" alt="EDIT 5/6 OP1 Scaling: L Depth, R Depth, Break Point F2" width="480" height="480"><figcaption>5/6 Keyboard scaling depth.</figcaption></figure>
+    <figure><img src="img/edit-6.png" alt="EDIT 6/6 OP1 Scaling: L Curve, R Curve, RateScale" width="480" height="480"><figcaption>6/6 Scaling curves.</figcaption></figure>
+    <figure><img src="img/edit-op4.png" alt="EDIT 1/6 OP4 Tune and Level" width="480" height="480"><figcaption>After the 4th black key: OP4.</figcaption></figure>
+    <figure><img src="img/pitch-1.png" alt="Pitch Envelope 1/2: Rate 1 to 4" width="480" height="480"><figcaption>Pitch envelope 1/2: rates.</figcaption></figure>
+    <figure><img src="img/pitch-2.png" alt="Pitch Envelope 2/2: Level 1 to 4 at 50" width="480" height="480"><figcaption>Pitch envelope 2/2: levels (50 = no change).</figcaption></figure>
+    <figure><img src="img/voice-1.png" alt="Voice page 1/2: Algorithm 3, Feedback 4, Osc Sync ON, Transpose 24" width="480" height="480"><figcaption>Voice 1/2: algorithm, feedback, osc sync, transpose.</figcaption></figure>
+    <figure><img src="img/voice-2.png" alt="Voice page 2/2: Init Voice, Rename, Copy Voice" width="480" height="480"><figcaption>Voice 2/2: Init Voice, Rename, Copy Voice.</figcaption></figure>
+  </div>
+</section>
+
+<section id="algorithm">
+  <h2>ALGORITHM</h2>
+  <p>Turn <span class="knob">ALGORITHM</span> on any page to change how the six operators connect. A diagram shows the number and the stack: operators feeding into each other, ending at <b>OUT</b>. The box drawn around one operator is its feedback loop. This changes the sound right away, so note the number before you turn it.</p>
+  <div class="screens">
+    <figure><img src="img/algorithm.png" alt="Algorithm 03 diagram: operators 3, 2, 1 and 6, 5, 4 stacked to OUT" width="480" height="480"><figcaption>Algorithm 03: two stacks of three.</figcaption></figure>
+  </div>
+</section>
+
+<section id="glo">
+  <h2>GLO: global settings</h2>
+  <p>Press <span class="btn">GLO</span>. Five pages, called <b>Globe</b> on screen.</p>
+  <ul>
+    <li><b>1/5 and 2/5: Voice 1 to Voice 8.</b> Each voice is on or off and has its own MIDI channel, so the FM-1 can play different sounds on different MIDI channels from a DAW.</li>
+    <li><b>3/5:</b> Key Vel, Effect Ch, Loopback.</li>
+    <li><b>4/5:</b> Vol OSC, button backlight, key backlight, Edit Color.</li>
+    <li><b>5/5:</b> Bank Export, Reset Patches, Version.</li>
+  </ul>
+  <div class="screens">
+    <figure><img src="img/glo-1.png" alt="Globe 1/5: Voice1 On ChAll, Voice2 Off ChAll, Voice3 Off Ch3, Voice4 Off Ch4" width="480" height="480"><figcaption>1/5 Voices 1–4.</figcaption></figure>
+    <figure><img src="img/glo-2.png" alt="Globe 2/5: Voices 5 to 8 off on channels 5 to 8" width="480" height="480"><figcaption>2/5 Voices 5–8.</figcaption></figure>
+    <figure><img src="img/glo-3.png" alt="Globe 3/5: Key Vel 90, Effect Ch 2, Loopback Off" width="480" height="480"><figcaption>3/5 Key velocity, effect channel, loopback.</figcaption></figure>
+    <figure><img src="img/glo-4.png" alt="Globe 4/5: Vol OSC On, Btn BL Off, Key BL Off, Edit Color" width="480" height="480"><figcaption>4/5 Lights and colors.</figcaption></figure>
+    <figure><img src="img/glo-5.png" alt="Globe 5/5: Bank Export, Reset Patches, Version 016" width="480" height="480"><figcaption>5/5 Export, reset, Version 016.</figcaption></figure>
+  </div>
+  <p class="note">Reset Patches resets the sounds. Export your bank first if you have sounds you want to keep.</p>
+</section>
+
+<section id="arp">
+  <h2>ARP: arpeggiator</h2>
+  <p>Press <span class="btn">ARP</span> to turn the arpeggiator on and open its pages; press it again to turn it off. Page 1: <b>pattern (Up …), Octave, Rate, Tempo</b>. Page 2: <b>Gate, Swing, Latch, Sync</b>.</p>
+  <div class="screens">
+    <figure><img src="img/arp-1.png" alt="Arpeggio 1/2: Up, Octave 1, Rate 1/4, Tempo 120" width="480" height="480"><figcaption>1/2 Pattern, octave, rate, tempo.</figcaption></figure>
+    <figure><img src="img/arp-2.png" alt="Arpeggio 2/2: Gate 80%, Swing 50%, Latch OFF, Sync OFF" width="480" height="480"><figcaption>2/2 Gate, swing, latch, sync.</figcaption></figure>
+  </div>
+</section>
+
+<section id="seq">
+  <h2>SEQ: step sequencer</h2>
+  <p>Press <span class="btn">SEQ</span>. If the screen says <b>Disable ARP to enter</b>, press <span class="btn">ARP</span> to turn the arpeggiator off first; the two can't run together. <span class="btn">PLAY</span> starts and stops the pattern (if it says <b>Enable SEQ first</b>, press SEQ). The rows of dots are the steps; the bold one is the playhead.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Page</th><th>KNOB 1</th><th>KNOB 2</th><th>KNOB 3</th><th>KNOB 4</th></tr></thead>
+    <tbody>
+      <tr><td>1/3</td><td>Pattern (P01 …)</td><td>Clear</td><td>Chain edit</td><td>Steps</td></tr>
+      <tr><td>2/3</td><td>Preset</td><td>Rate</td><td>Tempo</td><td>Gate</td></tr>
+      <tr><td>3/3</td><td>Swing</td><td>Sync</td><td>Transpose</td><td>Ratchet</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="screens">
+    <figure><img src="img/seq-1.png" alt="Sequencer 1/3: Pattern P01, Clear, Chain Edit, Steps 8" width="480" height="480"><figcaption>1/3 Pattern, clear, chain, steps.</figcaption></figure>
+    <figure><img src="img/seq-2.png" alt="Sequencer 2/3: Preset 001, Rate 1/8T, Tempo 120, Gate 80%" width="480" height="480"><figcaption>2/3 Preset, rate, tempo, gate.</figcaption></figure>
+    <figure><img src="img/seq-3.png" alt="Sequencer 3/3: Swing 50%, Sync Off, Transp +0st, Ratchet x1" width="480" height="480"><figcaption>3/3 Swing, sync, transpose, ratchet.</figcaption></figure>
+    <figure><img src="img/seq-playing.png" alt="Sequencer playing with the playhead on step 6" width="480" height="480"><figcaption>Playing: the bold dot moves along.</figcaption></figure>
+    <figure><img src="img/seq-arp-msg.png" alt="Message: Disable ARP to enter" width="480" height="480"><figcaption>ARP is on: turn it off first.</figcaption></figure>
+    <figure><img src="img/play-msg.png" alt="Message: Enable SEQ first" width="480" height="480"><figcaption>PLAY before SEQ.</figcaption></figure>
+  </div>
+</section>
+
+<section id="save">
+  <h2>SAVE</h2>
+  <p>Press <span class="btn">SAVE</span> and a menu lists what each knob saves: <span class="knob">KNOB 1</span> <b>ALL</b>, <span class="knob">KNOB 2</span> <b>Globe</b> (the GLO settings), <span class="knob">KNOB 3</span> <b>Preset</b>, <span class="knob">KNOB 4</span> <b>Pattern</b>. Grey lines can't be used at that moment. Press <span class="btn">SAVE</span> again to cancel. While this menu is open, the other buttons do nothing, so close it if the FM-1 seems stuck.</p>
+  <div class="screens">
+    <figure><img src="img/save.png" alt="SAVE menu: Knob1 ALL, Knob2 Globe, Knob3 Preset (grey), Knob4 Pattern (grey), SAVE Cancel" width="480" height="480"><figcaption>The SAVE menu.</figcaption></figure>
+  </div>
+</section>
+
+<section id="tips">
+  <h2>Tips</h2>
+  <ul>
+    <li><b>Lost?</b> Press <span class="btn">HOME</span>. If buttons do nothing, a menu (like SAVE) is still open: press the same button again.</li>
+    <li><b>Buttons are toggles:</b> pressing EDIT, ARP or SEQ a second time leaves that page.</li>
+    <li><b>Installing V16:</b> unplug any other MIDI keyboard from the computer while M-Upgrade runs; with two keyboards connected it can stop with an error.</li>
+    <li><b>Before Reset Patches or a firmware change:</b> use GLO 5/5 Bank Export to keep your sounds.</li>
+  </ul>
+</section>
+
+<footer>
+  <p class="note">Unofficial guide by Patrick Kellogg (<a href="https://aikellogg.com">aikellogg.com</a>), November 2026. Not made or checked by M-VAVE. The screens were captured from M-VAVE's own V16 file running in Joakim Eriksson's FM-1 emulator, which runs the firmware unchanged. If something on your FM-1 differs, please say so and this guide will be fixed.</p>
+</footer>
+</div>
+
+</body>
+</html>

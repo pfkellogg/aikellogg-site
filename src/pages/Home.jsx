@@ -15,6 +15,10 @@ export default function Home() {
           <h2>Fix your firmware</h2>
           <p>For FM-1 firmware authors: the best-practice guide for FM-1 Big Screen, and a free fix for yours.</p>
         </Link>
+        <a className="card" href="/fm1-v16-guide/">
+          <h2>FM-1 V16 Guide</h2>
+          <p>M-VAVE's official V16 firmware, page by page, with the real screens: effects, envelopes, the six operators (the black keys pick them), voices, arpeggiator, sequencer and SAVE.</p>
+        </a>
         <Link to="/flute-lab" className="card">
           <h2>Mellotron Flute Lab</h2>
           <p>Shape your own Mellotron flute with sliders, play it, and enter the contest.</p>
