@@ -20,6 +20,8 @@ export default function Play() {
   const [picked, setPicked] = useState(() => { try { const v = JSON.parse(localStorage.getItem("playSounds")); return Array.isArray(v) && v.length ? v : ["flute"]; } catch { return ["flute"]; } });
   const [loaded, setLoaded] = useState({});         // id -> strips ready (of 35)
   const [midiStatus, setMidiStatus] = useState("");
+  const [connected, setConnected] = useState(false);   // listening to the FM-1 (or a MIDI keyboard) now
+  const accessRef = useRef(null);
   const [sweet, setSweet] = useState(() => localStorage.getItem("sweeten") === "1");
   const [volume, setVolume] = useState(0.8);
   const [sounding, setSounding] = useState(new Set());
@@ -110,16 +112,29 @@ export default function Play() {
     setSounding((s) => { const n = new Set(s); n.delete(midi); return n; });
   }, []);
 
-  // the FM-1 (or any MIDI keyboard), Chrome and Edge
+  // the FM-1 (or any MIDI keyboard), Chrome and Edge: Connect turns listening on, Disconnect off
+  const disconnect = useCallback(() => {
+    const access = accessRef.current;
+    if (access) {
+      access.inputs.forEach((input) => { input.onmidimessage = null; });
+      access.onstatechange = null;
+    }
+    for (const m of [...voices.current.keys()]) noteOff(m);
+    setConnected(false);
+    setMidiStatus("Disconnected: the FM-1's keys don't play here now.");
+  }, [noteOff]);
+
   const connect = useCallback(async () => {
     audio();
     for (const id of pickedRef.current) if (!buffers.current[`${id}/${LOW}`]) load(id);
     if (!navigator.requestMIDIAccess) { setMidiStatus("This browser can't talk to MIDI devices. Use Chrome or Edge (Mac, Windows, Linux, Chromebook, Android)."); return; }
     try {
       const access = await navigator.requestMIDIAccess();
+      accessRef.current = access;
       const hook = () => {
         const names = [];
         access.inputs.forEach((input) => {
+          if (input.state === "disconnected") return;
           names.push(input.name);
           input.onmidimessage = (e) => {
             const [st, d1, d2] = e.data, type = st & 0xf0;
@@ -127,14 +142,18 @@ export default function Play() {
             else if (type === 0x80 || type === 0x90) noteOff(d1);
           };
         });
+        setConnected(names.length > 0);                 // an FM-1 unplugged: the light goes red by itself
         setMidiStatus(names.length ? "Playing from: " + names.join(", ") : "No FM-1 found: plug it in with a USB data cable and turn it on.");
       };
       hook();
       access.onstatechange = hook;
     } catch {
+      setConnected(false);
       setMidiStatus("MIDI wasn't allowed. Allow it in the browser's site settings (the icon left of the address) and try again.");
     }
   }, [audio, load, noteOn, noteOff]);
+
+  useEffect(() => () => { const a = accessRef.current; if (a) { a.inputs.forEach((i) => { i.onmidimessage = null; }); a.onstatechange = null; } }, []);
 
   // the computer's keys
   useEffect(() => {
@@ -174,7 +193,8 @@ export default function Play() {
 
       <section className="play">
         <div className="playbar">
-          <button className="connect" onClick={connect}>Connect my FM-1</button>
+          <button className={"connect" + (connected ? " on" : "")} onClick={connected ? disconnect : connect} aria-pressed={connected}>
+            <span className={"light " + (connected ? "green" : "red")} aria-hidden="true" />{connected ? "Disconnect" : "Connect my FM-1"}</button>
           <button className={"sweet" + (sweet ? " on" : "")} onClick={() => setSweet((v) => !v)} aria-pressed={sweet}
             title="What a good stereo does: a little warmth and air, soft tape saturation, stereo width and a small room">Sweeten: {sweet ? "on" : "off"}</button>
           <span className="fixed1">{status}</span>

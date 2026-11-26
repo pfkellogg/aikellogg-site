@@ -232,3 +232,7 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .playbar .vol { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .playbar .vol input { width: 120px; accent-color: #ffd60a; }
 .lab .help ul { padding-left: 1.2em; display: grid; gap: 6px; }
+.playbar .connect { display: inline-flex; align-items: center; gap: 10px; min-width: 12.5em; justify-content: center; }
+.playbar .connect .light { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #000; flex: none; }
+.playbar .connect .light.red { background: #e5383b; box-shadow: 0 0 6px #e5383b; }
+.playbar .connect .light.green { background: #2ecc71; box-shadow: 0 0 8px #2ecc71; }
