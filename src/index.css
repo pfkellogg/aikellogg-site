@@ -223,3 +223,12 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .fyf-form input, .fyf-form textarea { font: inherit; padding: 0.6rem 0.7rem; border-radius: 8px; border: 1px solid #555; background: #111; color: inherit; }
 .fyf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .fyf-sent { font-size: 1.15rem; }
+
+/* ---- Play (Play.jsx) ---- */
+.soundpick { display: flex; flex-wrap: wrap; gap: 10px; }
+.soundpick button { font-size: 1.05rem; padding: 10px 16px; background: transparent; color: #ffd60a; border: 2px solid #ffd60a; }
+.soundpick button.on { background: #ffd60a; color: #000; font-weight: 800; }
+.playbar .connect { font-weight: 800; background: #ffd60a; color: #000; }
+.playbar .vol { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.playbar .vol input { width: 120px; accent-color: #ffd60a; }
+.lab .help ul { padding-left: 1.2em; display: grid; gap: 6px; }

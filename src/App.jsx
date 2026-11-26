@@ -10,6 +10,7 @@ import SecureAnswers from "./pages/SecureAnswers.jsx";
 import LmsPlugins from "./pages/LmsPlugins.jsx";
 import MakeBigScreen from "./pages/MakeBigScreen.jsx";
 import FixYourFirmware from "./pages/FixYourFirmware.jsx";
+import Play from "./pages/Play.jsx";
 import Contact from "./components/Contact.jsx";
 
 // A static page outside the React app (public/...): go there.
@@ -27,6 +28,7 @@ export default function App() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/make-big-screen">Big Screen FWs</NavLink>
           <NavLink to="/fix-your-firmware">Fix your firmware</NavLink>
+          <NavLink to="/play">Play</NavLink>
           <NavLink to="/flute-lab">Flute Lab</NavLink>
           <NavLink to="/lms-plugins">LMS Plugins</NavLink>
           <Contact className="nav-contact" />
@@ -40,6 +42,7 @@ export default function App() {
           <Route path="/fix-your-firmware" element={<FixYourFirmware />} />
           <Route path="/fm1-v16-guide" element={<GoTo href="/fm1-v16-guide/" />} />
           <Route path="/gobble" element={<GoTo href="/gobble/" />} />
+          <Route path="/play" element={<Play />} />
           <Route path="/flute-lab" element={<FluteLab />} />
           <Route path="/lms-plugins" element={<LmsPlugins />} />
           <Route path="/viewer-for-h5p" element={<ViewerForH5P />} />

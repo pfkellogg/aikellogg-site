@@ -7,6 +7,10 @@ export default function Home() {
       <h1>AIKellogg</h1>
       <p className="lead">Free tools for the M-VAVE FM-1 and for musicians, especially those who find small screens hard to read, and for WordPress and Moodle course builders.</p>
       <div className="cards">
+        <Link to="/play" className="card">
+          <h2>Play with your FM-1</h2>
+          <p>Plug in your FM-1 and play 15 Mellotron-style sounds right in your browser, nothing to install: flute, strings, choir, shakuhachi, flugelhorn, trumpet, violin, cello, French horn, harmonica, alto sax, clarinet, oboe, accordion, vibraphone.</p>
+        </Link>
         <a className="card" href="/gobble/">
           <h2>🦃 GOBBLE</h2>
           <p>Happy Thanksgiving! A free, just-for-fun FM-1 firmware: up to eight turkeys gobble two songs in twelve styles, from fiddle to heavy metal and K-pop. Shows big in FM-1 Big Screen.</p>
