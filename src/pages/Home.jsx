@@ -9,7 +9,7 @@ export default function Home() {
       <div className="cards">
         <Link to="/play" className="card">
           <h2>Play with your FM-1</h2>
-          <p>Plug in your FM-1 and play 15 Mellotron-style sounds right in your browser, nothing to install: flute, strings, choir, shakuhachi, flugelhorn, trumpet, violin, cello, French horn, harmonica, alto sax, clarinet, oboe, accordion, vibraphone.</p>
+          <p>Plug in your FM-1 and play 16 Mellotron-style sounds right in your browser, nothing to install, one at a time or layered: flute, strings, choir, shakuhachi, flugelhorn, trumpet, violin, brass, sitar, French horn, harmonica, alto sax, clarinet, oboe, accordion, vibraphone.</p>
         </Link>
         <a className="card" href="/gobble/">
           <h2>🦃 GOBBLE</h2>
