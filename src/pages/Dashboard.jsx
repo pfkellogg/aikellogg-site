@@ -9,6 +9,9 @@ const ANDROID = "https://github.com/pfkellogg/fm1-mirror-spyglass-android/releas
 const STABLE = "https://github.com/pfkellogg/fm1-mirror/releases/latest";
 const EMU = "https://joakimeriksson.github.io/fm1-emu/";
 const VIDEO = "nPMg6kCL4t4";
+const SHUTTLE_VIDEO = "mReQ0qHMnH4";
+const MAC34 = "https://github.com/pfkellogg/fm1-mirror/releases/tag/v1.3.34";
+const ANDROID21 = "https://github.com/pfkellogg/fm1-mirror-spyglass-android/releases/tag/v1.6.21";
 
 export default function Dashboard() {
   const [list, setList] = useState([]);
@@ -91,6 +94,20 @@ export default function Dashboard() {
           )}
         </div>
       )}
+
+      <h2>Turn the knobs with a dial: the ShuttleXpress</h2>
+      <p>
+        A Contour ShuttleXpress (or ShuttlePRO) works as a knob remote in <a href={MAC34}>FM-1 Big Screen 1.3.34</a> and{" "}
+        <a href={ANDROID21}>Android 1.6.21</a> (pre-releases): plug it in and the app finds it, no Contour software needed.
+        Tested on a Mac; Windows, Linux and Android are built but not yet tried.
+      </p>
+      <ul>
+        <li><b>Inner dial:</b> turns the chosen knob, one notch = one click of the real knob. <b>Outer ring:</b> turns it fast; further = faster; let go = stop.</li>
+        <li><b>Button 1 / 2:</b> previous / next knob. <b>Hold 1:</b> where am I? <b>Hold 2:</b> speech on/off.</li>
+        <li><b>Button 3:</b> SEL. <b>Button 4:</b> the next FM-1 (<b>hold 4:</b> Side by side / one at a time). <b>Button 5:</b> the lock.</li>
+        <li>Everything is said out loud and shown big.</li>
+      </ul>
+      <Video id={SHUTTLE_VIDEO} title="ShuttleXpress Comes to FM-1 Dashboard" caption="A dial for the FM-1's knobs: my own hand on a real ShuttleXpress, with my real FM-1 and four virtual ones (2:50)." />
 
       <h2>Good to know</h2>
       <ul>
