@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import Video from "../components/Video.jsx";
 
 /* Inside the FM-1: a how-to guide in five parts. Part 1: the overview, and a debugging example with FM-1 Debugger.
    Route: #/guide (the series) and #/guide/1 … #/guide/5. */
@@ -60,6 +61,7 @@ function Part1() {
         Two computers are at work when you use FM-1 Big Screen: the little one inside the FM-1, and yours. This part shows
         what they say to each other, and then, with <b>FM-1 Debugger</b>, stops the conversation in the middle so you can read it.
       </p>
+      <Video id="XWXPgNYXL58" title="Inside the FM-1, Part 1" caption="Part 1 as a video (2:26): the same story, and FM-1 Debugger stopping a real FM-1, with real clicks." />
       <Series current={1} />
 
       <h2>Two computers, one cable</h2>
