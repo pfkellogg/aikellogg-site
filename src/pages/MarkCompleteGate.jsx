@@ -34,11 +34,12 @@ export default function MarkCompleteGate() {
         <a className="btn" href={ZIP}>Download the plugin (zip)</a>
         <a className="btn ghost" href={GITHUB}>Source on GitHub</a>
       </div>
-      <p className="note">Coming soon to the WordPress.org plugin directory.</p>
+      <p className="note">In review for the WordPress.org plugin directory now.</p>
 
       <Mock />
 
       <h2>Watch</h2>
+      <Video id="SiBgYsky7Ks" title="Mark Complete Gate 1.1.3 for LearnDash: Every H5P Type, Real Scores, Forced Timer (Free Plugin)" caption="What's new in 1.1.3: every kind of H5P (with a MutationObserver), real scores, your own rules, LearnDash's forced timer, eLearning Complete compatible (3:05)." />
       <Video id="il5P1rG8zf8" title="Stop LearnDash Learners Skipping Your H5P: Mark Complete Gate (Free Plugin)" caption="Locked, a wrong answer, then unlocked, in a real LearnDash lesson (2:07)." />
 
       <h2>What it does</h2>
