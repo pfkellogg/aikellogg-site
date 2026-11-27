@@ -11,6 +11,7 @@ import LmsPlugins from "./pages/LmsPlugins.jsx";
 import MakeBigScreen from "./pages/MakeBigScreen.jsx";
 import FixYourFirmware from "./pages/FixYourFirmware.jsx";
 import Play from "./pages/Play.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 import Contact from "./components/Contact.jsx";
 
 // A static page outside the React app (public/...): go there.
@@ -27,6 +28,7 @@ export default function App() {
         <nav>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/make-big-screen">Big Screen FWs</NavLink>
+          <NavLink to="/dashboard">Dashboard</NavLink>
           <NavLink to="/fix-your-firmware">Fix your firmware</NavLink>
           <NavLink to="/play">Play</NavLink>
           <NavLink to="/flute-lab">Flute Lab</NavLink>
@@ -43,6 +45,8 @@ export default function App() {
           <Route path="/fm1-v16-guide" element={<GoTo href="/fm1-v16-guide/" />} />
           <Route path="/gobble" element={<GoTo href="/gobble/" />} />
           <Route path="/play" element={<Play />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/fm1-dashboard" element={<Dashboard />} />
           <Route path="/flute-lab" element={<FluteLab />} />
           <Route path="/lms-plugins" element={<LmsPlugins />} />
           <Route path="/viewer-for-h5p" element={<ViewerForH5P />} />

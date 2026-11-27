@@ -240,3 +240,29 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .playbar .connect .light { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #000; flex: none; }
 .playbar .connect .light.red { background: #e5383b; box-shadow: 0 0 6px #e5383b; }
 .playbar .connect .light.green { background: #2ecc71; box-shadow: 0 0 8px #2ecc71; }
+
+/* Dashboard: several FM-1s on one screen */
+.dash .dash-warn { border-left: 4px solid #ffd60a; padding-left: 12px; }
+.dash-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 10px 0; }
+.dash-bar .seg { display: inline-flex; border-radius: 999px; overflow: hidden; border: 2px solid #ffd60a; }
+.dash-bar .seg button { background: transparent; color: #ffd60a; border: none; border-radius: 0; padding: 8px 16px; font-weight: 700; }
+.dash-bar .seg button.on { background: #ffd60a; color: #000; }
+.dash-bar .lock { font-weight: 800; background: #f39c12; color: #000; }
+.dash-bar .lock.on { background: #2ecc71; }
+.dash-knob { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+.dash-knob input { width: 160px; accent-color: #ffd60a; }
+.dash-bar input[type=search] { padding: 8px 12px; border-radius: 999px; border: 1px solid #555; background: #111; color: #fff; }
+.dash-hint { opacity: .85; margin: 4px 0 14px; }
+.dash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+.dash-tile { position: relative; display: block; padding: 18px 0 0; background: #0b0b0d; border: 2px solid #26262b; border-radius: 10px; overflow: hidden; cursor: pointer; text-align: left; }
+.dash-tile img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+.dash-tile.picked { border-color: #ffd60a; box-shadow: 0 0 0 2px #ffd60a; }
+.dash-label { position: absolute; top: 2px; left: 6px; font-size: .72rem; color: #bbb; font-weight: 700; }
+.dash-name { display: block; font-size: .72rem; color: #ddd; padding: 3px 6px 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dash-hit { position: absolute; left: 0; right: 0; bottom: 22px; background: rgba(16,16,20,.92); color: #ffd60a; font-weight: 800; font-size: .78rem; padding: 3px 6px; border-top: 3px solid #2ecc71; animation: dashpop .25s ease-out; }
+@keyframes dashpop { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
+.dash-more { margin-top: 12px; }
+.dash-tabrow { display: flex; flex-wrap: wrap; gap: 6px; max-height: 150px; overflow-y: auto; padding-bottom: 6px; }
+.dash-tabrow button { background: #37373c; color: #fff; padding: 6px 10px; font-size: .8rem; }
+.dash-tabrow button.on { background: #ffd60a; color: #000; font-weight: 800; }
+.dash-one { margin-top: 12px; max-width: 420px; }
