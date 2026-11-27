@@ -177,7 +177,7 @@ export default function Play() {
   return (
     <div className="lab">
       <h1>Play with your FM-1</h1>
-      <p className="lead">Plug your M-VAVE FM-1 into this computer, click <b>Connect my FM-1</b>, and play its keys: you hear {list ? list.length : 17}         sounds right here, nothing to install. Chrome or Edge. <b>Pick one sound, or several to layer them</b> (strings + choir…): click a sound
+      <p className="lead">Plug your M-VAVE FM-1 into this computer, click <b>Connect my FM-1</b>, and play its keys: you hear {list ? list.length : 18}         sounds right here, nothing to install. Chrome or Edge. <b>Pick one sound, or several to layer them</b> (strings + choir…): click a sound
         to add it or take it away, double-click for just that one. No FM-1? Play the keys below, or your computer's keys (A S D F G H J K L).</p>
 
       <section>
