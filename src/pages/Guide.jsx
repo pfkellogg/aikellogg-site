@@ -131,9 +131,13 @@ function Part1() {
       </table>
       <h3>Read the timing</h3>
       <p>
-        In the log, the hellos go out about <b>930 ms</b> apart, and the FM-1 answers within milliseconds. Leave the app stopped for
-        more than three seconds and the screen rows stop coming: no hello, no screen. Press <b>Continue</b> and they start again.
-        That's the protocol, seen working.
+        In the log, the hellos go out about <b>930 ms</b> apart, and the FM-1 answers within milliseconds. While the app is stopped
+        at the FM-1's answer, it reads nothing more from the FM-1, so the big screen freezes. The hellos keep going out, because another
+        part of the app sends them. Press <b>Continue</b> and the screen catches up.
+      </p>
+      <p>
+        Stop the hellos instead (a breakpoint on <b>Hello (Big Screen 1)</b>, to the FM-1) and you see the other half of the protocol:
+        about three seconds after the last hello, the FM-1 stops sending its screen. No hello, no screen.
       </p>
       <h3>More breakpoints to try</h3>
       <ul>
