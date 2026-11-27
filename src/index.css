@@ -330,3 +330,12 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .g-steps li{margin:6px 0}.g-note{color:#9aa6b8;font-size:15px}
 .g figure{margin:18px 0}.g figure img{width:100%;border-radius:10px;border:1px solid #2f3a4d}
 .g figcaption{color:#9aa6b8;font-size:14.5px;margin-top:6px}
+.g-map{background:#121823;border:1px solid #232c3b;border-radius:12px;padding:12px;margin:12px 0}
+.g-map-top{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px;font-size:15px;color:#aab4c3}
+.g-map-top button{background:#1b2230;border:1px solid #2f3a4d;color:#e6edf3;border-radius:8px;padding:4px 10px;cursor:pointer}
+.g-map-top button.on{border-color:#ffd60a;color:#ffd60a}
+.g-grid{display:grid;grid-template-columns:repeat(32,1fr);gap:2px;max-width:640px}
+.g-sq{aspect-ratio:1;border:1.5px solid;border-radius:2px;padding:0;cursor:pointer}
+.g-sq.empty{opacity:.55}.g-sq:hover{outline:1px solid #fff}.g-sq.pick{outline:2px solid #ffd60a;z-index:1}
+.g-map-info{margin-top:10px;font-size:15.5px;min-height:48px}
+.g-key{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:middle}

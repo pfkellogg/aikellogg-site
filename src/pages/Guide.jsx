@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Video from "../components/Video.jsx";
 
@@ -6,7 +7,7 @@ import Video from "../components/Video.jsx";
 
 const PARTS = [
   { n: 1, title: "How the app and the FM-1 talk, and catching them at it", ready: true },
-  { n: 2, title: "The FM-1's flash, square by square", ready: false },
+  { n: 2, title: "The FM-1's flash, square by square", ready: true },
   { n: 3, title: "From C code to the chip: compiling, the linker, RAM and the POOL", ready: false },
   { n: 4, title: "The two families: Felucca and fm1-base", ready: false },
   { n: 5, title: "Debugging on the FM-1 itself: breakpoints in the firmware", ready: false },
@@ -43,6 +44,7 @@ export default function Guide() {
   const { part } = useParams();
   const n = Number(part) || 0;
   if (n === 1) return <Part1 />;
+  if (n === 2) return <Part2 />;
   return (
     <div className="g">
       <h1>Inside the FM-1</h1>
@@ -156,6 +158,140 @@ function Part1() {
       <h2>Next: Part 2</h2>
       <p>The firmware that answered lives in the FM-1's flash. Part 2 opens the flash up, square by square, as M-Flasher draws it. To look ahead, the <Link to="/disassembler">FM-1 Disassembler</Link> already shows every C function of two real firmwares and the squares they live in.</p>
       <p className="g-note">FM-1 Debugger is a pre-release, tested on a Mac with a real FM-1; Windows and Linux are built but not yet tried. M-VAVE and FM-1 are M-VAVE's names; FM-1 Big Screen is independent.</p>
+    </div>
+  );
+}
+
+/* ---- Part 2: the flash, square by square ---- */
+
+// M-VAVE's own table for the FM-1 (m-bootloader docs/SPEC.md §5.2 and §5.5), in 4 KB squares
+const REGIONS = [
+  { k: "boot", from: 0, to: 4, name: "Boot area", what: "The bootloader, the flash's table of contents, and the chip key record. Starts the FM-1.", install: "Kept" },
+  { k: "fw", from: 4, to: 147, name: "Firmware", what: "The firmware's code and constants, stored scrambled with this FM-1's key. The chip runs it straight from here.", install: "Written: only the squares that change" },
+  { k: "vm", from: 147, to: 233, name: "Settings (VM)", what: "Settings, presets, sequences. Custom firmwares keep their projects and samples here, or in places of their own.", install: "Kept" },
+  { k: "bt", from: 233, to: 234, name: "Bluetooth pairings", what: "The devices it has paired with.", install: "Kept" },
+  { k: "usr", from: 234, to: 252, name: "Sounds (USR)", what: "The synth's sound bank. Official updates never write it; if it's lost, only a backup brings it back.", install: "Kept" },
+  { k: "free", from: 252, to: 255, name: "Not declared", what: "Not in M-VAVE's table. Some custom firmwares use gaps like this, so it isn't free to wipe.", install: "Kept" },
+  { k: "fac", from: 255, to: 256, name: "Factory data", what: "This FM-1's own: its Bluetooth address and key data. Never copied from one FM-1 to another.", install: "Kept" },
+];
+const RCOL = { boot: "#e5484d", fw: "#3e9bff", vm: "#30a46c", bt: "#f5a524", usr: "#ff8fd6", free: "#3a4252", fac: "#f76b15" };
+// where two real firmwares end (their builds: Skiff 0x8E76C, Erik37 0x90DBC)
+const BUILDS = { none: null, skiff: { name: "Skiff + Big Screen", end: 0x8e76c }, erik37: { name: "Erik37 + Big Screen", end: 0x90dbc } };
+const hx = (n) => "0x" + n.toString(16).toUpperCase().padStart(5, "0");
+
+function FlashMap() {
+  const [pick, setPick] = useState(null);
+  const [fw, setFw] = useState("skiff");
+  const b = BUILDS[fw];
+  const usedTo = b ? Math.floor((b.end - 1) / 4096) : -1;
+  const regionOf = (s) => REGIONS.find((r) => s >= r.from && s < r.to);
+  const r = pick != null ? regionOf(pick) : null;
+  return (
+    <div className="g-map">
+      <div className="g-map-top">
+        <span>Firmware in the map:</span>
+        {Object.entries(BUILDS).map(([k, v]) => (
+          <button key={k} className={fw === k ? "on" : ""} onClick={() => setFw(k)}>{v ? v.name : "none"}</button>
+        ))}
+      </div>
+      <div className="g-grid" role="grid" aria-label="The FM-1's flash: 256 squares of 4 KB">
+        {Array.from({ length: 256 }, (_, s) => {
+          const reg = regionOf(s);
+          const empty = reg.k === "fw" && b && s > usedTo;
+          return (
+            <button key={s} className={`g-sq ${pick === s ? "pick" : ""} ${empty ? "empty" : ""}`}
+              style={{ background: empty ? "transparent" : RCOL[reg.k], borderColor: RCOL[reg.k] }}
+              title={`Square ${s}: ${hx(s * 4096)}–${hx(s * 4096 + 4095)} · ${reg.name}${empty ? " (empty in this build)" : ""}`}
+              onClick={() => setPick(s)} />
+          );
+        })}
+      </div>
+      <div className="g-map-info">
+        {r ? (
+          <>
+            <b>Square {pick}</b> · {hx(pick * 4096)}–{hx(pick * 4096 + 4095)} · <b style={{ color: RCOL[r.k] }}>{r.name}</b>
+            {r.k === "fw" && b && (pick > usedTo ? " · empty: this build ends before it" : " · used by this build")}
+            <br />{r.what} <i>An install: {r.install.toLowerCase()}.</i>
+          </>
+        ) : (
+          <>Click a square. {b && <>{b.name} fills squares 4 to {usedTo} of the firmware's 4 to 146 ({Math.round(((usedTo - 3) / 143) * 100)}%).</>}</>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Part2() {
+  return (
+    <div className="g">
+      <p className="g-kicker">Inside the FM-1 · Part 2 of 5</p>
+      <h1>The FM-1's flash, square by square</h1>
+      <p className="g-lead">
+        The firmware that answered in Part 1 lives in the FM-1's flash memory: 1 MB, one chip, everything the FM-1 keeps.
+        M-Flasher draws it as a grid of <b>256 squares</b>. Here's what every square is, and what installing a firmware does to it.
+      </p>
+      <Series current={2} />
+
+      <h2>Why squares?</h2>
+      <p>
+        The FM-1's flash is NOR flash. Writing it can only turn 1 bits into 0 bits; to turn them back, the chip must
+        <b> erase</b>, and the smallest piece it can erase is <b>4 KB</b> (a sector). So every tool that writes the flash
+        works in 4 KB pieces, and 1 MB ÷ 4 KB = 256 of them. That's M-Flasher's grid: one square, one sector.
+      </p>
+      <ul>
+        <li>Hover a square in M-Flasher to see its address and what it holds.</li>
+        <li>Choose an action and the squares it would change are <b>outlined</b>.</li>
+        <li>While it writes, they <b>light up</b> as each is written and checked. Only the squares that change are written.</li>
+      </ul>
+
+      <h2>The map</h2>
+      <p>This is M-VAVE's own table for the FM-1, drawn the same way. Pick a firmware to see how much of the firmware area it fills, and click any square.</p>
+      <FlashMap />
+      <table className="g-table">
+        <thead><tr><th>Squares</th><th>Address</th><th>Size</th><th>What</th><th>An install</th></tr></thead>
+        <tbody>
+          {REGIONS.map((r) => (
+            <tr key={r.k}>
+              <td><i className="g-key" style={{ background: RCOL[r.k] }} />{r.to - r.from > 1 ? `${r.from}–${r.to - 1}` : r.from}</td>
+              <td><code>{hx(r.from * 4096)}</code></td>
+              <td>{(r.to - r.from) * 4} KB</td>
+              <td><b>{r.name}</b></td>
+              <td>{r.install}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p className="g-note">
+        Custom firmwares don't all follow the table: the Felucca family (SLOOP, Skiff, Melodee…) keeps projects inside the
+        settings area and some data elsewhere. That's why no tool can safely "wipe the settings" for every firmware.
+      </p>
+
+      <h2>Two things worth knowing</h2>
+      <h3>The firmware is stored scrambled</h3>
+      <p>
+        The firmware squares are stored encrypted with a key from this FM-1's chip. The chip unscrambles them as it reads, so
+        the code runs straight from the flash (no copy into memory). That's why a backup of the firmware area looks like noise,
+        and why installers need the chip key record in the boot area.
+      </p>
+      <h3>Two real firmwares are nearly full</h3>
+      <p>
+        Skiff + Big Screen ends at <code>0x8E76C</code>, square 142; Erik37 + Big Screen at <code>0x90DBC</code>, square 144. The
+        firmware area ends at square 146. That's why adding Big Screen to some firmwares needs a "squeeze" (Part 3 shows where the
+        space goes).
+      </p>
+
+      <h2>How to: look at your own FM-1's flash</h2>
+      <ol className="g-steps">
+        <li><b>Download mode:</b> put the FM-1 in download mode as M-Flasher's instructions say for your FM-1 (with m-bootloader installed: hold <b>REC</b> while you switch it on).</li>
+        <li><b>Back up first.</b> In <a href="https://github.com/jvitkauskas/m-flasher">M-Flasher</a>, back up the whole flash. It saves the 1 MB image and a <code>.json</code> describing it, in <code>Documents/M-Flasher/backups</code>, with a checksum, so a damaged backup is refused later.</li>
+        <li><b>Read the map.</b> Hover the squares: boot area first, then the firmware, settings, Bluetooth, sounds, and the factory square at the end.</li>
+        <li><b>Install, and watch.</b> Choose <b>Install firmware (.fwsc)</b>: the outlined squares are the only ones it may change. M-Flasher also makes a full backup before the first write of a session. The boot area, settings, Bluetooth pairings, presets and sequences stay as they are.</li>
+        <li><b>See which code sits where.</b> The <Link to="/disassembler">FM-1 Disassembler</Link> draws the same 256 squares for two real firmwares: click a square to see the C functions that live in it.</li>
+      </ol>
+
+      <h2>Next: Part 3</h2>
+      <p>How C code becomes those firmware squares: the compiler, the linker's map, and where the firmware's memory goes when it runs (RAM, and the POOL).</p>
+      <p className="g-note">Sources: M-Flasher's documentation, and the m-bootloader specification (the FM-1's flash format and region table). M-VAVE and FM-1 are M-VAVE's names.</p>
     </div>
   );
 }
