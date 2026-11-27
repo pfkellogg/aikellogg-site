@@ -13,6 +13,7 @@ import FixYourFirmware from "./pages/FixYourFirmware.jsx";
 import Play from "./pages/Play.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Disasm from "./pages/Disasm.jsx";
+import Guide from "./pages/Guide.jsx";
 import Contact from "./components/Contact.jsx";
 
 // A static page outside the React app (public/...): go there.
@@ -30,6 +31,7 @@ export default function App() {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/make-big-screen">Big Screen FWs</NavLink>
           <NavLink to="/dashboard">Dashboard</NavLink>
+          <NavLink to="/guide/1">Guide</NavLink>
           <NavLink to="/fix-your-firmware">Fix your firmware</NavLink>
           <NavLink to="/play">Play</NavLink>
           <NavLink to="/flute-lab">Flute Lab</NavLink>
@@ -48,6 +50,8 @@ export default function App() {
           <Route path="/play" element={<Play />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/disassembler" element={<Disasm />} />
+          <Route path="/guide" element={<Guide />} />
+          <Route path="/guide/:part" element={<Guide />} />
           <Route path="/fm1-dashboard" element={<Dashboard />} />
           <Route path="/flute-lab" element={<FluteLab />} />
           <Route path="/lms-plugins" element={<LmsPlugins />} />
