@@ -12,6 +12,7 @@ import MakeBigScreen from "./pages/MakeBigScreen.jsx";
 import FixYourFirmware from "./pages/FixYourFirmware.jsx";
 import Play from "./pages/Play.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
+import Disasm from "./pages/Disasm.jsx";
 import Contact from "./components/Contact.jsx";
 
 // A static page outside the React app (public/...): go there.
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/gobble" element={<GoTo href="/gobble/" />} />
           <Route path="/play" element={<Play />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/disassembler" element={<Disasm />} />
           <Route path="/fm1-dashboard" element={<Dashboard />} />
           <Route path="/flute-lab" element={<FluteLab />} />
           <Route path="/lms-plugins" element={<LmsPlugins />} />
