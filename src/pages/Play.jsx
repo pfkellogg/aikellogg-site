@@ -213,7 +213,7 @@ export default function Play() {
             <span className={"light " + (connected ? "green" : "red")} aria-hidden="true" />{connected ? "Disconnect" : "Connect my FM-1"}</button>
           <button className={"sweet" + (sweet ? " on" : "")} onClick={() => setSweet((v) => !v)} aria-pressed={sweet}
             title="What a good stereo does: a little warmth and air, soft tape saturation, stereo width and a small room">Sweeten: {sweet ? "on" : "off"}</button>
-          <button className={"sweet" + (own ? " on" : "")} onClick={() => setOwn((v) => !v)} aria-pressed={own}
+          <button className={"sweet own" + (own ? " on" : "")} onClick={() => setOwn((v) => !v)} aria-pressed={own}
             title="Off: only these sounds (the FM-1's own sound is turned down while connected, and back up when you disconnect or leave)">FM-1's own sound: {own ? "on" : "off"}</button>
           <span className="fixed1">{status}</span>
           <label className="vol">Volume <input type="range" min="0" max="1" step="0.01" value={volume} onChange={(e) => setVolume(+e.target.value)} /></label>

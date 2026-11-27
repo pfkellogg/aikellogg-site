@@ -62,11 +62,12 @@ legend { font-weight: 800; color: var(--gold); font-size: 1.15rem; padding: 0 6p
 .fixedw { min-width: 15.5em; }
 html { overflow-y: scroll; }          /* the scrollbar never appears or disappears */
 .keyboard .white, .keyboard .black { outline: none; }
-.playbar { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; gap: 14px; align-items: center; margin: 12px 0 0; height: 52px; }
+.playbar { display: grid; grid-template-columns: auto auto auto minmax(0, 1fr) auto; gap: 14px; align-items: center; margin: 12px 0 0; height: 52px; }
 .playbar .fixed1 { min-width: 0; }
 
 /* Sweeten: one width on or off (nothing moves); lit when on */
 .playbar .sweet { width: 9.5em; }
+.playbar .sweet.own { width: auto; padding-left: 1em; padding-right: 1em; white-space: nowrap; }
 .playbar .sweet.on { background: #ffd60a; color: #000; font-weight: 700; }
 
 /* ---- detail pages (Viewer for H5P) ---- */
