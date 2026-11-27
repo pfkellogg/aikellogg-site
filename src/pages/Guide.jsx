@@ -8,9 +8,9 @@ import Video from "../components/Video.jsx";
 const PARTS = [
   { n: 1, title: "How the app and the FM-1 talk, and catching them at it", ready: true },
   { n: 2, title: "The FM-1's flash, square by square", ready: true },
-  { n: 3, title: "From C code to the chip: compiling, the linker, RAM and the POOL", ready: false },
-  { n: 4, title: "The two families: Felucca and fm1-base", ready: false },
-  { n: 5, title: "Debugging on the FM-1 itself: breakpoints in the firmware", ready: false },
+  { n: 3, title: "From C code to the chip: compiling, the linker, RAM and the POOL", ready: true },
+  { n: 4, title: "The two families: Felucca and fm1-base", ready: true },
+  { n: 5, title: "Debugging on the FM-1 itself: breakpoints in the firmware", ready: true },
 ];
 const DEBUGGER = "https://github.com/pfkellogg/fm1-mirror/releases/tag/v1.3.35-debugger";
 const BASE = import.meta.env.BASE_URL;
@@ -45,6 +45,9 @@ export default function Guide() {
   const n = Number(part) || 0;
   if (n === 1) return <Part1 />;
   if (n === 2) return <Part2 />;
+  if (n === 3) return <Part3 />;
+  if (n === 4) return <Part4 />;
+  if (n === 5) return <Part5 />;
   return (
     <div className="g">
       <h1>Inside the FM-1</h1>
@@ -230,6 +233,7 @@ function Part2() {
         The firmware that answered in Part 1 lives in the FM-1's flash memory: 1 MB, one chip, everything the FM-1 keeps.
         M-Flasher draws it as a grid of <b>256 squares</b>. Here's what every square is, and what installing a firmware does to it.
       </p>
+      <Video id="vZHt1L0Avqk" title="Inside the FM-1, Part 2" caption="Part 2 as a video (2:34): the map drawn square by square, and what an install changes." />
       <Series current={2} />
 
       <h2>Why squares?</h2>
@@ -295,3 +299,263 @@ function Part2() {
     </div>
   );
 }
+
+/* ---- Part 3: from C code to the chip ---- */
+const SECT = [
+  ["XIP (flash)", ".text", "Code and constants. Runs straight from the flash.", 557904, 573540, 581564],
+  ["RAM code", ".ram_text", "Code that must run while the flash is busy (the flash driver; Skiff's busiest audio code). Copied from the flash at start.", 8456, 2924, 24576],
+  ["RAM", ".data", "Variables with a starting value. Copied from the flash at start.", 500, 204, null],
+  ["RAM", ".bss", "Variables that start at zero.", 91988, 82772, null],
+  ["POOL", ".pool", "Big buffers that start at zero: delay lines, screens, frames.", 347296, 333124, null],
+  ["NOINIT", ".noinit", "Kept across a reset (crash records, boot guards).", 10456, 484, null],
+];
+const kb = (b) => (b >= 1024 ? (b / 1024).toFixed(1) + " KB" : b + " B");
+
+function Part3() {
+  return (
+    <div className="g">
+      <p className="g-kicker">Inside the FM-1 · Part 3 of 5</p>
+      <h1>From C code to the chip: compiling, the linker, RAM and the POOL</h1>
+      <p className="g-lead">
+        A firmware starts as C source files. Part 3 follows it into the FM-1: what the compiler makes, how the linker decides
+        where every piece goes, and where the firmware's memory goes when it runs, including the POOL.
+      </p>
+      {P3_VIDEO && <Video id={P3_VIDEO} title="Inside the FM-1, Part 3" caption="Part 3 as a video." />}
+      <Series current={3} />
+
+      <h2>1. The compiler: C becomes machine code</h2>
+      <p>
+        The FM-1's chip doesn't run C; it runs its own machine code (JieLi's <b>pi32v2</b>). JieLi's compiler, clang, turns every C function into
+        those instructions, here with <code>-Os</code>: as small as it can, because space is short. This is the first function a Felucca-family
+        firmware runs after its start-up code (Skiff, <code>firmware/src/main.c</code>):
+      </p>
+      <pre className="g-code">{`void fm1_cstart(void)
+{
+    uint32_t *s, *d, p3, src, wdt;
+    fm1_time_init();
+    fm1_reset_reason();
+    ...`}</pre>
+      <p>and the first instructions of the code the chip really runs, at the very start of the firmware:</p>
+      <pre className="g-code">{`2000120:  04 81              goto  _start+4
+2000124:  64 e0 00 1b        r1 = icfg
+2000128:  64 e0 00 25        r2 = psr
+200012c:  60 00              cli
+...
+2000152:  82 ea 84 13        call  fm1_cstart`}</pre>
+      <p>The address <code>2000120</code> is where the chip sees the firmware's first byte. On the flash, that's <code>0x04120</code>: square 4, the first firmware square from Part 2.</p>
+
+      <h2>2. The linker: where every piece goes</h2>
+      <p>
+        The compiler makes pieces; the <b>linker</b> puts them together, following a short script (<code>app.ld</code>) that describes the chip's
+        memory. The Felucca family's, which fm1-base shares, says:
+      </p>
+      <pre className="g-code">{`MEMORY {
+  XIP     (rx)  : ORIGIN = 0x02000120   /* the flash, as the chip reads it */
+  RAMTEXT (rwx) : ORIGIN = 0x01C00000, LENGTH = 24K
+  RAM     (rwx) : ORIGIN = 0x01C08000, LENGTH = 96K
+  POOL    (rw)  : ORIGIN = 0x01C20000, LENGTH = 348K   /* Erik37: 336K */
+  NOINIT  (rw)  : ORIGIN = 0x01C7C000
+}`}</pre>
+      <p>Everything a firmware has lands in one of these, sorted by kind. The real sizes from two builds:</p>
+      <table className="g-table">
+        <thead><tr><th>Goes to</th><th>Section</th><th>What</th><th>Skiff + Big Screen</th><th>Erik37 + Big Screen</th></tr></thead>
+        <tbody>
+          {SECT.map(([where, sec, what, a, b]) => (
+            <tr key={sec}><td>{where}</td><td><code>{sec}</code></td><td>{what}</td><td>{kb(a)}</td><td>{kb(b)}</td></tr>
+          ))}
+        </tbody>
+      </table>
+      <p className="g-note">The firmwares use about 512 KB of the chip's RAM (<code>0x01C00000</code>–<code>0x01C80000</code>), and there's no memory chip besides the flash. The stacks share it too.</p>
+
+      <h2>3. The POOL: where the big buffers go</h2>
+      <p>
+        Ordinary variables get <b>96 KB</b> of RAM. Anything big (a delay line, a whole screen being drawn) is marked for the <b>POOL</b>, a
+        much larger region of its own. In fm1-base it's one word on the variable (Erik37's <code>draw.c</code>):
+      </p>
+      <pre className="g-code">{`#define PLAT_POOL __attribute__((section(".pool")))
+
+static uint8_t W[SW * SH * 3] PLAT_POOL;   /* the frame being drawn */
+static uint8_t MASK[SW * SH]  PLAT_POOL;   /* coverage 0..255 */`}</pre>
+      <p>
+        Skiff's POOL holds 339 KB of its 348 KB; Erik37's 325 KB of 336 KB. fm1-base's build refuses a firmware that leaves less than 8 KB
+        of the POOL spare.
+      </p>
+
+      <h2>4. When it doesn't fit: the squeeze</h2>
+      <p>Adding Big Screen to a firmware that's already full means finding room. We call it a squeeze, and its rules are simple:</p>
+      <ol className="g-steps">
+        <li><b>Move before removing.</b> Big Screen's 6 KB screen buffer goes into the POOL instead of ordinary RAM. That alone made Melodee fit.</li>
+        <li><b>Then switch off what's optional,</b> one step at a time: a USB console, debug counters, a second CPU core's job, a smaller audio buffer.</li>
+        <li><b>Never the safety checks.</b> The stack limits and the POOL's spare room stay.</li>
+      </ol>
+      <p>
+        It doesn't always work: one popular firmware still needs about 300 bytes more RAM and 1.4 KB more POOL after every step, so it has
+        no Big Screen build. And the same trick is our tip to other firmware authors: a small buffer moved into the POOL can free just the
+        RAM a feature needs.
+      </p>
+
+      <h2>How to: see it for yourself</h2>
+      <ol className="g-steps">
+        <li>Open the <Link to="/disassembler">FM-1 Disassembler</Link> and pick <b>Skiff</b>.</li>
+        <li>Click <code>fm1_cstart</code>: its C on the left, its machine code on the right, its square lit in the map.</li>
+        <li>Open <b>RAM &amp; POOL</b>: every variable, largest first, in the region the linker put it in.</li>
+      </ol>
+      <h2>Next: Part 4</h2>
+      <p>The two families every FM-1 community firmware comes from, Felucca and fm1-base: what they share, and how they differ.</p>
+    </div>
+  );
+}
+
+/* ---- Part 4: the two families ---- */
+function Part4() {
+  return (
+    <div className="g">
+      <p className="g-kicker">Inside the FM-1 · Part 4 of 5</p>
+      <h1>The two families: Felucca and fm1-base</h1>
+      <p className="g-lead">Almost every community firmware for the FM-1 grew from one of two parents. They're cousins: same chip layer, different ideas about how to build a firmware.</p>
+      {P4_VIDEO && <Video id={P4_VIDEO} title="Inside the FM-1, Part 4" caption="Part 4 as a video." />}
+      <Series current={4} />
+
+      <h2>Felucca</h2>
+      <p>
+        <b>Felucca</b>, by Leo Kuroshita (Hügelton Instruments), GPL-3.0, is an open firmware for the FM-1 whose children are
+        <b> forks</b>: a whole copy of Felucca, changed into a new instrument. SLOOP, Skiff, JIANT, Melodee, ChoralRoot and others started this way.
+      </p>
+      <ul>
+        <li>One program: the hardware code (screen, keys, USB, audio) and the instrument live together, and a firmware changes whatever it needs.</li>
+        <li>Choices are made in the C code (for example <code>FELUCCA_CPU2</code> for the second core, <code>FELUCCA_CDC</code> for a USB console).</li>
+        <li>USB is polled from a timer interrupt; the PC guard watches for code running where it shouldn't.</li>
+      </ul>
+
+      <h2>fm1-base</h2>
+      <p>
+        <b>fm1-base</b>, by Charles Vestal, MPL-2.0, is a <b>platform</b>: a firmware is an app on top of it. Underneath is <b>felucca-bsp</b>,
+        Felucca's chip and board code, used with Leo's permission. CTL-1 and Radio were its first proof points; LOOM-8, Polly, Ocarina, h1 and
+        Erik37's base are built on it.
+      </p>
+      <ul>
+        <li>The app talks to the hardware through one interface (<code>plat.h</code>), and the parts it wants are switched on in <code>fm1.toml</code>: Bluetooth MIDI, USB audio, WiFi, its own screen mirror.</li>
+        <li>The same app runs in a simulator on a computer and in a browser emulator.</li>
+        <li>Its build checks the memory: less than 8 KB of POOL to spare and it refuses.</li>
+        <li>A firmware has Bluetooth or WiFi, not both: either fills most of what the chip has.</li>
+      </ul>
+
+      <h2>Side by side</h2>
+      <table className="g-table">
+        <thead><tr><th></th><th>Felucca family</th><th>fm1-base family</th></tr></thead>
+        <tbody>
+          <tr><td>Started by</td><td>Leo Kuroshita</td><td>Charles Vestal</td></tr>
+          <tr><td>Licence</td><td>GPL-3.0 (children stay GPL)</td><td>MPL-2.0 (an app may use any licence)</td></tr>
+          <tr><td>A new firmware is</td><td>a fork of the whole thing</td><td>an app on the platform</td></tr>
+          <tr><td>Choosing parts</td><td>in the C code</td><td><code>fm1.toml</code></td></tr>
+          <tr><td>Chip layer</td><td>its own</td><td>felucca-bsp (Felucca's, shared)</td></tr>
+          <tr><td>Memory map</td><td colSpan={2}>the same: XIP code, 96 KB RAM, the POOL, NOINIT (Part 3)</td></tr>
+          <tr><td>Packaging</td><td colSpan={2}>the same <code>.fwsc</code> package and update loader</td></tr>
+          <tr><td>Screen on a computer</td><td>our Big Screen messages (<code>F0 7D 46 53</code>, Part 1)</td><td>its own mirror, inside the updater's messages</td></tr>
+          <tr><td>Try it without an FM-1</td><td>other people's emulators</td><td>a simulator and a browser emulator, built in</td></tr>
+        </tbody>
+      </table>
+
+      <h2>How they're alike, really</h2>
+      <p>
+        Under the different shapes, both run on the same chip in the same way: code straight from the flash, the same RAM, split
+        the same way, the same flash map from Part 2, and the same package an installer writes. That's why one tool, FM-1 Big Screen, can show
+        the screen of both kinds; it only has to speak two dialects.
+      </p>
+
+      <h2>How to: tell which family a firmware is</h2>
+      <ol className="g-steps">
+        <li>Look at its source: a <code>fm1.toml</code> and a <code>plat.h</code> mean fm1-base; a <code>firmware/hal/</code> folder with <code>fm1_guard.h</code> and <code>felucca.c</code> means the Felucca family.</li>
+        <li>Or ask the running FM-1: in <Link to="/guide/1">FM-1 Debugger</Link>, a Felucca-family firmware with Big Screen answers the hello with <code>F0 7D 46 53</code> rows; an fm1-base firmware with its mirror answers the "fm1-base mirror" hello.</li>
+        <li>Compare the two in the <Link to="/disassembler">FM-1 Disassembler</Link>: Skiff (Felucca, 1,229 functions) and Erik37 (fm1-base, 201: many small functions are folded into bigger ones when it's built).</li>
+      </ol>
+      <h2>Next: Part 5</h2>
+      <p>Breakpoints inside the firmware itself: how the FM-1's chip can stop on one instruction.</p>
+    </div>
+  );
+}
+
+/* ---- Part 5: breakpoints in the firmware ---- */
+function Part5() {
+  return (
+    <div className="g">
+      <p className="g-kicker">Inside the FM-1 · Part 5 of 5</p>
+      <h1>Debugging on the FM-1 itself: breakpoints in the firmware</h1>
+      <p className="g-lead">
+        FM-1 Debugger (Part 1) stops the <i>app</i>. This part is about stopping the <i>firmware</i>: the FM-1's own chip, on one instruction,
+        with its registers in view. How the chip makes that possible, and where our firmware debugger stands.
+      </p>
+      {P5_VIDEO && <Video id={P5_VIDEO} title="Inside the FM-1, Part 5" caption="Part 5 as a video." />}
+      <Series current={5} />
+      <p className="g-note"><b>Status, honestly:</b> the firmware debugger is being built. Nothing in this part has been run on a real FM-1 yet; when it has, this page will say so.</p>
+
+      <h2>The obvious way doesn't fit</h2>
+      <p>
+        Most debuggers for small chips add a little code to every function: "stop here if asked". JieLi's compiler can do that
+        (<code>-finstrument-functions</code>), but it costs about 50–70 KB, and Part 2 showed the firmware area is nearly full: Skiff has
+        under 20 KB left, Erik37 under 10 KB. So we use the chip itself.
+      </p>
+
+      <h2>The chip's PC guard</h2>
+      <p>
+        The FM-1's chip has a hardware watch on where code runs: two <b>windows</b> of addresses (<code>PC_LIMIT0</code> and
+        <code> PC_LIMIT1</code>). If the processor runs an instruction outside both windows, it raises the <b>CPU exception</b> right after that
+        instruction. Felucca uses it as a crash guard: the windows cover the firmware's code, so a jump into nowhere is caught
+        (<code>firmware/hal/fm1_guard.h</code>):
+      </p>
+      <pre className="g-code">{`#define FM1_PC_LIMIT0_H FM1_X2(0x380u)
+#define FM1_PC_LIMIT0_L FM1_X2(0x384u)
+#define FM1_PC_LIMIT1_H FM1_X2(0x388u)
+#define FM1_PC_LIMIT1_L FM1_X2(0x38Cu)
+/* PC limit: instruction fetch outside [0x02000120, _etext]
+                     -> DBG_MSG bit 12 */`}</pre>
+
+      <h2>Turning a guard into a breakpoint</h2>
+      <p>Set the two windows to <b>everything except one address</b>, X:</p>
+      <ul>
+        <li>window 0: from the start of the code up to X,</li>
+        <li>window 1: from just after X to the end.</li>
+      </ul>
+      <p>
+        The moment the processor runs the instruction at X, it's outside both windows: the exception comes, and the firmware is stopped right
+        there. Leave out the <i>next</i> instruction instead, and you have <b>single-step</b>; leave out the return address, and you have
+        <b> step out</b>. No extra code in the firmware, nothing slower.
+      </p>
+
+      <h2>What you see when it stops</h2>
+      <p>The exception's entry already saves every register. Felucca's (<code>fm1_vec.S</code>):</p>
+      <pre className="g-code">{`fm1_fatal_common:
+    [--sp] = {sp, ssp, usp, icfg, psr, rets, retx, rete, reti}
+    [--sp] = {r15-r0}
+    r0 = sp      /* frame: r0..r15, reti, rete, retx, rets, psr, icfg, usp, ssp, sp */`}</pre>
+      <p>
+        Felucca's version reports a crash and never returns. A debugger's version shows that frame (r0–r15, the stack, where it was going
+        back to), then returns and lets the firmware go on.
+      </p>
+
+      <h2>Talking while stopped</h2>
+      <p>
+        A stopped FM-1 still has to talk to the page that controls it. In the Felucca family, USB isn't driven by its own interrupt: it's
+        <b> polled</b> (<code>usb_poll</code>, from the TIMER5 interrupt). So the stopped firmware can keep calling that poll itself, and keep
+        answering over the same USB MIDI cable that Part 1 showed.
+      </p>
+
+      <h2>Putting it together</h2>
+      <ol className="g-steps">
+        <li>Pick a function in the <Link to="/disassembler">FM-1 Disassembler</Link>: its address is the breakpoint.</li>
+        <li>A debug build of the firmware sets the two windows and waits in its exception handler when they trip.</li>
+        <li>The page shows the registers and the C around the address, and sends Step, Step over, Step out or Continue.</li>
+      </ol>
+      <p>
+        That's the plan for both families' firmwares (Skiff for Felucca, Erik37 for fm1-base), and for a browser version, in an FM-1 emulator, for
+        anyone without an FM-1. Each part will be tested on a real FM-1 before it's published.
+      </p>
+
+      <h2>The whole series</h2>
+      <Series current={5} />
+    </div>
+  );
+}
+const P3_VIDEO = "";
+const P4_VIDEO = "";
+const P5_VIDEO = "";

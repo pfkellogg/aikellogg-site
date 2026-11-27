@@ -339,3 +339,4 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .g-sq.empty{opacity:.55}.g-sq:hover{outline:1px solid #fff}.g-sq.pick{outline:2px solid #ffd60a;z-index:1}
 .g-map-info{margin-top:10px;font-size:15.5px;min-height:48px}
 .g-key{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.g-code{background:#0d121a;border:1px solid #2f3a4d;border-radius:10px;padding:12px 14px;overflow-x:auto;font-size:14px;line-height:1.5}
