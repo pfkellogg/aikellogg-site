@@ -44,7 +44,8 @@ export default function MarkCompleteGate() {
       <h2>What it does</h2>
       <ul>
         <li><b>No setup:</b> activate it, and every lesson and topic with H5P is gated. Pages without H5P are left alone.</li>
-        <li><b>Passing counts:</b> a scored activity counts once the learner passes it; a wrong answer keeps the button locked, and they can retry.</li>
+        <li><b>Passing counts:</b> a scored activity counts once the learner passes it; a wrong answer keeps the button locked, and they can retry. Activities that give only a score (Fill in the Blanks, Drag the Words, Flashcards, Interactive Video) need full marks, or the pass mark you set.</li>
+        <li><b>Every kind of H5P:</b> activities that never report a result are watched on the page: every Accordion panel opened, every Dialog Card turned, Guess the Answer revealed, Audio played to the end, an image or other display-only content seen.</li>
         <li><b>Every activity:</b> with several H5P on a page, all must be done; a message shows how many are complete.</li>
         <li><b>Works with H5P's frames:</b> it listens to H5P's own completion events (xAPI), so it works the usual way H5P runs in WordPress.</li>
         <li><b>A clean slate:</b> when a user is permanently deleted, their H5P scores, saved progress and activity log are deleted too, however they're deleted.</li>
@@ -53,7 +54,9 @@ export default function MarkCompleteGate() {
       <h2>Per page, with a shortcode</h2>
       <p>Put it anywhere in a lesson or topic (a Shortcode block in the block editor). It shows nothing on the page.</p>
       <ul>
-        <li><code>[mark_complete_gate ignore="3,7"]</code>: H5P items 3 and 7 don't count (say, an Accordion that can't be "completed").</li>
+        <li><code>[mark_complete_gate ignore="3,7"]</code>: H5P items 3 and 7 don't count. Types work too: <code>ignore="accordion, 12"</code>.</li>
+        <li><code>[mark_complete_gate require="3 and (5 or 7)"]</code>: exactly what must be done, with <i>and</i>, <i>or</i> and brackets; H5P IDs or types (<code>require="quiz or 12"</code>).</li>
+        <li><code>[mark_complete_gate pass="80"]</code>: the pass mark, in percent, for activities that give only a score (full marks unless you say).</li>
         <li><code>[mark_complete_gate off]</code>: no gate on this page.</li>
       </ul>
 
