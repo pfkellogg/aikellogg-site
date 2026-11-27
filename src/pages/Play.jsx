@@ -18,6 +18,10 @@ export default function Play() {
   const [list, setList] = useState(null);
   // the sounds picked (several at once: layered on every key)
   const [picked, setPicked] = useState(() => { try { const v = JSON.parse(localStorage.getItem("playSounds")); return Array.isArray(v) && v.length ? v : ["flute"]; } catch { return ["flute"]; } });
+  // the sounds' order on the page: dragged by the learner, remembered
+  const [order, setOrder] = useState(() => { try { const v = JSON.parse(localStorage.getItem("playOrder")); return Array.isArray(v) ? v : []; } catch { return []; } });
+  const drag = useRef(null);                        // { id, x, y, moved } while a sound button is held
+  const [dragging, setDragging] = useState(null);
   const [loaded, setLoaded] = useState({});         // id -> strips ready (of 35)
   const [midiStatus, setMidiStatus] = useState("");
   const [connected, setConnected] = useState(false);   // listening to the FM-1 (or a MIDI keyboard) now
@@ -72,8 +76,57 @@ export default function Play() {
     await Promise.all([worker(), worker(), worker(), worker(), worker(), worker()]);
   }, [audio]);
 
+  // the list in the remembered order; sounds new since then go at the end, in the list's own order
+  const sorted = (list || []).slice().sort((a, b) => {
+    const ia = order.indexOf(a.id), ib = order.indexOf(b.id);
+    return (ia < 0 ? 1e6 + list.indexOf(a) : ia) - (ib < 0 ? 1e6 + list.indexOf(b) : ib);
+  });
+  const saveOrder = (ids) => { setOrder(ids); localStorage.setItem("playOrder", JSON.stringify(ids)); };
+  // move one sound to where another is
+  const moveTo = (id, target) => {
+    if (id === target) return;
+    const ids = sorted.map((x) => x.id).filter((x) => x !== id);
+    const at = ids.indexOf(target), from = sorted.findIndex((x) => x.id === id), to = sorted.findIndex((x) => x.id === target);
+    ids.splice(from < to ? at + 1 : at, 0, id);
+    saveOrder(ids);
+  };
+  // drag with the mouse or a finger: press, move a little, and the sound follows to where you point
+  const onDown = (e, id) => {
+    if (e.button !== undefined && e.button !== 0) return;
+    drag.justMoved = false;
+    drag.current = { id, x: e.clientX, y: e.clientY, moved: false };
+  };
+  const onMove = (e) => {
+    const d = drag.current;
+    if (!d) return;
+    if (!d.moved) {
+      if (Math.hypot(e.clientX - d.x, e.clientY - d.y) < 8) return;
+      d.moved = true;
+      setDragging(d.id);
+      try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* fine */ }
+    }
+    const el = document.elementFromPoint(e.clientX, e.clientY)?.closest(".soundpick button[data-id]");
+    if (el && el.dataset.id !== d.id) moveTo(d.id, el.dataset.id);
+  };
+  const onUp = () => {
+    const d = drag.current;
+    drag.current = null;
+    setDragging(null);
+    if (d && d.moved) drag.justMoved = true;   // the click that follows a drag doesn't pick
+  };
+  // from the keyboard: Alt + arrow keys move the focused sound
+  const onKey = (e, id) => {
+    if (!e.altKey || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)) return;
+    e.preventDefault();
+    const i = sorted.findIndex((x) => x.id === id), j = i + (e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 1);
+    if (j < 0 || j >= sorted.length) return;
+    moveTo(id, sorted[j].id);
+    requestAnimationFrame(() => document.querySelector(`.soundpick button[data-id="${id}"]`)?.focus());
+  };
+
   // a click adds the sound or takes it away (at least one stays): layered sounds on every key
   const pick = (id) => {
+    if (drag.justMoved) { drag.justMoved = false; return; }
     let next = picked.includes(id) ? picked.filter((x) => x !== id) : [...picked, id];
     if (!next.length) next = [id];
     setPicked(next);
@@ -195,14 +248,18 @@ export default function Play() {
     <div className="lab">
       <h1>Play with your FM-1</h1>
       <p className="lead">Plug your M-VAVE FM-1 into this computer, click <b>Connect my FM-1</b>, and play its keys: you hear {list ? list.length : 25}         sounds right here, nothing to install. Chrome or Edge. <b>Pick one sound, or several to layer them</b> (strings + choir…): click a sound
-        to add it or take it away, double-click for just that one. No FM-1? Play the keys below, or your computer's keys (A S D F G H J K L).</p>
+        to add it or take it away, double-click for just that one, and drag the sounds into the order you like (it's remembered). No FM-1? Play the keys below, or your computer's keys (A S D F G H J K L).</p>
 
       <section>
         <div className="soundpick" role="group" aria-label="Sounds (several can be picked)">
-          {(list || []).map((x) => (
-            <button key={x.id} role="checkbox" aria-checked={picked.includes(x.id)} className={picked.includes(x.id) ? "on" : ""}
-              onClick={() => pick(x.id)} onDoubleClick={() => only(x.id)}>{x.name}</button>
+          {sorted.map((x) => (
+            <button key={x.id} data-id={x.id} role="checkbox" aria-checked={picked.includes(x.id)}
+              className={(picked.includes(x.id) ? "on" : "") + (dragging === x.id ? " dragging" : "")}
+              title="Click: add or take away · Double-click: just this one · Drag (or Alt + arrows): move it"
+              onClick={() => pick(x.id)} onDoubleClick={() => only(x.id)} onKeyDown={(e) => onKey(e, x.id)}
+              onPointerDown={(e) => onDown(e, x.id)} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp}>{x.name}</button>
           ))}
+          {order.length > 0 && <button className="reset-order" onClick={() => saveOrder([])} title="Back to the original order">Reset order</button>}
           {list && list.length === 0 && <p>The sounds can't be reached right now. Check the internet connection and reload.</p>}
         </div>
       </section>

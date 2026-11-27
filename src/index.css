@@ -229,6 +229,9 @@ html { overflow-y: scroll; }          /* the scrollbar never appears or disappea
 .soundpick { display: flex; flex-wrap: wrap; gap: 10px; }
 .soundpick button { font-size: 1.05rem; padding: 10px 16px; background: transparent; color: #ffd60a; border: 2px solid #ffd60a; }
 .soundpick button.on { background: #ffd60a; color: #000; font-weight: 800; }
+.soundpick button[data-id] { touch-action: none; user-select: none; cursor: grab; }
+.soundpick button.dragging { cursor: grabbing; opacity: .6; outline: 3px dashed #ffd60a; outline-offset: 3px; }
+.soundpick button.reset-order { border: none; text-decoration: underline; font-size: .9rem; padding: 10px 6px; opacity: .8; }
 .playbar .connect { font-weight: 800; background: #ffd60a; color: #000; }
 .playbar .vol { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .playbar .vol input { width: 120px; accent-color: #ffd60a; }
