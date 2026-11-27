@@ -556,6 +556,6 @@ function Part5() {
     </div>
   );
 }
-const P3_VIDEO = "";
-const P4_VIDEO = "";
-const P5_VIDEO = "";
+const P3_VIDEO = "kTf-0Vr-0LQ";
+const P4_VIDEO = "N0FTaG-p9Zs";
+const P5_VIDEO = "xpG1nu3TOII";
