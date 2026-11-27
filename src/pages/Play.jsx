@@ -24,6 +24,10 @@ export default function Play() {
   const accessRef = useRef(null);
   const [sweet, setSweet] = useState(() => localStorage.getItem("sweeten") === "1");
   const [volume, setVolume] = useState(0.8);
+  // the FM-1's own sound while these play: off sends CC 11 (EXPRESSION) 0 on all 16 channels, on sends 127 (SLOOP 2.7.1+
+  // takes it as a gain over every track, not saved with the song; firmware that doesn't know it ignores it)
+  const [own, setOwn] = useState(() => localStorage.getItem("fm1Own") === "1");
+  const ownRef = useRef(own);
   const [sounding, setSounding] = useState(new Set());
   const ac = useRef(null), master = useRef(null), sweetRef = useRef(null);
   const buffers = useRef({});                         // "id/043" -> AudioBuffer
@@ -112,17 +116,27 @@ export default function Play() {
     setSounding((s) => { const n = new Set(s); n.delete(midi); return n; });
   }, []);
 
+  const sendOwn = useCallback((up) => {
+    const access = accessRef.current;
+    if (!access) return;
+    access.outputs.forEach((out) => {
+      if (out.state === "disconnected") return;
+      try { for (let ch = 0; ch < 16; ch++) out.send([0xb0 | ch, 11, up ? 127 : 0]); } catch { /* not ours to worry about */ }
+    });
+  }, []);
+
   // the FM-1 (or any MIDI keyboard), Chrome and Edge: Connect turns listening on, Disconnect off
   const disconnect = useCallback(() => {
     const access = accessRef.current;
     if (access) {
+      sendOwn(true);                                   // the FM-1's own sound back as it was
       access.inputs.forEach((input) => { input.onmidimessage = null; });
       access.onstatechange = null;
     }
     for (const m of [...voices.current.keys()]) noteOff(m);
     setConnected(false);
     setMidiStatus("Disconnected: the FM-1's keys don't play here now.");
-  }, [noteOff]);
+  }, [noteOff, sendOwn]);
 
   const connect = useCallback(async () => {
     audio();
@@ -142,6 +156,7 @@ export default function Play() {
             else if (type === 0x80 || type === 0x90) noteOff(d1);
           };
         });
+        sendOwn(ownRef.current);                        // (again for an FM-1 plugged in later)
         setConnected(names.length > 0);                 // an FM-1 unplugged: the light goes red by itself
         setMidiStatus(names.length ? "Playing from: " + names.join(", ") : "No FM-1 found: plug it in with a USB data cable and turn it on.");
       };
@@ -151,9 +166,11 @@ export default function Play() {
       setConnected(false);
       setMidiStatus("MIDI wasn't allowed. Allow it in the browser's site settings (the icon left of the address) and try again.");
     }
-  }, [audio, load, noteOn, noteOff]);
+  }, [audio, load, noteOn, noteOff, sendOwn]);
 
-  useEffect(() => () => { const a = accessRef.current; if (a) { a.inputs.forEach((i) => { i.onmidimessage = null; }); a.onstatechange = null; } }, []);
+  useEffect(() => () => { const a = accessRef.current; if (a) { sendOwn(true); a.inputs.forEach((i) => { i.onmidimessage = null; }); a.onstatechange = null; } }, [sendOwn]);
+  useEffect(() => { const back = () => sendOwn(true); window.addEventListener("pagehide", back); return () => window.removeEventListener("pagehide", back); }, [sendOwn]);
+  useEffect(() => { ownRef.current = own; localStorage.setItem("fm1Own", own ? "1" : "0"); if (connected) sendOwn(own); }, [own, connected, sendOwn]);
 
   // the computer's keys
   useEffect(() => {
@@ -177,7 +194,7 @@ export default function Play() {
   return (
     <div className="lab">
       <h1>Play with your FM-1</h1>
-      <p className="lead">Plug your M-VAVE FM-1 into this computer, click <b>Connect my FM-1</b>, and play its keys: you hear {list ? list.length : 18}         sounds right here, nothing to install. Chrome or Edge. <b>Pick one sound, or several to layer them</b> (strings + choir…): click a sound
+      <p className="lead">Plug your M-VAVE FM-1 into this computer, click <b>Connect my FM-1</b>, and play its keys: you hear {list ? list.length : 19}         sounds right here, nothing to install. Chrome or Edge. <b>Pick one sound, or several to layer them</b> (strings + choir…): click a sound
         to add it or take it away, double-click for just that one. No FM-1? Play the keys below, or your computer's keys (A S D F G H J K L).</p>
 
       <section>
@@ -196,6 +213,8 @@ export default function Play() {
             <span className={"light " + (connected ? "green" : "red")} aria-hidden="true" />{connected ? "Disconnect" : "Connect my FM-1"}</button>
           <button className={"sweet" + (sweet ? " on" : "")} onClick={() => setSweet((v) => !v)} aria-pressed={sweet}
             title="What a good stereo does: a little warmth and air, soft tape saturation, stereo width and a small room">Sweeten: {sweet ? "on" : "off"}</button>
+          <button className={"sweet" + (own ? " on" : "")} onClick={() => setOwn((v) => !v)} aria-pressed={own}
+            title="Off: only these sounds (the FM-1's own sound is turned down while connected, and back up when you disconnect or leave)">FM-1's own sound: {own ? "on" : "off"}</button>
           <span className="fixed1">{status}</span>
           <label className="vol">Volume <input type="range" min="0" max="1" step="0.01" value={volume} onChange={(e) => setVolume(+e.target.value)} /></label>
         </div>
@@ -222,7 +241,7 @@ export default function Play() {
         <h2>Good to know</h2>
         <ul>
           <li><b>The FM-1 has to send its notes.</b> Most firmwares do over USB; on some, turn on KEY OUT (or MIDI out) in its settings.</li>
-          <li><b>Hear only these sounds:</b> turn the FM-1's MASTER knob down. Or keep both, and play the FM-1's own sound with a Mellotron on top.</li>
+          <li><b>Hear only these sounds:</b> leave <b>FM-1's own sound: off</b> (the page turns the FM-1's sound down while connected, and back up when you disconnect or leave the page). Turn it <b>on</b> to play the FM-1's own sound with these on top. If your FM-1's firmware doesn't follow it, turn the FM-1's MASTER knob down instead.</li>
           <li><b>Each sound loads once</b> (about 10 MB) and is kept by the browser. Like a real Mellotron, each note plays its tape strip for up to 8 seconds.</li>
           <li><b>Want them in the app?</b> <a href="https://github.com/pfkellogg/fm1-mirror">FM-1 Big Screen</a> plays the same sounds with no internet: Sound › Get sounds….</li>
           <li>All the sounds but one are made from scratch by programs, no recordings: free to use in your own music. The <b>Grand Piano</b> is made from the <a href="https://github.com/sfzinstruments/SalamanderGrandPiano">Salamander Grand Piano</a> (a Yamaha C5) by Alexander Holm, <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY 3.0</a>.</li>
