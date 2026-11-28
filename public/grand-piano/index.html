@@ -58,6 +58,7 @@ footer{margin-top:2rem;text-align:center;color:var(--muted);font-size:.95rem}
   <h1 style="margin-top:.8rem">AIK <span>GRAND</span></h1>
   <p class="lead">A real grand piano for your M-VAVE FM-1 running SLOOP. Free.</p>
   <svg class="kb" id="kb" viewBox="0 0 840 120" role="group" aria-label="Piano keys: click or tap to hear AIK GRAND"><rect class="k w" data-m="48" x="0" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="50" x="40" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="52" x="80" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="53" x="120" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="55" x="160" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="57" x="200" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="59" x="240" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="60" x="280" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="62" x="320" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="64" x="360" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="65" x="400" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="67" x="440" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="69" x="480" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="71" x="520" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="72" x="560" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="74" x="600" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="76" x="640" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="77" x="680" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="79" x="720" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="81" x="760" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="83" x="800" y="0" width="38" height="120" rx="4"/><rect class="k b" data-m="49" x="27" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="51" x="67" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="54" x="147" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="56" x="187" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="58" x="227" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="61" x="307" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="63" x="347" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="66" x="427" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="68" x="467" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="70" x="507" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="73" x="587" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="75" x="627" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="78" x="707" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="80" x="747" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="82" x="787" y="0" width="24" height="74" rx="3"/></svg>
+  <p style="margin:.2rem 0 .4rem"><button class="quiet" id="connectBtn">Connect to FM-1</button> <span class="credit" id="connectNote"></span></p>
   <p class="credit" id="kbHint">🎹 Click or tap a key to hear AIK GRAND, exactly as the FM-1 plays it (or use your computer keys A W S E D F T G Y H U J K).</p>
 
   <section>
@@ -113,8 +114,18 @@ import { Grand } from "./player.js";
 const grand = new Grand();
 const kb = document.getElementById("kb");
 const held = new Map();
-const press = async (m) => { await grand.load(); grand.down(m); kb.querySelector(`[data-m="${m}"]`)?.classList.add("on"); };
-const lift = (m) => { grand.up(m); kb.querySelector(`[data-m="${m}"]`)?.classList.remove("on"); };
+// Connected: the keys play the FM-1 itself (MIDI channel 1 = track 1 in SLOOP), not the browser
+let fm1Keys = null;
+const press = async (m) => {
+  kb.querySelector(`[data-m="${m}"]`)?.classList.add("on");
+  if (fm1Keys) { fm1Keys.send([0x90, m, 100]); return; }
+  await grand.load(); grand.down(m);
+};
+const lift = (m) => {
+  kb.querySelector(`[data-m="${m}"]`)?.classList.remove("on");
+  if (fm1Keys) { fm1Keys.send([0x80, m, 0]); return; }
+  grand.up(m);
+};
 kb.addEventListener("pointerdown", (e) => {
   const k = e.target.closest(".k"); if (!k) return;
   kb.setPointerCapture?.(e.pointerId);
@@ -147,7 +158,7 @@ async function connect() {
       const p = pending; pending = null; clearTimeout(p.timer); p.res(Array.from(d.slice(5, d.length - 1)));
     }
   };
-  return { req: (cmd, args) => new Promise((res, rej) => {
+  return { out, req: (cmd, args) => new Promise((res, rej) => {
     pending = { cmd, res, timer: setTimeout(() => { pending = null; rej(new Error("The FM-1 did not answer: is it running SLOOP?")); }, 6000) };
     out.send([0xf0, 0x7d, 0x46, 0x4c, cmd, ...args, 0xf7]);
   }) };
@@ -168,6 +179,24 @@ async function run(smp, pre) {
   say(`Done: AIK GRAND is in U${String(pre + 1).padStart(2, "0")} (its sample in USR${smp + 1}).`, "ok");
   $("playNow").hidden = false;
 }
+
+$("connectBtn").onclick = async () => {
+  if (fm1Keys) {
+    fm1Keys = null;
+    $("connectBtn").textContent = "Connect to FM-1";
+    $("connectNote").textContent = "The keys play here, in the browser.";
+    return;
+  }
+  try {
+    $("connectNote").textContent = "Looking for your FM-1…";
+    link = link || await connect();
+    fm1Keys = link.out;
+    $("connectBtn").textContent = "✓ Connected: playing your FM-1";
+    $("connectNote").textContent = "The keys now play the FM-1 itself (track 1). Press again to play in the browser.";
+  } catch (e) {
+    $("connectNote").textContent = e.message;
+  }
+};
 
 $("install").onclick = async () => {
   $("install").disabled = true; $("choose").hidden = true;
