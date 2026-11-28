@@ -11,6 +11,10 @@ export default function Home() {
           <h2>Play with your FM-1</h2>
           <p>Plug in your FM-1 and play 25 sounds right in your browser, nothing to install, one at a time or layered: a grand piano and 24 Mellotron-style sounds, from flute, strings and choir to shakuhachi, flugelhorn, brass, sitar, vibraphone, triangle, Tibetan bells and five FM sounds (an FM electric piano, tubular bells, a glass choir, crystal strings and a glass harmonica).</p>
         </Link>
+        <a className="card" href="/grand-piano/">
+          <h2>🎹 AIK GRAND</h2>
+          <p>A real grand piano for your FM-1 running SLOOP, free: a Yamaha C5 (the Salamander Grand Piano) in one of its sample slots. One click installs it from Chrome or Edge, into an empty slot.</p>
+        </a>
         <a className="card" href="/gobble/">
           <h2>🦃 GOBBLE</h2>
           <p>Happy Thanksgiving! A free, just-for-fun FM-1 firmware: up to eight turkeys gobble two songs in twelve styles, from fiddle to heavy metal and K-pop. Shows big in FM-1 Big Screen.</p>

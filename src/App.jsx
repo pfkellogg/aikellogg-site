@@ -47,6 +47,7 @@ export default function App() {
           <Route path="/fix-your-firmware" element={<FixYourFirmware />} />
           <Route path="/fm1-v16-guide" element={<GoTo href="/fm1-v16-guide/" />} />
           <Route path="/gobble" element={<GoTo href="/gobble/" />} />
+          <Route path="/grand-piano" element={<GoTo href="/grand-piano/" />} />
           <Route path="/play" element={<Play />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/disassembler" element={<Disasm />} />

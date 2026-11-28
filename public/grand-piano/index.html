@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AIK GRAND: a real grand piano for the FM-1 (free)</title>
+<meta name="description" content="AIK GRAND: a free grand piano for the M-VAVE FM-1 running SLOOP, made from the Salamander Grand Piano (a Yamaha C5, CC-BY 3.0). One click installs it from Chrome or Edge into an empty slot.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* One quiet column: the piano's name and its sound first, then the install button, then what it is and the credit */
+:root{
+  --bg:#f6f3ee; --panel:#fffdf9; --fg:#1d1a17; --muted:#625a52; --line:#e3dbd0;
+  --accent:#b8862e; --accent-fg:#1b1305; --ok:#2f7a3c; --bad:#a33a2a;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#121110; --panel:#1b1917; --fg:#f2ede6; --muted:#b5aca1; --line:#2f2b27;
+  --accent:#e0b157; --accent-fg:#1b1305; --ok:#7bd28a; --bad:#f08b7a; color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 var(--body)}
+.wrap{max-width:880px;margin:0 auto;padding:2rem max(16px,env(safe-area-inset-left,0px)) 4rem}
+h1,h2{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.8rem,8vw,4.6rem);font-weight:800;letter-spacing:.01em}
+h1 span{color:var(--accent)}
+h2{font-size:1.7rem;font-weight:700;margin-bottom:.6rem}
+p,li{max-width:66ch}
+a{color:var(--accent)}
+.home{font-family:var(--display);font-size:.95rem;text-decoration:none}
+.lead{font-size:1.25rem;color:var(--muted);margin:.4rem 0 1.4rem}
+.kb{display:block;width:100%;height:auto;margin:1.2rem 0;border-radius:8px}
+.keys{height:46px;border-radius:8px;margin:1.2rem 0;background:
+  repeating-linear-gradient(90deg,#fff 0 30px,#cfc8bd 30px 32px);position:relative;overflow:hidden;border:2px solid var(--accent)}
+.keys::after{content:"";position:absolute;inset:0 0 40% 0;background:
+  repeating-linear-gradient(90deg,transparent 0 21px,#1d1a17 21px 39px,transparent 39px 53px,#1d1a17 53px 71px,transparent 71px 96px,
+  #1d1a17 96px 114px,transparent 114px 128px,#1d1a17 128px 146px,transparent 146px 160px,#1d1a17 160px 178px,transparent 178px 224px)}
+section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem;margin:1.2rem 0}
+audio{width:100%;margin-top:.4rem}
+button{font:700 1.15rem var(--display);background:var(--accent);color:var(--accent-fg);border:0;border-radius:10px;padding:.75rem 1.4rem;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+button.quiet{background:transparent;color:var(--accent);border:2px solid var(--accent);padding:.55rem 1.1rem;font-size:1rem}
+#status{margin-top:.9rem;min-height:1.6em;font-weight:600}
+#status.ok{color:var(--ok)} #status.bad{color:var(--bad)}
+progress{width:100%;height:12px;margin-top:.6rem;display:none}
+select{font:inherit;padding:.35rem;margin:.3rem 0}
+ol{padding-left:1.3rem} li{margin:.25rem 0}
+.files a{display:inline-block;margin:.2rem 1rem .2rem 0}
+.credit{font-size:.95rem;color:var(--muted)}
+.es{border-left:4px solid var(--accent)}
+footer{margin-top:2rem;text-align:center;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="home" href="/">‹ aikellogg.com</a>
+  <h1 style="margin-top:.8rem">AIK <span>GRAND</span></h1>
+  <p class="lead">A real grand piano for your M-VAVE FM-1 running SLOOP. Free.</p>
+  <svg class="kb" viewBox="0 0 840 120" role="img" aria-label="piano keys"><rect x="0" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="40" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="80" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="120" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="160" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="200" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="240" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="280" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="320" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="360" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="400" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="440" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="480" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="520" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="560" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="600" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="640" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="680" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="720" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="760" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="800" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="27" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="67" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="147" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="187" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="227" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="307" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="347" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="427" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="467" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="507" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="587" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="627" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="707" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="747" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="787" y="0" width="24" height="74" rx="3" fill="#1d1a17"/></svg>
+
+  <section>
+    <h2>Hear it</h2>
+    <p>Played on an FM-1, recorded from its output:</p>
+    <audio controls preload="none" src="aik-grand-preview.mp3"></audio>
+  </section>
+
+  <section>
+    <h2>Install it on your FM-1</h2>
+    <ol>
+      <li>Plug in your FM-1 by USB. It needs <b>SLOOP 2.6 or later</b> (the <a href="/#/make-big-screen">Big Screen builds</a> of SLOOP work too).</li>
+      <li>Stop the song on the FM-1 (press STOP).</li>
+      <li>Open this page in <b>Chrome or Edge</b> on a computer, press <b>Install</b> and allow MIDI.</li>
+      <li>On Windows, close other apps that use the FM-1 first (Windows lets only one app use it at a time).</li>
+    </ol>
+    <p>It goes into an empty sample slot (USR1 to USR4) and an empty sound slot (U01 to U32). <b>Nothing on your FM-1 is replaced</b> unless you choose it. Installing again updates it in place.</p>
+    <p style="margin-top:1rem"><button id="install">Install on my FM-1</button></p>
+    <div id="choose" hidden>
+      <p id="chooseText"></p>
+      <label>Sample slot to replace: <select id="smpPick"></select></label><br>
+      <label>Sound slot to replace: <select id="prePick"></select></label><br>
+      <button class="quiet" id="replace">Replace and install</button>
+    </div>
+    <progress id="bar" max="1" value="0"></progress>
+    <div id="status" role="status"></div>
+    <p><button class="quiet" id="playNow" hidden>Play it now on the selected track</button></p>
+    <p class="credit">Then on the FM-1: turn <b>PRESETS</b> past the factory sounds to <b>AIK GRAND</b>, or SAVE › USER, pick its slot, LOAD.</p>
+  </section>
+
+  <section>
+    <h2>What it is</h2>
+    <p>Eight notes of a Yamaha C5 concert grand, from G2 to F5, each covering about five keys. They fit into one of SLOOP's own sample slots (80 KB). Each note rings on with a seamless loop, and the FM-1's envelope lets it fade like a real piano. It is a small piano for a small synth: next to the full recordings on a computer it is simpler, but for a sound that lives inside the FM-1 it is about as good as the hardware allows.</p>
+    <p class="files" style="margin-top:.8rem">Files, for tinkerers: <a href="aik-grand.hdr" download>aik-grand.hdr</a><a href="aik-grand.bin" download>aik-grand.bin</a><a href="aik-grand-sound.json" download>aik-grand-sound.json</a><a href="installer.js">installer.js</a> (SLOOP's editor protocol: the sample slot header and data, and the sound's 71 values).</p>
+  </section>
+
+  <section class="es" lang="es">
+    <h2>En español</h2>
+    <p>AIK GRAND es un piano de cola de verdad para tu M-VAVE FM-1 con SLOOP 2.6 o posterior, gratis. Conecta el FM-1 por USB, detén la canción (STOP), abre esta página en Chrome o Edge en una computadora y pulsa <b>Install on my FM-1</b>. Se guarda en una ranura vacía: no se reemplaza nada tuyo. Luego, en el FM-1, gira <b>PRESETS</b> hasta <b>AIK GRAND</b>.</p>
+  </section>
+
+  <section class="credit">
+    <h2 style="color:var(--fg)">Credit and license</h2>
+    <p>Piano: <a href="https://github.com/sfzinstruments/SalamanderGrandPiano">Salamander Grand Piano</a> by Alexander Holm, a Yamaha C5, licensed <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY 3.0</a>. Adapted for the FM-1 by aikellogg.com (eight notes chosen, shortened, looped, resampled to 22 kHz and stored as IMA ADPCM). AIK GRAND is shared under the same license: CC-BY 3.0, keep this credit with it. SLOOP is by Leo Kuroshita (Felucca). M-VAVE and FM-1 are M-VAVE's names; this is an independent project.</p>
+  </section>
+
+  <footer>Free from the Patrick Kellogg Foundation for the Performing Arts. <a href="https://ko-fi.com/aikellogg">Support it on Ko-fi</a>.</footer>
+</div>
+<script type="module">
+import { look, plan, install, loadNow } from "./installer.js";
+const $ = (id) => document.getElementById(id);
+const say = (t, cls = "") => { $("status").textContent = t; $("status").className = cls; };
+let link, fm1, files, last;
+
+async function connect() {
+  if (!navigator.requestMIDIAccess) throw new Error("This browser has no Web MIDI: use Chrome or Edge on a computer");
+  const midi = await navigator.requestMIDIAccess({ sysex: true });
+  const isFm1 = (p) => /felucca|fm1|fm-1/i.test(p.name);
+  const out = [...midi.outputs.values()].find(isFm1), inp = [...midi.inputs.values()].find(isFm1);
+  if (!out || !inp) throw new Error("No FM-1 found: plug it in by USB (running SLOOP), then press Install again");
+  let pending = null;
+  inp.onmidimessage = (e) => {
+    const d = e.data;
+    if (pending && d[0] === 0xf0 && d[1] === 0x7d && d[2] === 0x46 && d[3] === 0x4c && d[4] === pending.cmd) {
+      const p = pending; pending = null; clearTimeout(p.timer); p.res(Array.from(d.slice(5, d.length - 1)));
+    }
+  };
+  return { req: (cmd, args) => new Promise((res, rej) => {
+    pending = { cmd, res, timer: setTimeout(() => { pending = null; rej(new Error("The FM-1 did not answer: is it running SLOOP?")); }, 6000) };
+    out.send([0xf0, 0x7d, 0x46, 0x4c, cmd, ...args, 0xf7]);
+  }) };
+}
+
+async function getFiles() {
+  const [hdr, data, sound] = await Promise.all([
+    fetch("aik-grand.hdr").then((r) => r.arrayBuffer()), fetch("aik-grand.bin").then((r) => r.arrayBuffer()),
+    fetch("aik-grand-sound.json").then((r) => r.json())]);
+  return { hdr: new Uint8Array(hdr), data: new Uint8Array(data), sound };
+}
+
+async function run(smp, pre) {
+  $("bar").style.display = "block"; $("bar").value = 0;
+  say(`Installing into USR${smp + 1} and U${String(pre + 1).padStart(2, "0")}… keep the FM-1 plugged in`);
+  await install(link, files, smp, pre, (f) => { $("bar").value = f; });
+  last = pre;
+  say(`Done: AIK GRAND is in U${String(pre + 1).padStart(2, "0")} (its sample in USR${smp + 1}).`, "ok");
+  $("playNow").hidden = false;
+}
+
+$("install").onclick = async () => {
+  $("install").disabled = true; $("choose").hidden = true;
+  try {
+    say("Looking for your FM-1…");
+    link = link || await connect();
+    files = files || await getFiles();
+    fm1 = await look(link);
+    if (!fm1.sloop) throw new Error(`This FM-1 runs ${fm1.version}: AIK GRAND needs SLOOP`);
+    if (fm1.pCount !== files.sound.p_count) throw new Error(`This SLOOP is too old (${fm1.version}): update to SLOOP 2.6 or later`);
+    const where = plan(fm1);
+    if (where.sample === null || where.preset === null) {
+      $("chooseText").textContent = "Your FM-1 has no empty " + [where.sample === null ? "sample slot" : "", where.preset === null ? "sound slot" : ""].filter(Boolean).join(" and no empty ") + ". Pick what to replace (it is overwritten):";
+      $("smpPick").innerHTML = fm1.samples.map((s) => `<option value="${s.slot}" ${where.sample === s.slot ? "selected" : ""}>USR${s.slot + 1}: ${s.zones ? s.name : "empty"}</option>`).join("");
+      $("prePick").innerHTML = fm1.presets.map((p) => `<option value="${p.slot}" ${where.preset === p.slot ? "selected" : ""}>U${String(p.slot + 1).padStart(2, "0")}: ${p.used ? p.name : "empty"}</option>`).join("");
+      $("choose").hidden = false; say("");
+      return;
+    }
+    await run(where.sample, where.preset);
+  } catch (e) {
+    say(e.message, "bad");
+  } finally {
+    $("install").disabled = false;
+  }
+};
+$("replace").onclick = async () => {
+  $("choose").hidden = true;
+  try { await run(+$("smpPick").value, +$("prePick").value); } catch (e) { say(e.message, "bad"); }
+};
+$("playNow").onclick = async () => {
+  try { say((await loadNow(link, last)) ? "Playing AIK GRAND on the FM-1's selected track" : "The FM-1 could not load it", "ok"); } catch (e) { say(e.message, "bad"); }
+};
+</script>
+</body>
+</html>
