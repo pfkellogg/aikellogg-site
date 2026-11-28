@@ -1,5 +1,5 @@
 import Video from "../components/Video.jsx";
-// CertificateVerifier.jsx: the detail page of the WordPress plugin Certificate ID & QR Verifier for LearnDash
+// CertificateVerifier.jsx: the detail page of the WordPress plugin AIKellogg Certificate ID & QR Verifier for LearnDash
 // (github.com/pfkellogg/certificate-id-qr-verifier-for-learndash).
 const GITHUB = "https://github.com/pfkellogg/certificate-id-qr-verifier-for-learndash";
 const ZIP = GITHUB + "/releases/latest/download/certificate-id-qr-verifier-for-learndash.zip";
@@ -8,9 +8,9 @@ const BG = GITHUB + "/raw/main/samples/certificate-background-landscape.jpg";
 export default function CertificateVerifier() {
   return (
     <div className="detail">
-      <img className="banner" src="img/certificate-verifier-banner.png" alt="Certificate ID & QR Verifier for LearnDash: a certificate and a phone showing Certificate Verified" />
+      <img className="banner" src="img/certificate-verifier-banner.png" alt="AIKellogg Certificate ID & QR Verifier for LearnDash: a certificate and a phone showing Certificate Verified" />
       <p className="kicker">WordPress plugin · free · GPL</p>
-      <h1>Certificate ID &amp; QR Verifier for LearnDash</h1>
+      <h1>AIKellogg Certificate ID &amp; QR Verifier for LearnDash</h1>
       <p className="lead">
         Scan any LearnDash certificate and know, in a second, that it's <b>genuine</b>, <b>current</b> and <b>approved</b>.
       </p>
