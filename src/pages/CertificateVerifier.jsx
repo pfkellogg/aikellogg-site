@@ -18,7 +18,7 @@ export default function CertificateVerifier() {
         <a className="btn" href={ZIP}>Download the plugin (zip)</a>
         <a className="btn ghost" href={GITHUB}>Docs &amp; source on GitHub</a>
       </div>
-      <p className="note">Coming soon to the WordPress.org plugin directory.</p>
+      <p className="note">Submitted to the WordPress.org plugin directory: in review.</p>
 
       <div className="cqv-original">
         <p className="cqv-original-big">The original.</p>
