@@ -29,7 +29,8 @@ p,li{max-width:66ch}
 a{color:var(--accent)}
 .home{font-family:var(--display);font-size:.95rem;text-decoration:none}
 .lead{font-size:1.25rem;color:var(--muted);margin:.4rem 0 1.4rem}
-.kb{display:block;width:100%;height:auto;margin:1.2rem 0;border-radius:8px}
+.kb{display:block;width:100%;height:auto;margin:1.2rem 0 .3rem;border-radius:8px;touch-action:none;cursor:pointer}
+.k.w{fill:#fff;stroke:#b8862e;stroke-width:1}.k.b{fill:#1d1a17}.k.on.w{fill:#e0b157}.k.on.b{fill:#b8862e}
 .keys{height:46px;border-radius:8px;margin:1.2rem 0;background:
   repeating-linear-gradient(90deg,#fff 0 30px,#cfc8bd 30px 32px);position:relative;overflow:hidden;border:2px solid var(--accent)}
 .keys::after{content:"";position:absolute;inset:0 0 40% 0;background:
@@ -56,7 +57,8 @@ footer{margin-top:2rem;text-align:center;color:var(--muted);font-size:.95rem}
   <a class="home" href="/">‹ aikellogg.com</a>
   <h1 style="margin-top:.8rem">AIK <span>GRAND</span></h1>
   <p class="lead">A real grand piano for your M-VAVE FM-1 running SLOOP. Free.</p>
-  <svg class="kb" viewBox="0 0 840 120" role="img" aria-label="piano keys"><rect x="0" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="40" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="80" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="120" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="160" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="200" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="240" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="280" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="320" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="360" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="400" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="440" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="480" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="520" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="560" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="600" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="640" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="680" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="720" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="760" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="800" y="0" width="38" height="120" rx="4" fill="#fff" stroke="#b8862e" stroke-width="1"/><rect x="27" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="67" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="147" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="187" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="227" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="307" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="347" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="427" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="467" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="507" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="587" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="627" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="707" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="747" y="0" width="24" height="74" rx="3" fill="#1d1a17"/><rect x="787" y="0" width="24" height="74" rx="3" fill="#1d1a17"/></svg>
+  <svg class="kb" id="kb" viewBox="0 0 840 120" role="group" aria-label="Piano keys: click or tap to hear AIK GRAND"><rect class="k w" data-m="48" x="0" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="50" x="40" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="52" x="80" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="53" x="120" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="55" x="160" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="57" x="200" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="59" x="240" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="60" x="280" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="62" x="320" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="64" x="360" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="65" x="400" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="67" x="440" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="69" x="480" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="71" x="520" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="72" x="560" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="74" x="600" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="76" x="640" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="77" x="680" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="79" x="720" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="81" x="760" y="0" width="38" height="120" rx="4"/><rect class="k w" data-m="83" x="800" y="0" width="38" height="120" rx="4"/><rect class="k b" data-m="49" x="27" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="51" x="67" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="54" x="147" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="56" x="187" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="58" x="227" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="61" x="307" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="63" x="347" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="66" x="427" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="68" x="467" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="70" x="507" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="73" x="587" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="75" x="627" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="78" x="707" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="80" x="747" y="0" width="24" height="74" rx="3"/><rect class="k b" data-m="82" x="787" y="0" width="24" height="74" rx="3"/></svg>
+  <p class="credit" id="kbHint">🎹 Click or tap a key to hear AIK GRAND, exactly as the FM-1 plays it (or use your computer keys A W S E D F T G Y H U J K).</p>
 
   <section>
     <h2>Hear it</h2>
@@ -106,6 +108,28 @@ footer{margin-top:2rem;text-align:center;color:var(--muted);font-size:.95rem}
 </div>
 <script type="module">
 import { look, plan, install, loadNow } from "./installer.js";
+import { Grand } from "./player.js";
+// the keyboard: AIK GRAND in the browser (the same 8 notes the FM-1 gets)
+const grand = new Grand();
+const kb = document.getElementById("kb");
+const held = new Map();
+const press = async (m) => { await grand.load(); grand.down(m); kb.querySelector(`[data-m="${m}"]`)?.classList.add("on"); };
+const lift = (m) => { grand.up(m); kb.querySelector(`[data-m="${m}"]`)?.classList.remove("on"); };
+kb.addEventListener("pointerdown", (e) => {
+  const k = e.target.closest(".k"); if (!k) return;
+  kb.setPointerCapture?.(e.pointerId);
+  const m = +k.dataset.m; held.set(e.pointerId, m); press(m);
+});
+const release = (e) => { const m = held.get(e.pointerId); if (m !== undefined) { held.delete(e.pointerId); lift(m); } };
+kb.addEventListener("pointerup", release); kb.addEventListener("pointercancel", release);
+const KEYS = "awsedftgyhujk";
+const down = new Set();
+addEventListener("keydown", (e) => {
+  const i = KEYS.indexOf(e.key.toLowerCase());
+  if (i < 0 || e.repeat || e.metaKey || e.ctrlKey || /input|select|textarea/i.test(e.target.tagName)) return;
+  down.add(i); press(60 + i);
+});
+addEventListener("keyup", (e) => { const i = KEYS.indexOf(e.key.toLowerCase()); if (down.delete(i)) lift(60 + i); });
 const $ = (id) => document.getElementById(id);
 const say = (t, cls = "") => { $("status").textContent = t; $("status").className = cls; };
 let link, fm1, files, last;
